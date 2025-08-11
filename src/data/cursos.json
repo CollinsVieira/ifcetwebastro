@@ -9,7 +9,7 @@
     "lessons": 1,
     "students": 23,
     "hours": "2 ",
-    "enlace": "https://wa.link/e08zhh"
+    "link": "https://wa.link/e08zhh"
   },
   {
     "img": "https://www.ifcet.com.pe/wp-content/uploads/2024/12/CCNIFF.jpg",
@@ -20,7 +20,8 @@
     "Horario": "6:00 p.m. - 8:00 p.m.",
     "lessons": 8,
     "students": 22,
-    "hours": "120 "
+    "hours": "120 ",
+    "link": "https://wa.link/e08zhh"
   },
   {
     "img": "https://www.ifcet.com.pe/wp-content/uploads/2024/11/ECE.jpg",
@@ -31,7 +32,8 @@
     "Horario": "2:00 p.m. - 4:00 p.m.",
     "lessons": 4,
     "students": 18,
-    "hours": "8 "
+    "hours": "8 ",
+    "link": "https://wa.link/e08zhh"
   },
   {
     "img": "https://www.ifcet.com.pe/wp-content/uploads/2024/12/CCNIFF.jpg",
@@ -42,7 +44,8 @@
     "Horario": "7:00 p.m. - 9:00 p.m.",
     "lessons": 12,
     "students": 25,
-    "hours": "160 "
+    "hours": "160 ",
+    "link": "https://wa.link/e08zhh"
   },
   {
     "img": "https://www.ifcet.com.pe/wp-content/uploads/2024/11/ECE.jpg",
@@ -53,7 +56,8 @@
     "Horario": "5:00 p.m. - 7:00 p.m.",
     "lessons": 10,
     "students": 20,
-    "hours": "60 "
+    "hours": "60 ",
+    "link": "https://wa.link/e08zhh"
   },
   {
     "img": "https://www.ifcet.com.pe/wp-content/uploads/2024/12/CCNIFF.jpg",
@@ -64,6 +68,7 @@
     "Horario": "6:30 p.m. - 8:30 p.m.",
     "lessons": 7,
     "students": 16,
-    "hours": "100 "
+    "hours": "100 ",
+    "link": "https://wa.link/e08zhh"
   }
 ] 

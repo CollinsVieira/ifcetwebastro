@@ -53,6 +53,7 @@ export function Cursos() {
                 lessons={curso.lessons}
                 students={curso.students}
                 hours={curso.hours}
+                link={curso.link}
               />
             </SwiperSlide>
           ))}

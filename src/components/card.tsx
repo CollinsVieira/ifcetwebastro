@@ -17,7 +17,7 @@ export function Card({
   lessons = 4,
   students = 22,
   hours = "120 horas",
-  link = "https://wa.link/1eucxp",
+  link,
 }: CardProps) {
   return (
     <article className="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl mb-8 
@@ -112,7 +112,9 @@ export function Card({
           <a
             className="w-full bg-[#101fd2] hover:bg-[#ffb204] text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-300 text-center block text-sm"
             role="button"
-            href={link}
+            href={link || "#"}
+            target={link?.startsWith('http') ? "_blank" : undefined}
+            rel={link?.startsWith('http') ? "noopener noreferrer" : undefined}
           >
             Solicitar información
           </a>
