@@ -1,0 +1,48 @@
+{
+  "docentes": [
+    {
+      "id": 1,
+      "quote": "El Mag. CPC William Mendoza Tarrillo titulado en la Universidad Nacional Pedro Ruiz Gallo, con estudios de Maestría en Tributación y Asesoría Fiscal por la Universidad de Tarapacá del país vecino de Chile y la Universidad Católica Santo Toribio de Mogrovejo. Además, completó diplomados especializados y cursos en auditoría tributaria e internacionalización fiscal.",
+      "name": "Mag. CPC. William Mendoza Tarrillo",
+      "designation": "Auditor Tributario",
+      "src": "https://www.ifcet.com.pe/wp-content/uploads/2025/07/Mag-CPC-William-Mendoza-Tarrillo-Tributario-Auditor-Fiscalizador-Peru.webp"
+    },
+    {
+      "id": 2,
+      "quote": "Egresado de la Universidad Nacional Pedro Ruiz Gallo, con Maestría en Tributación por la UNT. Especializado en Costos y Presupuestos, Precios de Transferencia, NIIF, Agronegocios de Exportación, Power BI, Google Data Studio y Gestión de Proyectos BPM, en reconocidas instituciones como Universidad ESAN, Universidad Nacional de Ingeniería, etc.",
+      "name": "Mag. CPC Isrrael Chaquila Carrasco",
+      "designation": "Auditor Tributario",
+      "src": "https://www.ifcet.com.pe/wp-content/uploads/2025/08/Mag-CPC-isrrael-chaquila-carrasco-Experto-Costos-Presupuestos-Gestion-Financiera-Internacional-Peru.webp"
+    },
+    {
+      "id": 3,
+      "quote": "Con más de 11 años de experiencia en el ámbito tributario y contable, ha liderado funciones clave dentro de SUNAT Lambayeque. Actualmente, se desempeña como Auditora en la Intendencia de Principales Contribuyentes Nacionales.",
+      "name": "Mag. CPC Fiorela Prada Montalvan",
+      "designation": "Contadora Pública",
+      "src": "https://www.ifcet.com.pe/wp-content/uploads/2025/07/Mag-CPC-Fiorela-Prada-Montalvan-Auditor-Tributario-Peru-1024x976.webp"
+    }
+    ,
+    {
+      "id": 4,
+      "quote": "Juliana Bueno Arias es una Contadora Pública Colegiada con un perfil profesional sólido en el ámbito tributario. Posee maestrías en Derecho Tributario y Fiscalidad Internacional, y está especializada en procedimientos tributarios. Su trayectoria incluye roles clave en la SUNAT y el Tribunal Fiscal Peruano, lo que le otorga una comprensión profunda de la administración tributaria.",
+      "name": "Doctora Juliana Bueno Arias",
+      "designation": "Abogada Tributarista",
+      "src": "asd.webp"
+    },
+    {
+      "id": 5,
+      "quote": "Juan Manuel Carrillo Bautista es un abogado tributarista con más de 20 años de experiencia en el ámbito público y privado. Se formó en la PUCP y tiene una maestría en Derecho Tributario y Fiscalidad Internacional de la USMP y la Universidad de Castilla La Mancha.",
+      "name": "Abogado Juan Manuel Carrillo Bautista",
+      "designation": "Abogado Tributarista",
+      "src": "CPC-Miguel-Carrillo-Bautista-Abogado-Tributarista-Asesor-Empresarial-Docente-Universitario.webp"
+    }
+    ,
+    {
+      "id": 6,
+      "quote": "Ex ministro de la nación y fiscal especializado, se desempeñó como fiscal provincial y posteriormente lideró fiscalías contra la criminalidad organizada en Chiclayo, donde obtuvo reconocimiento por su trabajo en casos complejos de crimen organizado y corrupción.",
+      "name": "LL.M. Abog. Juan Carrasco Millones",
+      "designation": "Abogado",
+      "src": "Abogado-Juan-Carrasco-Millones-Fiscal-especializado-Ministro-del-Interior-Ministro-de-Defensa.webp"
+    }
+  ]
+}

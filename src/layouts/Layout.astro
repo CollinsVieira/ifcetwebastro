@@ -1,23 +1,20 @@
+---
+import { Header2 } from '../components/header2.tsx';
+import { FooterComponent } from '../components/footer.tsx';
+---
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="/src/styles/global.css" />
 		<title>IFCET | Instituto de Formación Contable, Empresarial y Tributaria</title>
 		<link rel="icon" type="image/svg+xml" href="/favicon.webp" />
-		<meta name="description" content="" />
+		<meta name="description" content="Instituto de Formación Contable, Empresarial y Tributaria - Educación de calidad a distancia" />
 	</head>
-	<body>
+	<body class="antialiased">
+		<Header2 client:load />
 		<slot />
+		<FooterComponent client:load />
 	</body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>

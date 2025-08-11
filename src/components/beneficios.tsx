@@ -1,36 +1,38 @@
-import { Sparkles, Wifi, GraduationCap, BookOpen } from "lucide-react";
+import { GraduationCap, BookOpen, HandCoins, Computer } from "lucide-react";
 
 export function Beneficios() {
   const beneficios = [
     {
       id: 1,
-      title: "+8 años de experiencia",
-      description:
-        "Somos un Instituto que lleva más de 8 años brindando cursos especializados que complementan tus conocimientos, es por ello que tenemos como objetivo prepararte para afrontar con éxito el mundo laboral.",
-      icon: <Sparkles />,
-    },
-
-    {
-      id: 2,
-      title: "Clases virtuales",
-      description:
-        "Todas nuestras clases se realizan a través de la plataforma ZOOM, además, se utilizan herramientas durante las sesiones como: recursos y casos prácticos, que ayudan a identificar, entender o intuir la utilidad práctica que se tendrá en la vida real.",
-      icon: <Wifi />,
-    },
-    {
-      id: 3,
       title: "Docentes calificados",
       description:
         "Contamos con una plana docente altamente calificada, con una amplia experiencia, comprometidos con el aprendizaje, consultoría y formación pedagógica, consolidando la enseñanza y formación de manera efectiva.",
       icon: <GraduationCap />,
     },
     {
-      id: 4,
+      id: 2,
+      title: "Clases virtuales",
+      description:
+        "Todas nuestras clases se realizan a través de la plataforma ZOOM, además, se utilizan herramientas durante las sesiones como: recursos y casos prácticos, que ayudan a identificar, entender o intuir la utilidad práctica que se tendrá en la vida real.",
+      icon: <Computer />,
+    },
+    {
+      id: 3,
       title: "Material actualizado",
       description:
         "Sostenemos nuestros módulos con material, herramientas, recursos y casos de estudio 100% actualizados en cada uno de los cursos, garantizando una enseñanza de calidad.",
       icon: <BookOpen />,
     },
+    {
+      id: 4,
+      title: "Política de reembolso",
+      description:
+        "En el Instituto de Formación Contable, Empresarial y Tributaria (IFCET), nos comprometemos a reembolsar el 100% del pago de la matrícula en casos de fuerza mayor.",
+      icon: <HandCoins />,
+      enlace: "Para mas información haga click aquí.",
+      url: "/politica-de-reembolsos",
+    },    
+    
   ];
   return (
     <>
@@ -75,6 +77,17 @@ export function Beneficios() {
                 <div>
                   <p className="text-gray-500 text-pretty text-sm text-justify">
                     {beneficio.description}
+                    {beneficio.enlace && (
+                      <a
+                        href={beneficio.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-500 hover:underline"
+                      >
+                        {" "}
+                        {beneficio.enlace}
+                      </a>
+                    )}
                   </p>
                 </div>
               </div>

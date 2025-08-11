@@ -1,8 +1,53 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { Beneficios } from '../components/beneficios';
+import { HeroSlider } from '../components/hero-slider.js';
+import { Aside } from '../components/aside.tsx';
+import { Cursos } from '../components/cursos.tsx';
+import { Convenios } from '../components/convenios.tsx';
+import { Opiniones } from '../components/opiniones.tsx';
 ---
 
 <Layout>
-	<Beneficios />
+	<div class="w-full">
+		<!-- SLIDER -->
+		 <HeroSlider client:load />
+		 <div class="grid grid-cols-1 lg:grid-cols-[1fr_4fr_1fr] min-h-screen max-w-full overflow-x-hidden gap-4">
+			<aside class="col-span-1 hidden lg:block">
+			  <Aside client:load />
+			</aside>
+			<main class="col-span-1 lg:col-span-1 w-full overflow-hidden">
+			  <section class="bg-white md:py-8 px-4">
+				<div class="container mx-auto max-w-full">
+				  <div class="bg-[#101fd2] p-4 rounded-lg w-fit mx-auto md:mx-0 mt-4">
+					<h1 class="text-lg md:text-3xl font-bold text-white text-center">
+					  Cursos disponibles del mes
+					</h1>
+				  </div>
+				  <div class="mt-4">
+					<p class="hidden md:block text-gray-500 md:pb-4">
+					  Explora nuestros cursos a través de nuestras áreas de
+					  formación de Tributación, Contabilidad, Finanzas, Laboral,
+					  Auditoría y Gubernamental.
+					</p>
+				  </div>
+				</div>
+				<Cursos client:load server:defer />
+			  </section>
+			  <section class="bg-white flex flex-col md:gap-y-4">
+				<Beneficios client:load />
+			  </section>
+			  <section class="bg-white flex flex-col md:gap-y-4">
+				<Convenios client:load />
+			  </section>
+			  {/* Opiniones en ancho completo, fuera del grid */}
+			  <section class="bg-white flex flex-col md:gap-y-4">
+				<Opiniones client:load />
+			  </section>
+			</main>
+			<aside class="col-span-1 hidden lg:block">
+			  <Aside client:load />
+			</aside>
+		  </div>
+	</div>
 </Layout>
