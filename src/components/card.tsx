@@ -21,7 +21,7 @@ export function Card({
 }: CardProps) {
   return (
     <article className="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl mb-8 
-    max-w-[300px]">
+    md:max-w-[300px] lg:max-w-[400px]">
       <div className="relative overflow-hidden">
         <img
           src={img}

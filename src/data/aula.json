@@ -19,6 +19,7 @@
     {
       "id": 1,
       "name": "Asistente Contable Tributario",
+      "zoom": "https://zoom.us/j/91288922269?pwd=1234567890",
       "startDate": "2025-08-12",
       "schedule": "Mar y Jue 7:00 p.m. - 9:00 p.m.",
       "recordings": [
@@ -33,6 +34,7 @@
     {
       "id": 2,
       "name": "Contabilidad Financiera",
+      "zoom": "https://zoom.us/j/91288922269?pwd=1234567890",
       "startDate": "2025-07-15",
       "schedule": "Lun y Mié 6:00 p.m. - 8:00 p.m.",
       "recordings": [
@@ -45,6 +47,7 @@
     {
       "id": 3,
       "name": "Excel para Contadores",
+      "zoom": "https://zoom.us/j/91288922269?pwd=1234567890",
       "startDate": "2025-07-20",
       "schedule": "Sáb 2:00 p.m. - 4:00 p.m.",
       "recordings": [

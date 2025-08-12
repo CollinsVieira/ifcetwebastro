@@ -90,7 +90,7 @@ export function Header2() {
                 href="/nosotros"
                 className="text-white hover:text-yellow-300 transition-colors font-medium"
               >
-                nosotros
+                Nosotros
               </a>
               <a
                 href="/blog"
