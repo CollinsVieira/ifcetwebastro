@@ -1,8 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { BibliotecaComponent } from '../components/BibliotecaComponent.tsx';
+const title = 'Biblioteca | IFCET';
+const description = 'Accede a materiales y recursos educativos de contabilidad, tributación y gestión empresarial para complementar tu aprendizaje.';
+const image = '/favicon.webp';
 ---
 
-<Layout>
+<Layout {title} {description} {image}>
 	<BibliotecaComponent client:load />
 </Layout>

@@ -1,8 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { ContactoComponent } from '../components/contacto.tsx';
+const title = 'Contacto | IFCET';
+const description = 'Escríbenos para recibir información sobre cursos y diplomados. Soporte y asesoría para tu matrícula.';
+const image = '/favicon.webp';
 ---
 
-<Layout>
+<Layout {title} {description} {image}>
 	<ContactoComponent client:load />
 </Layout>

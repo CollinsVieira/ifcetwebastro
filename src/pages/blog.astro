@@ -1,8 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { BlogComponent } from '../components/blog.tsx';
+const title = 'Blog | IFCET';
+const description = 'Noticias, artículos y recursos sobre tributación, contabilidad, finanzas y gestión empresarial en Perú.';
+const image = '/favicon.webp';
 ---
 
-<Layout>
+<Layout {title} {description} {image}>
 	<BlogComponent client:load />
 </Layout>

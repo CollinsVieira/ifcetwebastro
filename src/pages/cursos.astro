@@ -1,9 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import cursos from '../data/cursos.json';
+const title = 'Cursos IFCET | Programas profesionales con clases en vivo';
+const description = 'Explora cursos de contabilidad, tributación, finanzas, laboral y auditoría. Metodología práctica, docentes expertos y certificación.';
+const image = '/favicon.webp';
 ---
 
-<Layout>
+<Layout {title} {description} {image}>
   <div class="w-full">
     <!-- Hero Section -->
     <section class="bg-gradient-to-b from-slate-900 via-slate-900 to-black text-white">

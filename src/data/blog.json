@@ -48,7 +48,7 @@
       "authorRole": "Contadora Pública",
       "publishedAt": "2024-01-15",
       "readTime": "8 min",
-      "image": "contabilidad.webp ",
+      "image": "/contabilidad.webp ",
       "featured": true,
       "tags": ["fundamentos", "principios", "ecuación contable"]
     },
@@ -62,7 +62,7 @@
       "authorRole": "Consultor Contable Senior",
       "publishedAt": "2024-08-11",
       "readTime": "6 min",
-      "image": "CONCAR.jpg",
+      "image": "/CONCAR.jpg",
       "featured": true,
       "tags": ["CONCAR", "software contable", "contabilidad Perú", "SUNAT", "gestión financiera"]
     }

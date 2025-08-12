@@ -2,7 +2,11 @@
 import Layout from '../layouts/Layout.astro';
 import { AulaVirtualComponent } from '../components/AulaVirtualComponent.tsx';
 import '../styles/global.css';
+const title = 'Aula Virtual | IFCET';
+const description = 'Accede a tus cursos, grabaciones y materiales. Se requiere inicio de sesión.';
+const image = '/favicon.webp';
+const noindex = true; // panel privado
 ---
-<Layout>
-	<AulaVirtualComponent client:load />
+<Layout {title} {description} {image} {noindex}>
+    <AulaVirtualComponent client:load />
 </Layout>

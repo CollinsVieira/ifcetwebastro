@@ -2,16 +2,99 @@
 import { Header2 } from '../components/header2.tsx';
 import { FooterComponent } from '../components/footer.tsx';
 import '../styles/global.css';
+
+// Props SEO
+const siteName = 'IFCET';
+const defaultTitle = 'IFCET | Instituto de Formación Contable, Empresarial y Tributaria';
+const defaultDescription = 'Instituto de Formación Contable, Empresarial y Tributaria. Cursos y diplomados con clases en vivo, enfoque práctico y certificación.';
+const {
+  title = defaultTitle,
+  description = defaultDescription,
+  image = '/favicon.webp',
+  canonical: canonicalProp,
+  noindex = false,
+} = Astro.props as {
+  title?: string;
+  description?: string;
+  image?: string;
+  canonical?: string;
+  noindex?: boolean;
+};
+
+const currentUrl = Astro.url;
+const canonical = (canonicalProp ?? new URL(currentUrl.pathname, currentUrl.origin).toString()).replace(/\/$/, currentUrl.pathname === '/' ? '/' : '');
 ---
 <!doctype html>
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="global.css" />
-		<title>IFCET | Instituto de Formación Contable, Empresarial y Tributaria</title>
-		<link rel="icon" type="image/svg+xml" href="/favicon.webp" />
-		<meta name="description" content="Instituto de Formación Contable, Empresarial y Tributaria - Educación de calidad a distancia" />
+    <link rel="stylesheet" href="global.css" />
+    <title>{title}</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.webp" />
+    <meta name="description" content={description} />
+    <meta name="author" content={siteName} />
+    <meta name="theme-color" content="#101fd2" />
+
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="es-PE" href={canonical} />
+    <link rel="alternate" hreflang="es" href={canonical} />
+
+    {noindex ? (
+      <>
+        <meta name="robots" content="noindex,nofollow,noarchive" />
+        <meta name="googlebot" content="noindex,nofollow" />
+      </>
+    ) : (
+      <>
+        <meta name="robots" content="index,follow" />
+      </>
+    )}
+
+    {/* Open Graph */}
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={image} />
+    <meta property="og:image:alt" content={siteName} />
+    <meta property="og:locale" content="es_PE" />
+
+    {/* Twitter */}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
+
+    {/* JSON-LD: Organization, WebSite, WebPage */}
+    <script type="application/ld+json">
+      {JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Organization',
+        name: siteName,
+        url: canonical,
+        logo: image,
+      })}
+    </script>
+    <script type="application/ld+json">
+      {JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        name: siteName,
+        url: new URL('/', currentUrl.origin).toString(),
+      })}
+    </script>
+    <script type="application/ld+json">
+      {JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: title,
+        description,
+        url: canonical,
+        inLanguage: 'es-PE',
+      })}
+    </script>
 	</head>
 	<body class="antialiased">
 		<Header2 client:load />

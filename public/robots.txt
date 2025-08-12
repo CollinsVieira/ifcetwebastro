@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+# No index para el panel privado
+Disallow: /aula-virtual
+Sitemap: https://ifcet.com.pe/sitemap-index.xml

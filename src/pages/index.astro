@@ -6,9 +6,12 @@ import { Aside } from '../components/aside.tsx';
 import { Cursos } from '../components/cursos.tsx';
 import { Convenios } from '../components/convenios.tsx';
 import { Opiniones } from '../components/opiniones.tsx';
+const title = 'IFCET | Educación contable, empresarial y tributaria en Perú';
+const description = 'Cursos y diplomados con clases en vivo, enfoque práctico y certificación. Tributación, contabilidad, finanzas, laboral, auditoría y más.';
+const image = '/favicon.webp';
 ---
 
-<Layout>
+<Layout {title} {description} {image}>
 	<div class="w-full">
 		<!-- SLIDER -->
 		 <HeroSlider client:load />

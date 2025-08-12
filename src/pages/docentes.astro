@@ -1,8 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { DocentesComponent } from '../components/DocentesComponent.tsx';
+const title = 'Docentes | IFCET';
+const description = 'Conoce a nuestro equipo de docentes expertos en SUNAT, sector empresarial y consultoría. Enfoque práctico y casos reales.';
+const image = '/favicon.webp';
 ---
 
-<Layout>
+<Layout {title} {description} {image}>
 	<DocentesComponent client:load server:defer />
 </Layout>
