@@ -238,11 +238,7 @@ export function AulaVirtualComponent() {
                 <p className="font-semibold leading-tight">{loggedUser.fullName}</p>
               </div>
             </div>
-            <div className="mt-4 flex items-center justify-between">
-              <button onClick={handleLogout} className="inline-flex items-center gap-2 text-sm px-3 py-1.5 rounded-md bg-red-500 hover:bg-slate-200 text-white">
-                <LogoutIcon className="h-4 w-4" /> Cerrar sesión
-              </button>
-            </div>
+            
           </div>
 
           <div className="p-5 bg-white rounded-xl border shadow-sm">
@@ -271,6 +267,11 @@ export function AulaVirtualComponent() {
           </div>
 
           <a href="/contacto#contacto" className="block text-center px-4 py-2.5 rounded-lg bg-[#101fd2] text-white hover:bg-[#0e1ab3] transition">Soporte</a>
+          <div className="mt-4 flex items-center justify-center">
+              <button onClick={handleLogout} className="w-full inline-flex items-center gap-2 text-sm px-3 py-1.5 rounded-md bg-red-500 hover:scale-105 transition-all duration-300 text-white">
+                <LogoutIcon className="h-4 w-4" /> Cerrar sesión
+              </button>
+            </div>
         </aside>
 
         {/* Main */}
@@ -294,9 +295,11 @@ export function AulaVirtualComponent() {
                 <span className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-slate-100 border">
                   <FileIcon className="h-4 w-4 text-slate-600" /> {activeCourse.materials.length} archivos
                 </span>
-                <a href={activeCourse.zoom} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-3 py-1.5 text-sm rounded-lg bg-blue-600 text-white hover:bg-blue-700">
-                  Ingresar a clases en vivo
-                </a>
+                {activeCourse.zoom && (
+                  <a href={activeCourse.zoom} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-3 py-1.5 text-sm rounded-lg bg-blue-600 text-white hover:bg-blue-700">
+                    Ingresar a clases en vivo
+                  </a>
+                )}
               </div>
             </div>
             
@@ -320,12 +323,14 @@ export function AulaVirtualComponent() {
                       </div>
                       <div className="min-w-0">
                         <p className="text-sm font-medium truncate">{r.title}</p>
-                        <p className="text-xs text-gray-500">Video</p>
+                        <p className="text-xs text-gray-500">Grabación</p>
                       </div>
                     </div>
-                    <a href={r.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-3 py-1.5 text-sm rounded-lg bg-blue-600 text-white hover:bg-blue-700">
-                      Ver
-                    </a>
+                    {r.url && (
+                      <a href={r.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-3 py-1.5 text-sm rounded-lg bg-blue-600 text-white hover:bg-blue-700">
+                        Ver
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>

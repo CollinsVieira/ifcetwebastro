@@ -13,7 +13,22 @@
       "password": "ifcet2025",
       "fullName": "Alumno Demo 2",
       "courseIds": [3]
+    },
+    {
+      "id": 3,
+      "username": "contabilidadm",
+      "password": "contabilidadm",
+      "fullName": "Estudiante Minera",
+      "courseIds": [4]
+    },
+    {
+      "id": 4,
+      "username": "continmobiliarias",
+      "password": "continmobiliarias",
+      "fullName": "Estudiante Constructoras",
+      "courseIds": [5]
     }
+
   ],
   "courses": [
     {
@@ -55,6 +70,41 @@
       ],
       "materials": [
         { "title": "Dataset Práctica (XLSX)", "url": "/materiales/dataset-practica.xlsx" }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Contabilidad Minera",
+      "codename": "contabilidad minera 0725",
+      "zoom": "https://us02web.zoom.us/j/87940689278?pwd=hgdgEf53eacLSkHolPrOCmRQEOyDok.1",
+      "startDate": "2025-07-20",
+      "schedule": "Sáb 4:00 p.m. - 7:00 p.m.",
+      "recordings": [
+        { "title": "Sesión 1", "url": "" },
+        { "title": "Sesión 2", "url": "" },
+        { "title": "Sesión 3", "url": "" },
+        { "title": "Sesión 4", "url": "" }
+      ],
+      "materials": [
+        { "title": "", "url": "" }
+      ]
+    }
+    ,
+    {
+      "id": 5,
+      "name": "Contabilidad de Constructoras e Inmobiliarias",
+      "codename": "contabilidad constructoras 0125",
+      "zoom": "https://us02web.zoom.us/j/82618987063?pwd=cBodz5rzE5utNYSWqKq6HFk0ODgN5Z.1",
+      "startDate": "2025-07-09",
+      "schedule": "Sáb 4:00 p.m. - 7:00 p.m.",
+      "recordings": [
+        { "title": "Sesión 1", "url": "https://us02web.zoom.us/rec/play/nyXG00z6G4-c4kM4ZdAqvH9-HutORtle6N86suop6DCXIHd793utJ3HtHbbfUlomYkNtZW_96kTJpok5.TOlAFgB0b6quV8fW?eagerLoadZvaPages=sidemenu.billing.plan_management&accessLevel=meeting&canPlayFromShare=true&from=share_recording_detail&continueMode=true&componentName=rec-play&originRequestUrl=https%3A%2F%2Fus02web.zoom.us%2Frec%2Fshare%2FZJ-Z6S-1620dLFjAoCKH40knGxsMSoAE46e1PeGN-LVpFTWsEavmkUkVRCOBFF_j.A-zveHyTkTa7OO0V" },
+        { "title": "Sesión 2", "url": "https://us02web.zoom.us/rec/play/Q2A9lML0aO-D7iMAu9U-l73sRIdETfMTAWxnnAEMA6Ri_L11n1cDRoeR1d3lRh7fCEZPGGMyeSlNRYmh.knZY0ep2H7MqYLQu?eagerLoadZvaPages=sidemenu.billing.plan_management&accessLevel=meeting&canPlayFromShare=true&from=share_recording_detail&continueMode=true&componentName=rec-play&originRequestUrl=https%3A%2F%2Fus02web.zoom.us%2Frec%2Fshare%2F2yZ2BXV-WK37OacSyAQVYMTo3_QHkakpI6v-s9n2EieM6u2R4VsCSSOD3Hf5Gnla.UWCQhGxC75I345LI" },
+        { "title": "Sesión 3", "url": "" },
+        { "title": "Sesión 4", "url": "" }
+      ],
+      "materials": [
+        { "title": "", "url": "" }
       ]
     }
   ]
