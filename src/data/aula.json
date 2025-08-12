@@ -1,0 +1,58 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "alumno1",
+      "password": "ifcet2025",
+      "fullName": "Alumno Demo 1",
+      "courseIds": [1, 2]
+    },
+    {
+      "id": 2,
+      "username": "alumno2",
+      "password": "ifcet2025",
+      "fullName": "Alumno Demo 2",
+      "courseIds": [3]
+    }
+  ],
+  "courses": [
+    {
+      "id": 1,
+      "name": "Asistente Contable Tributario",
+      "startDate": "2025-08-12",
+      "schedule": "Mar y Jue 7:00 p.m. - 9:00 p.m.",
+      "recordings": [
+        { "title": "Sesión 1 - Introducción", "url": "https://zoom.us/rec/sesion1-demo" },
+        { "title": "Sesión 2 - IGV", "url": "https://zoom.us/rec/sesion2-demo" }
+      ],
+      "materials": [
+        { "title": "Sílabo del curso (PDF)", "url": "/materiales/silabo-asistente-contable.pdf" },
+        { "title": "Plantilla Excel - Libro Diario", "url": "/materiales/plantilla-libro-diario.xlsx" }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Contabilidad Financiera",
+      "startDate": "2025-07-15",
+      "schedule": "Lun y Mié 6:00 p.m. - 8:00 p.m.",
+      "recordings": [
+        { "title": "Sesión 1 - Marco Conceptual", "url": "https://zoom.us/rec/cf-s1" }
+      ],
+      "materials": [
+        { "title": "NIIF Resumen (PDF)", "url": "/materiales/niif-resumen.pdf" }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Excel para Contadores",
+      "startDate": "2025-07-20",
+      "schedule": "Sáb 2:00 p.m. - 4:00 p.m.",
+      "recordings": [
+        { "title": "Sesión 1 - Funciones básicas", "url": "https://zoom.us/rec/excel-s1" }
+      ],
+      "materials": [
+        { "title": "Dataset Práctica (XLSX)", "url": "/materiales/dataset-practica.xlsx" }
+      ]
+    }
+  ]
+}

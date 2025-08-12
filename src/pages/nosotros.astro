@@ -1,0 +1,133 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+  <div class="w-full">
+    <!-- Hero -->
+    <section class="bg-gradient-to-b from-slate-900 via-slate-900 to-black text-white">
+      <div class="max-w-7xl mx-auto px-4 py-16 md:py-20">
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div class="space-y-5">
+            <h1 class="text-[clamp(1.8rem,4.5vw,3rem)] font-extrabold leading-tight">Nosotros</h1>
+            <p class="text-white/80 text-[clamp(0.95rem,1.8vw,1.05rem)]">
+              Somos el Instituto de Formación Contable, Empresarial y Tributaria comprometido con la excelencia académica y el desarrollo profesional de nuestros estudiantes a nivel nacional.
+            </p>
+            <div class="flex flex-wrap gap-3">
+              <a href="#mision-vision" class="px-5 py-2.5 rounded-lg text-sm font-medium bg-[#ffb403] text-black hover:scale-[1.02] transition-transform">Misión y Visión</a>
+              <a href="#mensaje-gerencial" class="px-5 py-2.5 rounded-lg text-sm font-medium bg-white/10 text-white border border-white/30 hover:bg-white/15 hover:scale-[1.02] transition-transform">Mensaje Gerencial</a>
+            </div>
+          </div>
+          <div class="relative h-[32vh] md:h-[46vh] rounded-xl overflow-hidden border border-white/10 bg-white/5">
+            <div class="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent" />
+            <div class="absolute inset-0 grid grid-cols-3 gap-2 p-6">
+              <div class="rounded-lg bg-white/10"></div>
+              <div class="rounded-lg bg-white/10"></div>
+              <div class="rounded-lg bg-white/10"></div>
+              <div class="rounded-lg bg-white/10"></div>
+              <div class="rounded-lg bg-white/10"></div>
+              <div class="rounded-lg bg-white/10"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Misión y Visión -->
+    <section id="mision-vision" class="bg-white">
+      <div class="max-w-7xl mx-auto px-4 py-12 md:py-16">
+        <div class="mb-8">
+          <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900">Misión y Visión</h2>
+          <p class="text-gray-600 mt-2">Nuestro propósito y hacia dónde nos dirigimos.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="p-6 rounded-2xl border bg-white">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Misión</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Formar profesionales competentes en contabilidad, tributación y gestión empresarial a través de programas de alta calidad, enfoque práctico y uso de tecnologías educativas, impactando positivamente en su entorno laboral y social.
+            </p>
+          </div>
+          <div class="p-6 rounded-2xl border bg-white">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Visión</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Ser un instituto referente a nivel nacional por la excelencia académica, innovación y vinculación con el sector empresarial, promoviendo el aprendizaje continuo y la empleabilidad.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mensaje Gerencial -->
+    <section id="mensaje-gerencial" class="bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 py-12 md:py-16">
+        <div class="mb-8">
+          <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900">Mensaje Gerencial</h2>
+          <p class="text-gray-600 mt-2">Compromiso con la calidad y el aprendizaje significativo.</p>
+        </div>
+        <div class="p-6 md:p-8 rounded-2xl border bg-white">
+          <p class="text-gray-700 leading-relaxed">
+            En IFCET creemos en la educación como el eje transformador de la sociedad. Nuestro compromiso es brindar una formación actualizada, con docentes expertos y metodologías centradas en el estudiante. Trabajamos de la mano con el sector empresarial para asegurar que cada programa responda a las necesidades reales del mercado.
+          </p>
+          <blockquote class="mt-6 border-l-4 border-[#ffb403] pl-4 text-gray-800 italic">
+            "Nuestro objetivo es formar profesionales que generen impacto, con ética, conocimiento sólido y competencias digitales que les permitan destacar en cualquier organización."
+          </blockquote>
+          <p class="mt-4 text-gray-900 font-semibold">Gerencia General – IFCET</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reseña Histórica -->
+    <section id="resena-historica" class="bg-white">
+      <div class="max-w-7xl mx-auto px-4 py-12 md:py-16">
+        <div class="mb-8">
+          <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900">Reseña Histórica</h2>
+          <p class="text-gray-600 mt-2">Nuestro camino a lo largo del tiempo.</p>
+        </div>
+        <div class="relative border-l-2 border-gray-200 pl-6 space-y-8">
+          <div>
+            <div class="absolute -left-[5px] mt-1 w-3 h-3 rounded-full bg-[#101fd2]"></div>
+            <h3 class="text-lg font-bold text-gray-900">Fundación</h3>
+            <p class="text-sm text-gray-500">2018 - 2019</p>
+            <p class="mt-1 text-gray-700">Nacimos con el propósito de ofrecer formación especializada en contabilidad y tributación, acercando contenido práctico y accesible a todo el país.</p>
+          </div>
+          <div>
+            <div class="absolute -left-[5px] mt-1 w-3 h-3 rounded-full bg-[#101fd2]"></div>
+            <h3 class="text-lg font-bold text-gray-900">Consolidación académica</h3>
+            <p class="text-sm text-gray-500">2020 - 2022</p>
+            <p class="mt-1 text-gray-700">Ampliamos nuestra oferta académica y fortalecimos el cuerpo docente con especialistas de amplia trayectoria en el sector público y privado.</p>
+          </div>
+          <div>
+            <div class="absolute -left-[5px] mt-1 w-3 h-3 rounded-full bg-[#101fd2]"></div>
+            <h3 class="text-lg font-bold text-gray-900">Innovación y expansión</h3>
+            <p class="text-sm text-gray-500">2023 - Actualidad</p>
+            <p class="mt-1 text-gray-700">Potenciamos nuestra plataforma virtual, integramos herramientas digitales, y consolidamos alianzas estratégicas para incrementar la empleabilidad de nuestros egresados.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Docencia -->
+    <section id="docencia" class="bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 py-12 md:py-16">
+        <div class="mb-8">
+          <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900">Docencia</h2>
+          <p class="text-gray-600 mt-2">Equipo de especialistas y metodología práctica.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="p-6 rounded-2xl border bg-white">
+            <h3 class="font-semibold text-gray-900 mb-2">Experiencia real</h3>
+            <p class="text-gray-700">Docentes con trayectoria en SUNAT, sector empresarial y consultoría, compartiendo casos reales y buenas prácticas.</p>
+          </div>
+          <div class="p-6 rounded-2xl border bg-white">
+            <h3 class="font-semibold text-gray-900 mb-2">Metodología práctica</h3>
+            <p class="text-gray-700">Clases en vivo, materiales descargables, proyectos y evaluaciones aplicadas a escenarios actuales.</p>
+          </div>
+          <div class="p-6 rounded-2xl border bg-white">
+            <h3 class="font-semibold text-gray-900 mb-2">Acompañamiento</h3>
+            <p class="text-gray-700">Tutorías, asesoría académica y soporte constante para garantizar el aprendizaje continuo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>

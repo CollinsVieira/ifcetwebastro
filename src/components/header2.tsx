@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import logoBlanco from "../assets/logo-blanco.png";
+import logoBlanco from "../assets/IFCET-instuto-de-formacion-contable-empresarial-y-tributaria.png";
 import hamburger from "../assets/hamburger.svg";
 import close from "../assets/close.svg";
 import WhatsApp from "../utils/WhatsApp";
@@ -73,12 +73,7 @@ export function Header2() {
               >
                 Docentes
               </a>
-              <a
-                href="/blog"
-                className="text-white hover:text-yellow-300 transition-colors font-medium"
-              >
-                Blog
-              </a>
+              
               <a
                 href="/cursos"
                 className="text-white hover:text-yellow-300 transition-colors font-medium"
@@ -95,19 +90,25 @@ export function Header2() {
                 href="/nosotros"
                 className="text-white hover:text-yellow-300 transition-colors font-medium"
               >
-                Nosotros
+                nosotros
               </a>
               <a
-                href="/aula-virtual"
+                href="/blog"
                 className="text-white hover:text-yellow-300 transition-colors font-medium"
               >
-                Aula Virtual
+                Blog
               </a>
               <a
                 href="/biblioteca"
                 className="text-white hover:text-yellow-300 transition-colors font-medium"
               >
                 Biblioteca
+              </a>
+              <a
+                href="/aula-virtual"
+                className="text-white hover:text-yellow-300 transition-colors font-medium"
+              >
+                Aula Virtual
               </a>
             </nav>
           </div>
