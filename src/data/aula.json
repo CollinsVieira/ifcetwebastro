@@ -28,6 +28,14 @@
       "fullName": "Estudiante Constructoras",
       "courseIds": [5]
     }
+    ,
+    {
+      "id": 5,
+      "username": "minera1",
+      "password": "minera1",
+      "fullName": "Estudiante Minera",
+      "courseIds": [6]
+    }
 
   ],
   "courses": [
@@ -102,6 +110,23 @@
         { "title": "Sesión 2", "url": "https://us02web.zoom.us/rec/play/Q2A9lML0aO-D7iMAu9U-l73sRIdETfMTAWxnnAEMA6Ri_L11n1cDRoeR1d3lRh7fCEZPGGMyeSlNRYmh.knZY0ep2H7MqYLQu?eagerLoadZvaPages=sidemenu.billing.plan_management&accessLevel=meeting&canPlayFromShare=true&from=share_recording_detail&continueMode=true&componentName=rec-play&originRequestUrl=https%3A%2F%2Fus02web.zoom.us%2Frec%2Fshare%2F2yZ2BXV-WK37OacSyAQVYMTo3_QHkakpI6v-s9n2EieM6u2R4VsCSSOD3Hf5Gnla.UWCQhGxC75I345LI" },
         { "title": "Sesión 3", "url": "" },
         { "title": "Sesión 4", "url": "" }
+      ],
+      "materials": [
+        { "title": "", "url": "" }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Contabilidad de Minera",
+      "codename": "contabilidad minera 0625",
+      "zoom": "https://us02web.zoom.us/j/84311600371?pwd=NlS5a7WinbcMoHpHa9hJQrNKDaJ6EC.1",
+      "startDate": "Finalizó.",
+      "schedule": "Finalizó.",
+      "recordings": [
+        { "title": "Sesión 1", "url": "https://us02web.zoom.us/rec/share/ihMOIvI4CtPrCCTCAU-Js72py0AVzlz0rfoB3APuoX_ayaepeDhfAvnvKcMRelW7.SUykDfl7e0OMBTJf" },
+        { "title": "Sesión 2", "url": "https://us02web.zoom.us/rec/share/cGvkGm4GLfxwYuN_Czq_3jTN_nwlDyd3gvMsvFYGuNUcNS9V2Dz6e0jZ0i7VnafL.8AIaymoNFf1hs69r" },
+        { "title": "Sesión 3", "url": "https://us02web.zoom.us/rec/share/V6A5YdkHaMC0geZ10ITjSdI3viATBhWCIyptIGJJnWBUze2dDof52NEzSMgK-dNy.N-keIDkwiM7eV2un" },
+        { "title": "Sesión 4", "url": "https://us02web.zoom.us/rec/share/UlRo9SGkDNDfCIwmQ6g9-qdNMmFTn8ktVk8XiNIW89ykNC4Ip7-mQgeU9Ehr8DsA.iLGXR_dD8PxeEkub " }
       ],
       "materials": [
         { "title": "", "url": "" }
