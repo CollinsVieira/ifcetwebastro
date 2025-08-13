@@ -35,6 +35,21 @@
       "password": "minera1",
       "fullName": "Estudiante Minera",
       "courseIds": [6]
+    },
+    {
+      "id": 6,
+      "username": "asistentecontable",
+      "password": "asistentecontable",
+      "fullName": "Estudiante Asistente Contable",
+      "courseIds": [7]
+    }
+    ,
+    {
+      "id": 7,
+      "username": "pericontable",
+      "password": "pericontable",
+      "fullName": "Estudiante Peritaje",
+      "courseIds": [8]
     }
 
   ],
@@ -130,6 +145,41 @@
       ],
       "materials": [
         { "title": "", "url": "" }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Asistente Contable Tributario",
+      "codename": "asistente contable tributario 0125",
+      "zoom": "https://us02web.zoom.us/j/87417171780?pwd=SvllHTwJeRM8ArTVEY1VTHa49rbNmV.1",
+      "startDate": "13/08/2025",
+      "schedule": "Mar. Jue. Vier. 7:00 p.m. - 9:00 p.m.",
+      "recordings": [
+        { "title": "Sesión 1", "url": "" },
+        { "title": "Sesión 2", "url": "" },
+        { "title": "Sesión 3", "url": "" },
+        { "title": "Sesión 4", "url": "" }
+      ],
+      "materials": [
+        { "title": "", "url": "" }
+      ]
+    }
+    ,
+    {
+      "id": 8,
+      "name": "Peritaje Contable",
+      "codename": "peritaje contable 0325",
+      "zoom": "",
+      "startDate": "",
+      "schedule": "Finalizó.",
+      "recordings": [
+        { "title": "Sesión 1", "url": "https://us02web.zoom.us/rec/share/HTvsQ869SkJxBTuNZTTZFNLSFjaqKRa6j9Rgmx75DeVVFNu5gvywoNp_e8lJtc6W.92pzk8FUgcq9HNrx" },
+        { "title": "Sesión 2", "url": "https://us02web.zoom.us/rec/share/cXmyGNrjr1DS1hMZdyscGrZ18__nFFJLkLsV8-J--6p6PmggUT1SMqAIVGioIIRq.2agPG49d-3YNE4Mx" },
+        { "title": "Sesión 3", "url": "https://us02web.zoom.us/rec/share/PRQz1l_4PDMozOY9aO1LZyJ3ssFeZt5-l9q0itu5juaGgO3j3wRIR5ra5OvQezW3.KfiHNFXp20nDhXoB" },
+        { "title": "Sesión 4", "url": "https://us02web.zoom.us/rec/share/8MThYw38G3LcKE03c5N0R39u_0ue_oWW35DLrDdNcyKGC-ot6-ZT4WvXCc1i4BZ4.p6yQiQnX6vxUqa_n" }
+      ],
+      "materials": [
+        { "title": "Url del Drive", "url": "https://drive.google.com/drive/folders/1NHT6HEZjtIaiScjDN7liJWPYpiXiu3j9?usp=drive_link" }
       ]
     }
   ]
