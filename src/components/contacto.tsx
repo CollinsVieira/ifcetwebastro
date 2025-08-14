@@ -1,7 +1,79 @@
+import React from "react";
 import { ContactForm } from "./ContactForm.tsx";
 import { Aside } from "../components/aside.tsx";
 
 export function ContactoComponent() {
+  const paymentMethods = [
+    {
+      title: "Pagos por Yape y Plin",
+      content: "Nuestro número de YAPE es: 939 292 806 \n\n A nombre del Instituto de Formación Contable, Empresarial y Tributaria",
+      logos: ["/yape-logo.webp", "/plin-logo.webp"],
+      bgColor: "bg-purple-50",
+      borderColor: "border-purple-200"
+    },
+    {
+      title: "Transferencia bancaria o depósito",
+      content: "Número de cuenta BCP: \n305-2546977-0-46  \n\n CCI:\n 00230500254697704612 \n\n A nombre del Instituto de Formación Contable, Empresarial y Tributaria",
+      logos: ["/bcp-logo.svg"],
+      bgColor: "bg-blue-50",
+      borderColor: "border-blue-200"
+    },
+    {
+      title: "Pago con tarjeta – Débito o Crédito",
+      content: "Aceptamos tarjetas de crédito y débito de las principales marcas. \n\n A nombre del Instituto de Formación Contable, Empresarial y Tributaria",
+      logos: ["/visa-master.png"],
+      bgColor: "bg-green-50",
+      borderColor: "border-green-200"
+    },
+    {
+      title: "Pago desde el extranjero – Paypal - Western Union",
+      content: "Correo electrónico: \nifcet.chiclayo@gmail.com \n\n A nombre del Instituto de Formación Contable, Empresarial y Tributaria",
+      logos: ["/paypal-logo.svg", "/western-union-logo.svg"],
+      bgColor: "bg-yellow-50",
+      borderColor: "border-yellow-200"
+    }
+  ];
+
+  const renderLogo = (logoType: string) => {
+    const logoComponents: { [key: string]: React.ReactElement } = {
+      yape: (
+        <div className="bg-purple-600 text-white rounded-xl p-3 shadow-lg">
+          <div className="text-lg font-bold">YAPE</div>
+        </div>
+      ),
+      plin: (
+        <div className="bg-green-500 text-white rounded-xl p-3 shadow-lg">
+          <div className="text-lg font-bold">PLIN</div>
+        </div>
+      ),
+      bcp: (
+        <div className="bg-blue-600 text-white rounded-xl p-3 shadow-lg">
+          <div className="text-lg font-bold">BCP</div>
+        </div>
+      ),
+      visa: (
+        <div className="bg-blue-800 text-white rounded-xl p-3 shadow-lg">
+          <div className="text-lg font-bold">VISA</div>
+        </div>
+      ),
+      mastercard: (
+        <div className="bg-red-600 text-white rounded-xl p-3 shadow-lg">
+          <div className="text-lg font-bold">MC</div>
+        </div>
+      ),
+      paypal: (
+        <div className="bg-blue-700 text-white rounded-xl p-3 shadow-lg">
+          <div className="text-lg font-bold">PayPal</div>
+        </div>
+      )
+    };
+    return logoComponents[logoType] || (
+      <div className="bg-gray-500 text-white rounded-xl p-3 shadow-lg">
+        <div className="text-lg font-bold">💳</div>
+      </div>
+    );
+  };
+
   return (
     <div className="w-full">
       {/* Hero superior (por encima de los Aside) */}
@@ -35,7 +107,7 @@ export function ContactoComponent() {
             {/* Imagen/Placeholder */}
             <div className="relative h-[32vh] md:h-[46vh] flex items-center justify-center">
               <div className="h-full w-full flex items-center justify-center border border-dashed border-white/30 rounded-xl">
-                {/* Insertar imágen aquí: Ilustración de contacto/soporte académico, fondo limpio, formato .webp */}
+                {/* <img src="/contactanos-ifcet.webp" alt="Contacto" className="w-full h-full object-contain" /> */}
               </div>
             </div>
           </div>
@@ -82,19 +154,31 @@ export function ContactoComponent() {
               <div className="mt-4 bg-white/5 border border-black/10 rounded-xl p-4">
                 <h1 className="text-3xl font-bold">Conoce nuestros medios de pago</h1>
                 <p className="text-sm text-pretty text-justify">En <b>IFCET,</b> sabemos que un proceso de matrícula ágil es clave para tu desarrollo académico. Por ello, ofrecemos medios de <b>pago seguros</b>, flexibles y accesibles, <b>incluyendo transferencias bancarias, billeteras digitales, tarjetas y PayPal</b>. A continuación, te detallamos cada opción disponible para que elijas la que mejor se adapte a ti.</p>
-                <div className="flex flex-col gap-4 pt-4">
-                  <div className="bg-black/5 border border-black/10 rounded-xl p-4">
-                    <h3 className="font-semibold">Pagos por Yape y Plin</h3>
-                  </div>
-                  <div className="bg-black/5 border border-black/10 rounded-xl p-4">
-                    <h3 className="font-semibold">Transferencia bancaria o depósito</h3>
-                  </div>
-                  <div className="bg-black/5 border border-black/10 rounded-xl p-4">
-                    <h3 className="font-semibold">Pago con tarjeta – Débito o Crédito</h3>
-                  </div>
-                  <div className="bg-black/5 border border-black/10 rounded-xl p-4">
-                    <h3 className="font-semibold">Pago desde el extranjero – Paypal</h3>
-                  </div>
+                
+                <div className="flex flex-col gap-8 pt-6">
+                  {paymentMethods.map((method, index) => {
+                    const isEven = index % 2 === 0;
+                    
+                    return (
+                      <div key={index} className={`grid grid-cols-1 lg:grid-cols-1 gap-6 items-center ${isEven ? '' : 'lg:grid-flow-col-dense'}`}>
+                        {/* Card con logo */}
+                        <div className={`${isEven ? '' : 'lg:col-start-1'} ${method.bgColor} ${method.borderColor} border-2 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300`}>
+                          <div className="flex flex-col items-center text-center space-y-4">
+                            <div className="flex gap-3 items-center justify-center">
+                              {method.logos.map((logo, logoIndex) => (
+                                <div key={logoIndex}>
+                                  <img src={logo} alt={method.title} className="w-auto h-10" />
+                                </div>
+                              ))}
+                            </div>
+                            <h3 className="text-xl font-bold text-gray-800">{method.title}</h3>
+                            <div className="w-16 h-1 bg-gradient-to-r from-[#ffb403] to-orange-400 rounded-full"></div>
+                            <p className="text-sm text-gray-700 whitespace-pre-line">{method.content}</p>
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
               <div className="mt-12">
