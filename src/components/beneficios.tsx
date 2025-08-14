@@ -30,7 +30,7 @@ export function Beneficios() {
         "En el Instituto de Formación Contable, Empresarial y Tributaria (IFCET), nos comprometemos a reembolsar el 100% del pago de la matrícula en casos de fuerza mayor.",
       icon: <HandCoins />,
       enlace: "Para mas información haga click aquí.",
-      url: "/politica-de-reembolsos",
+      url: "/politica-de-reembolso",
     },    
     
   ];

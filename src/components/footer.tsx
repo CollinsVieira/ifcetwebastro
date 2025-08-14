@@ -18,6 +18,7 @@ export function FooterComponent() {
                 <a
                   href="/mensaje-gerencial"
                   className="hover:text-[#fab500] transition-colors"
+                  target="_blank"
                 >
                   Mensaje Gerencial
                 </a>
@@ -26,6 +27,7 @@ export function FooterComponent() {
                 <a
                   href="/resena-historica"
                   className="hover:text-[#fab500] transition-colors"
+                  target="_blank"
                 >
                   Reseña Histórica
                 </a>
@@ -34,6 +36,7 @@ export function FooterComponent() {
                 <a
                   href="/mision-vision"
                   className="hover:text-[#fab500] transition-colors"
+                  target="_blank"
                 >
                   Misión y Visión
                 </a>
@@ -42,6 +45,7 @@ export function FooterComponent() {
                 <a
                   href="/docencia"
                   className="hover:text-[#fab500] transition-colors"
+                  target="_blank"
                 >
                   Docencia
                 </a>
@@ -57,6 +61,7 @@ export function FooterComponent() {
                 <a
                   href="https://www.facebook.com/ifcet.contables"
                   className="hover:text-[#fab500] transition-colors flex items-center gap-2"
+                  target="_blank"
                 >
                   <Facebook size={16} />
                   Facebook
@@ -66,6 +71,7 @@ export function FooterComponent() {
                 <a
                   href="https://www.instagram.com/ifcet.contables/"
                   className="hover:text-[#fab500] transition-colors flex items-center gap-2"
+                  target="_blank"
                 >
                   <Instagram size={16} />
                   Instagram
@@ -75,6 +81,7 @@ export function FooterComponent() {
                 <a
                   href="https://www.tiktok.com/@ifcet.contables"
                   className="hover:text-[#fab500] transition-colors flex items-center gap-2"
+                  target="_blank"
                 >
                   <svg
                     className="w-4 h-4"
@@ -90,6 +97,7 @@ export function FooterComponent() {
                 <a
                   href="https://www.youtube.com/@ifcetcontables1161"
                   className="hover:text-[#fab500] transition-colors flex items-center gap-2"
+                  target="_blank"
                 >
                   <Youtube size={16} />
                   YouTube
@@ -107,6 +115,7 @@ export function FooterComponent() {
                   href="mailto:informes@ifcet.com.pe"
                   className="hover:text-[#fab500] transition-colors"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   informes@ifcet.com.pe
                 </a>
@@ -116,6 +125,7 @@ export function FooterComponent() {
                   href="tel:+51983395385"
                   className="hover:text-[#fab500] transition-colors"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   +51 950 268 31
                 </a>

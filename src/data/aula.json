@@ -43,14 +43,20 @@
       "docente": "William Mendoza",
       "fullName": "Estudiante Asistente Contable",
       "courseIds": [7]
-    }
-    ,
+    },
     {
       "id": 7,
       "username": "pericontable",
       "password": "pericontable",
       "fullName": "Estudiante Peritaje",
       "courseIds": [8]
+    },
+    {
+      "id": 8,
+      "username": "dmensual",
+      "password": "dmensual",
+      "fullName": "Declaraciones Mensuales",
+      "courseIds": [9]
     }
 
   ],
@@ -145,7 +151,10 @@
         { "title": "Sesión 4", "url": "https://us02web.zoom.us/rec/share/UlRo9SGkDNDfCIwmQ6g9-qdNMmFTn8ktVk8XiNIW89ykNC4Ip7-mQgeU9Ehr8DsA.iLGXR_dD8PxeEkub " }
       ],
       "materials": [
-        { "title": "", "url": "" }
+        { "title": "Materiales 1", "url": "https://drive.google.com/drive/folders/1OSIf9KmApMAOWPWGEOaPkYFcYwz77Men?usp=sharing" },
+        { "title": "Materiales 2", "url": "https://drive.google.com/drive/folders/124P8YBMQzYK-hmk_WPS-v-udVRsunBUD?usp=sharing" },
+        { "title": "Materiales 3", "url": "https://drive.google.com/drive/folders/1dDeX7j3wl5TjokjOGXMFEZBo_b760_6i?usp=sharing" },
+        { "title": "Materiales 4", "url": "https://drive.google.com/drive/folders/1Sm_8NjpPF0t4cT_OK2OjeDOJXpRz6G7T?usp=sharing" }
       ]
     },
     {
@@ -164,8 +173,7 @@
       "materials": [
         { "title": "", "url": "" }
       ]
-    }
-    ,
+    },
     {
       "id": 8,
       "name": "Peritaje Contable",
@@ -181,6 +189,25 @@
       ],
       "materials": [
         { "title": "Url del Drive", "url": "https://drive.google.com/drive/folders/1NHT6HEZjtIaiScjDN7liJWPYpiXiu3j9?usp=drive_link" }
+      ]
+    }
+    ,
+    {
+      "id": 8,
+      "name": "Declaraciones Mensuales",
+      "codename": "declaraciones mensuales 0125",
+      "zoom": "",
+      "startDate": "16/02/2025",
+      "schedule": "Finalizó.",
+      "recordings": [
+        { "title": "Sesión 1", "url": "https://us02web.zoom.us/rec/share/jJDNdve2uIaiQ7n3GGAiTNeR1_GavHmu6a82j_J7KNfeBG19V_6TUpnQVKs6T486.qb9Fi4krnM6ULcd-" },
+        { "title": "Sesión 1", "url": "https://us02web.zoom.us/rec/share/1BKBAwLuytgJqAKwR4S7M2QskyNJnXsQWznIlV0wwifQMaIX8dtiikOMOMFhmH15.rPWr62Uph0KPoVMA" },
+        { "title": "Sesión 1", "url": "https://us02web.zoom.us/rec/share/7GCFs5HJkMV4jtxYLjLCIpK4TRlmDcl9C5a2HEHy6PxOeu_oijIKEUlwsH-J1iO_.kdX5jlBZBRTm6RP4" }
+      ],
+      "materials": [
+        { "title": "Material 1", "url": "https://drive.google.com/drive/folders/128teI6oTlz_B884FjC7sKxNGHiVKKJ76?usp=sharing" },
+        { "title": "Material 2", "url": "https://drive.google.com/drive/folders/133Y61jBc9g-brE3TZbEmSu-b7v27G1yF?usp=sharing" },
+        { "title": "Material 3", "url": "https://drive.google.com/drive/folders/10MfBPb5R3U8kNQOR2sQ8H80UoWncQ5Dn?usp=sharing" }
       ]
     }
   ]
