@@ -1,9 +1,15 @@
 [
   {
     "nombre": "Fundamentos de Contabilidad",
-    "categoria": "Contabilidad",
-    "imagen": "https://www.ifcet.com.pe/wp-content/uploads/2022/08/Tributacion-Laboral-Gaceta-Juridica-2017-1.jpg",
-    "url": "https://drive.google.com/file/d/1-example-id-abc/view?usp=sharing"
+    "categoria": "Tributación Laboral",
+    "imagen": "/Tributacion-laboral-libro.webp",
+    "url": "https://drive.google.com/file/d/1pENOWshSvXBozwz0uXbJENooS9meE_z5/view"
+  },
+  {
+    "nombre": "Estados Financieros de Acuerdo a las NIC",
+    "categoria": "Contabilidad Financiera",
+    "imagen": "/Estados-financieros-libro.webp",
+    "url": "https://drive.google.com/file/d/1YEKbuCGlNI6sb1JlNO2A1OHed0FlpeIZ/view"
   }
 ]
 
