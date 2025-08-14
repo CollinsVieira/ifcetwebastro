@@ -40,6 +40,7 @@
       "id": 6,
       "username": "asistentecontable",
       "password": "asistentecontable",
+      "docente": "William Mendoza",
       "fullName": "Estudiante Asistente Contable",
       "courseIds": [7]
     }
@@ -155,7 +156,7 @@
       "startDate": "13/08/2025",
       "schedule": "Mar. Jue. Vier. 7:00 p.m. - 9:00 p.m.",
       "recordings": [
-        { "title": "Sesión 1", "url": "" },
+        { "title": "Sesión 1", "url": "https://us02web.zoom.us/rec/share/2u6MPUWbepSbEIP1vefUDgoDuhEhO16ZfTbIFzK4BXRjhIKFfq-grWUhHps7-mmU.h6AWbscr_gk5w5Jr" },
         { "title": "Sesión 2", "url": "" },
         { "title": "Sesión 3", "url": "" },
         { "title": "Sesión 4", "url": "" }
