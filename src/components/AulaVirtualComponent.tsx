@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import type React from "react";
 import data from "../data/aula.json";
+import { LoginComponent } from "./LoginComponent";
 
 interface User {
   id: number;
@@ -24,6 +25,8 @@ interface Course {
   materials: Material[];
   zoom: string;
 }
+
+// El componente LoginForm ha sido movido a LoginComponent.tsx
 
 export function AulaVirtualComponent() {
   const users: User[] = data.users as any;
@@ -146,8 +149,7 @@ export function AulaVirtualComponent() {
     localStorage.setItem('activeCourseId', String(activeCourseId));
   }, [activeCourseId, canAccessCourse]);
 
-  const handleLogin = (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleLogin = (username: string, password: string) => {
     setError(null);
     const found = users.find((u) => u.username === username && u.password === password);
     if (!found) {
@@ -174,55 +176,14 @@ export function AulaVirtualComponent() {
   };
 
   if (!loggedUser) {
-    return (
-      <section className="min-h-[100vh] grid place-items-center bg-gradient-to-b from-slate-900 via-slate-900 to-black text-white">
-        <div className="w-full max-w-md p-6 rounded-2xl bg-white/10 backdrop-blur border border-white/10">
-          <h1 className="text-2xl font-bold mb-1 text-center">Aula Virtual</h1>
-          <p className="text-white/70 mb-6">Accede con tu usuario y contraseña asignados.</p>
-
-          <form onSubmit={handleLogin} className="space-y-4">
-            <div>
-              <label className="block text-sm mb-1">Usuario</label>
-              <input
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-                className="w-full rounded-lg bg-white/90 text-black px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#ffb403]"
-                placeholder="usuario"
-                autoComplete="contraseña"
-              />
-            </div>
-            <div>
-              <label className="block text-sm mb-1">Contraseña</label>
-              <input
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                className="w-full rounded-lg bg-white/90 text-black px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#ffb403]"
-                placeholder="••••••••"
-                autoComplete="current-password"
-              />
-            </div>
-
-            {error && (
-              <div className="text-sm text-red-300">{error}</div>
-            )}
-
-            <button
-              type="submit"
-              className="w-full bg-[#ffb403] text-black font-semibold px-4 py-2.5 rounded-lg hover:brightness-95 transition"
-            >
-              Ingresar
-            </button>
-          </form>
-        </div>
-      </section>
-    );
+    return <LoginComponent onLogin={handleLogin} />;
   }
 
   const activeCourse = myCourses.find((c) => c.id === activeCourseId) || myCourses[0];
 
   return (
     <section className="min-h-screen bg-slate-50">
+      {/* Header solo se muestra cuando el usuario está logueado */}
       <div className="min-h-[10vh] bg-[#191c29]/90">
       </div>
       <div className="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-6">
