@@ -166,12 +166,12 @@
       "schedule": "Mar. Jue. Vier. 7:00 p.m. - 9:00 p.m.",
       "recordings": [
         { "title": "Sesión 1", "url": "https://us02web.zoom.us/rec/share/2u6MPUWbepSbEIP1vefUDgoDuhEhO16ZfTbIFzK4BXRjhIKFfq-grWUhHps7-mmU.h6AWbscr_gk5w5Jr" },
-        { "title": "Sesión 2", "url": "" },
+        { "title": "Sesión 2", "url": "https://us02web.zoom.us/rec/share/xLF0TOQ8E261zNDjNgj1xw6UKtjs_s0IZcsJWDpJ7Z_b4E5e9-Sju8yzqqfJBqIE.9nJBLOKncB5kiZfN" },
         { "title": "Sesión 3", "url": "" },
         { "title": "Sesión 4", "url": "" }
       ],
       "materials": [
-        { "title": "", "url": "" }
+        { "title": "Material", "url": "https://docs.google.com/presentation/d/1e8GagYAyIZ0vDNFRWbA-euM5Ho9OPrmW/edit?usp=sharing&ouid=112580292696143211510&rtpof=true&sd=true" }
       ]
     },
     {
@@ -182,7 +182,7 @@
       "startDate": "",
       "schedule": "Finalizó.",
       "recordings": [
-        { "title": "Sesión 1", "url": "https://us02web.zoom.us/rec/share/HTvsQ869SkJxBTuNZTTZFNLSFjaqKRa6j9Rgmx75DeVVFNu5gvywoNp_e8lJtc6W.92pzk8FUgcq9HNrx" },
+        { "title": "Sesión 1", "url": "https://us02web.zoom.us/rec/share/ZilFXVZTZfLLT2jxfMC4lSbcY_qBJWoMz_zFPLQyPGSakSaAVJ6uDLbNk1N7CXT7.x64NYDvhiIMlRH8i" },
         { "title": "Sesión 2", "url": "https://us02web.zoom.us/rec/share/cXmyGNrjr1DS1hMZdyscGrZ18__nFFJLkLsV8-J--6p6PmggUT1SMqAIVGioIIRq.2agPG49d-3YNE4Mx" },
         { "title": "Sesión 3", "url": "https://us02web.zoom.us/rec/share/PRQz1l_4PDMozOY9aO1LZyJ3ssFeZt5-l9q0itu5juaGgO3j3wRIR5ra5OvQezW3.KfiHNFXp20nDhXoB" },
         { "title": "Sesión 4", "url": "https://us02web.zoom.us/rec/share/8MThYw38G3LcKE03c5N0R39u_0ue_oWW35DLrDdNcyKGC-ot6-ZT4WvXCc1i4BZ4.p6yQiQnX6vxUqa_n" }

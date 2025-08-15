@@ -30,6 +30,8 @@ export function BlogComponent() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [selectedPost, setSelectedPost] = useState<Post | null>(null);
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  const [postsPerPage] = useState<number>(3);
 
   const featuredPosts = posts.filter(post => post.featured);
   const filteredPosts = posts.filter(post => {
@@ -39,6 +41,17 @@ export function BlogComponent() {
                          post.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     return matchesCategory && matchesSearch;
   });
+
+  // Lógica de paginación
+  const totalPages = Math.ceil(filteredPosts.length / postsPerPage);
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentPosts = filteredPosts.slice(indexOfFirstPost, indexOfLastPost);
+
+  // Resetear página cuando cambie la búsqueda o categoría
+  const resetPage = () => {
+    setCurrentPage(1);
+  };
 
   const getCategoryInfo = (categoryId: string) => {
     return categories.find(cat => cat.id === categoryId);
@@ -359,7 +372,7 @@ export function BlogComponent() {
                 key={post.id}
                 onClick={() => handlePostClick(post)}
                 className={`group cursor-pointer bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105 ${
-                  index === 0 ? 'md:col-span-2 md:row-span-2' : ''
+                  index === 0 ? 'md:col-span-2 md:row-span-1' : ''
                 }`}
               >
                 {post.image && (
@@ -423,7 +436,10 @@ export function BlogComponent() {
                     type="text"
                     placeholder="Buscar artículos..."
                     value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
+                    onChange={(e) => {
+                      setSearchTerm(e.target.value);
+                      resetPage();
+                    }}
                     className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
                   <svg
@@ -445,7 +461,10 @@ export function BlogComponent() {
               {/* Categorías */}
               <div className="flex flex-wrap gap-3">
                 <button
-                  onClick={() => setSelectedCategory('all')}
+                  onClick={() => {
+                    setSelectedCategory('all');
+                    resetPage();
+                  }}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                     selectedCategory === 'all'
                       ? 'bg-blue-600 text-white'
@@ -457,7 +476,10 @@ export function BlogComponent() {
                 {categories.map((category) => (
                   <button
                     key={category.id}
-                    onClick={() => setSelectedCategory(category.id)}
+                    onClick={() => {
+                      setSelectedCategory(category.id);
+                      resetPage();
+                    }}
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                       selectedCategory === category.id
                         ? `${category.color} text-white`
@@ -473,6 +495,19 @@ export function BlogComponent() {
 
           {/* Lista de Artículos */}
           <section className="max-w-7xl mx-auto px-4 py-12">
+            {/* Información de resultados */}
+            {filteredPosts.length > 0 && (
+              <div className="flex justify-between items-center mb-6">
+                <p className="text-sm text-gray-600">
+                  Mostrando {indexOfFirstPost + 1}-{Math.min(indexOfLastPost, filteredPosts.length)} de {filteredPosts.length} artículos
+                </p>
+                {totalPages > 1 && (
+                  <p className="text-sm text-gray-600">
+                    Página {currentPage} de {totalPages}
+                  </p>
+                )}
+              </div>
+            )}
             {filteredPosts.length === 0 ? (
               <div className="text-center py-12">
                 <svg
@@ -494,57 +529,104 @@ export function BlogComponent() {
                 </p>
               </div>
             ) : (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filteredPosts.map((post) => (
-                  <article
-                    key={post.id}
-                    onClick={() => handlePostClick(post)}
-                    className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow cursor-pointer group"
-                  >
-                    {post.image && (
-                      <div className="w-full h-48 overflow-hidden rounded-t-xl">
-                        <img
-                          src={post.image}
-                          alt={post.title}
-                          className="w-full h-full object-cover"
-                          loading="lazy"
-                        />
-                      </div>
-                    )}
-                    <div className="p-6">
-                      <div className="flex items-center space-x-3 mb-4">
-                        <span className={`px-3 py-1 rounded-full sm:text-[11px] text-white text-[clamp(0.6rem,1.5vw,0.8rem)] font-medium ${getCategoryInfo(post.category)?.color}`}>
-                          {getCategoryInfo(post.category)?.name}
-                        </span>
-                        <span className="text-sm text-gray-500">{post.readTime}</span>
-                      </div>
-
-                      <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                        {post.title}
-                      </h3>
-
-                      <p className="text-gray-600 mb-4 line-clamp-3">
-                        {post.excerpt}
-                        </p>
-
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center space-x-3">
-                          <div className="w-10 h-10 rounded-full items-center justify-center hidden 2xl:flex 2xl:bg-amber-200">
-                            <span className="text-black font-bold text-sm">
-                              {post.author.split(' ').map(n => n[0]).join('')}
-                            </span>
-                          </div>
-                          <div>
-                            <p className="font-medium text-gray-900 text-sm">{post.author}</p>
-                            <p className="text-xs text-gray-500">{post.authorRole}</p>
-                          </div>
+              <>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {currentPosts.map((post) => (
+                    <article
+                      key={post.id}
+                      onClick={() => handlePostClick(post)}
+                      className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow cursor-pointer group"
+                    >
+                      {post.image && (
+                        <div className="w-full h-48 overflow-hidden rounded-t-xl">
+                          <img
+                            src={post.image}
+                            alt={post.title}
+                            className="w-full h-full object-cover"
+                            loading="lazy"
+                          />
                         </div>
-                        <span className="text-sm text-gray-500">{formatDate(post.publishedAt)}</span>
+                      )}
+                      <div className="p-6">
+                        <div className="flex items-center space-x-3 mb-4">
+                          <span className={`px-3 py-1 rounded-full sm:text-[11px] text-white text-[clamp(0.6rem,1.5vw,0.8rem)] font-medium ${getCategoryInfo(post.category)?.color}`}>
+                            {getCategoryInfo(post.category)?.name}
+                          </span>
+                          <span className="text-sm text-gray-500">{post.readTime}</span>
+                        </div>
+
+                        <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                          {post.title}
+                        </h3>
+
+                        <p className="text-gray-600 mb-4 line-clamp-3">
+                          {post.excerpt}
+                          </p>
+
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center space-x-3">
+                            <div className="w-10 h-10 rounded-full items-center justify-center hidden 2xl:flex 2xl:bg-amber-200">
+                              <span className="text-black font-bold text-sm">
+                                {post.author.split(' ').map(n => n[0]).join('')}
+                              </span>
+                            </div>
+                            <div>
+                              <p className="font-medium text-gray-900 text-sm">{post.author}</p>
+                              <p className="text-xs text-gray-500">{post.authorRole}</p>
+                            </div>
+                          </div>
+                          <span className="text-sm text-gray-500">{formatDate(post.publishedAt)}</span>
+                        </div>
                       </div>
+                    </article>
+                  ))}
+                </div>
+                
+                {/* Paginación */}
+                {totalPages > 1 && (
+                  <div className="flex justify-center items-center mt-12 space-x-2">
+                    <button
+                      onClick={() => setCurrentPage(currentPage - 1)}
+                      disabled={currentPage === 1}
+                      className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                        currentPage === 1
+                          ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
+                          : 'bg-white border border-gray-300 text-gray-700 hover:bg-gray-50'
+                      }`}
+                    >
+                      Anterior
+                    </button>
+                    
+                    <div className="flex space-x-1">
+                      {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                        <button
+                          key={page}
+                          onClick={() => setCurrentPage(page)}
+                          className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+                            currentPage === page
+                              ? 'bg-blue-600 text-white'
+                              : 'bg-white border border-gray-300 text-gray-700 hover:bg-gray-50'
+                          }`}
+                        >
+                          {page}
+                        </button>
+                      ))}
                     </div>
-                  </article>
-                ))}
-              </div>
+                    
+                    <button
+                      onClick={() => setCurrentPage(currentPage + 1)}
+                      disabled={currentPage === totalPages}
+                      className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                        currentPage === totalPages
+                          ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
+                          : 'bg-white border border-gray-300 text-gray-700 hover:bg-gray-50'
+                      }`}
+                    >
+                      Siguiente
+                    </button>
+                  </div>
+                )}
+              </>
             )}
           </section>
         </main>
