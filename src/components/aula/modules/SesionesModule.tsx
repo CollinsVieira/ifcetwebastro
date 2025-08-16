@@ -1,4 +1,5 @@
 import type React from "react";
+import zoom from "../../../assets/zoom.webp";
 
 interface Recording {
   id: number;
@@ -78,8 +79,8 @@ export function SesionesModule({ course }: SesionesModuleProps) {
             <div className="flex flex-col lg:flex-row lg:items-start gap-4 lg:gap-6">
               {/* Video Thumbnail/Icon */}
               <div className="flex items-center gap-4 lg:gap-0 lg:flex-shrink-0">
-                <div className="h-12 w-12 lg:h-16 lg:w-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg lg:rounded-xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300 flex-shrink-0">
-                  <VideoIcon className="h-6 w-6 lg:h-8 lg:w-8 text-white" />
+                <div className="h-12 w-12 lg:h-16 lg:w-16 bg-blue-500 rounded-lg lg:rounded-xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300 flex-shrink-0">
+                  <img src={zoom.src} alt="Video Icon" className="h-full object-cover" />
                 </div>
                 
                 {/* Title on mobile - inline with icon */}

@@ -234,7 +234,7 @@ export function AulaVirtualComponent() {
   return (
     <div className="h-screen bg-gradient-to-br from-slate-50 to-blue-50/30 flex flex-col overflow-hidden">
       {/* Top Header Bar */}
-      <div className="h-12 bg-gradient-to-r from-[#191c29] to-[#2d3748] shadow-lg flex items-center px-4 lg:px-6 flex-shrink-0">
+      <div className="h-12 bg-gradient-to-r from-[#191c29] to-[#2d3748] shadow-lg flex items-center px-4 lg:px-6 flex-shrink-0 bg-transparent">
         {/* Mobile Menu Button */}
         <button
           onClick={() => setSidebarOpen(!sidebarOpen)}
@@ -257,7 +257,7 @@ export function AulaVirtualComponent() {
         {/* Mobile Sidebar Overlay */}
         {sidebarOpen && (
           <div 
-            className="lg:hidden fixed inset-0 bg-black bg-opacity-50 z-40"
+            className="lg:hidden fixed inset-0 bg-transparent z-40"
             onClick={() => setSidebarOpen(false)}
           />
         )}
@@ -303,6 +303,11 @@ export function AulaVirtualComponent() {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div className="h-12 bg-gradient-to-r from-[#191c29] to-[#2d3748] shadow-lg flex items-center px-4 lg:px-6 flex-shrink-0 ">
+        <div className="text-white text-sm text-center">
+          <p>IFCET - Instituto de Formación Contable, Empresarial y Tributaria</p>
         </div>
       </div>
     </div>

@@ -85,30 +85,32 @@ export function AulaCourseHeader({ course, error }: CourseHeaderProps) {
   };
 
   return (
-    <div className="bg-white/80 backdrop-blur-sm border border-gray-200/50 rounded-2xl p-6 mb-6">
-      <div className="flex flex-wrap items-start justify-between gap-6">
+    <div className="bg-white/80 backdrop-blur-sm border border-gray-200/50 rounded-2xl p-4 sm:p-6 mb-6">
+      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 sm:gap-6">
         <div className="flex-1 min-w-0">
-          <div className="flex items-center gap-3 mb-3">
-            <h1 className="text-2xl font-bold text-gray-900 truncate">{course.name}</h1>
-            <span className={`px-3 py-1 text-xs font-medium border rounded-full ${getStatusColor(course.status)}`}>
-              {getStatusText(course.status)}
-            </span>
-            {course.codename && (
-              <span className="px-2 py-1 text-xs bg-gray-100 text-gray-600 rounded-md font-mono">
-                {course.codename}
+          <div className="flex flex-col gap-2 mb-3">
+            <h1 className="text-lg sm:text-2xl font-bold text-gray-900">{course.name}</h1>
+            <div className="flex flex-wrap items-center gap-2">
+              <span className={`px-2 sm:px-3 py-1 text-xs font-medium border rounded-full ${getStatusColor(course.status)}`}>
+                {getStatusText(course.status)}
               </span>
-            )}
+              {course.codename && (
+                <span className="px-2 py-1 text-xs bg-gray-100 text-gray-600 rounded-md font-mono">
+                  {course.codename}
+                </span>
+              )}
+            </div>
           </div>
           
           <p className="text-gray-600 mb-4 leading-relaxed">{course.description}</p>
           
-          <div className="flex flex-wrap items-center gap-6 text-sm text-gray-600">
+          <div className="flex flex-wrap items-center gap-3 sm:gap-6 text-xs sm:text-sm text-gray-600">
             <div className="flex items-center gap-2">
-              <UserIcon className="h-4 w-4 text-blue-500" />
+              <UserIcon className="h-3 w-3 sm:h-4 sm:w-4 text-blue-500" />
               <span className="font-medium">{course.instructor}</span>
             </div>
             <div className="flex items-center gap-2">
-              <CalendarIcon className="h-4 w-4 text-blue-500" />
+              <CalendarIcon className="h-3 w-3 sm:h-4 sm:w-4 text-blue-500" />
               <span>{course.schedule}</span>
             </div>
             <div className="flex items-center gap-2">
@@ -122,17 +124,17 @@ export function AulaCourseHeader({ course, error }: CourseHeaderProps) {
           </div>
         </div>
         
-        <div className="flex items-center gap-4">
-          <div className="flex items-center gap-3 text-sm">
-            <div className="flex items-center gap-1 px-3 py-2 bg-blue-50 text-blue-700 rounded-lg border border-blue-100">
-              <VideoIcon className="h-4 w-4" /> 
-              <span className="font-medium">{course.recordings.length}</span>
-              <span className="text-blue-600">sesiones</span>
+        <div className="flex flex-col sm:flex-row items-end sm:items-center gap-3 sm:gap-4">
+          <div className="flex items-center gap-2 sm:gap-3 text-sm">
+            <div className="flex items-center gap-1 px-2 sm:px-3 py-1.5 sm:py-2 bg-blue-50 text-blue-700 rounded-lg border border-blue-100">
+              <VideoIcon className="h-3 w-3 sm:h-4 sm:w-4" /> 
+              <span className="font-medium text-xs sm:text-sm">{course.recordings.length}</span>
+              <span className="text-blue-600 text-xs sm:text-sm hidden sm:inline">sesiones</span>
             </div>
-            <div className="flex items-center gap-1 px-3 py-2 bg-emerald-50 text-emerald-700 rounded-lg border border-emerald-100">
-              <FileIcon className="h-4 w-4" /> 
-              <span className="font-medium">{course.materials.length}</span>
-              <span className="text-emerald-600">archivos</span>
+            <div className="flex items-center gap-1 px-2 sm:px-3 py-1.5 sm:py-2 bg-emerald-50 text-emerald-700 rounded-lg border border-emerald-100">
+              <FileIcon className="h-3 w-3 sm:h-4 sm:w-4" /> 
+              <span className="font-medium text-xs sm:text-sm">{course.materials.length}</span>
+              <span className="text-emerald-600 text-xs sm:text-sm hidden sm:inline">archivos</span>
             </div>
           </div>
           
@@ -141,10 +143,11 @@ export function AulaCourseHeader({ course, error }: CourseHeaderProps) {
               href={course.zoom} 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="flex items-center gap-2 px-4 py-2.5 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-all duration-200 shadow-lg shadow-blue-500/25 font-medium"
+              className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 sm:py-2.5 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-all duration-200 shadow-lg shadow-blue-500/25 font-medium text-xs sm:text-sm"
             >
-              <VideoIcon className="h-4 w-4" />
-              Clase en vivo
+              <VideoIcon className="h-3 w-3 sm:h-4 sm:w-4" />
+              <span className="hidden sm:inline">Clase en vivo</span>
+              <span className="sm:hidden">En vivo</span>
             </a>
           )}
         </div>

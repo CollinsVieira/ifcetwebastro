@@ -97,7 +97,7 @@ export function AulaSidebar({ user, courses, activeCourseId, activeModule, onCou
   ] as const;
 
   return (
-    <aside className="w-full h-full bg-white/95 backdrop-blur-sm border-r border-gray-200/50 flex flex-col overflow-hidden">
+    <aside className="w-full h-full bg-white/90 sm:bg-white/95 backdrop-blur-sm border-r border-gray-200/50 flex flex-col overflow-hidden">
       {/* Scrollable Content */}
       <div className="flex-1 overflow-y-auto">
         {/* User Profile Section */}
@@ -189,20 +189,21 @@ export function AulaSidebar({ user, courses, activeCourseId, activeModule, onCou
       </div>
 
       {/* Bottom Actions - Fixed */}
-      <div className="p-4 lg:p-6 border-t border-gray-100 space-y-2 lg:space-y-3 flex-shrink-0 bg-white/95">
-        <a 
-          href="/contacto#contacto" 
-          className="block w-full text-center px-3 lg:px-4 py-2 lg:py-2.5 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-all duration-200 text-xs lg:text-sm font-medium"
-        >
-          Soporte Técnico
-        </a>
-        <button 
+      <div className="p-4 lg:p-6 border-t border-gray-100 space-y-2 lg:space-y-3 flex-shrink-0 bg-white/90 sm:bg-white/95 mb-10 sm:mb-0">
+      <button 
           onClick={onLogout} 
           className="w-full flex items-center justify-center gap-2 px-3 lg:px-4 py-2 lg:py-2.5 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-all duration-200 text-xs lg:text-sm font-medium"
         >
           <LogoutIcon className="h-3 w-3 lg:h-4 lg:w-4" />
           Cerrar Sesión
         </button>
+        <a 
+          href="/contacto#contacto" 
+          className="block w-full text-center px-3 lg:px-4 py-2 lg:py-2.5 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-all duration-200 text-xs lg:text-sm font-medium"
+        >
+          Soporte Técnico
+        </a>
+        
       </div>
     </aside>
   );
