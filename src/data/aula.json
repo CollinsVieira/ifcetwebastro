@@ -5,210 +5,559 @@
       "username": "alumno1",
       "password": "ifcet2025",
       "fullName": "Alumno Demo 1",
-      "courseIds": [1, 2]
+      "email": "alumno1@ifcet.edu.pe",
+      "courseIds": [1, 2],
+      "enrollmentDate": "2025-01-15",
+      "avatar": null,
+      "progress": {
+        "1": 85,
+        "2": 60
+      }
     },
     {
       "id": 2,
       "username": "alumno2",
       "password": "ifcet2025",
       "fullName": "Alumno Demo 2",
-      "courseIds": [3]
+      "email": "alumno2@ifcet.edu.pe",
+      "courseIds": [3],
+      "enrollmentDate": "2025-01-20",
+      "avatar": null,
+      "progress": {
+        "3": 75
+      }
     },
     {
       "id": 3,
       "username": "contabilidadm",
       "password": "contabilidadm",
       "fullName": "Estudiante Minera",
-      "courseIds": [4]
+      "email": "minera@ifcet.edu.pe",
+      "courseIds": [4],
+      "enrollmentDate": "2025-07-01",
+      "avatar": null,
+      "progress": {
+        "4": 90
+      }
     },
     {
       "id": 4,
       "username": "continmobiliarias",
       "password": "continmobiliarias",
       "fullName": "Estudiante Constructoras",
-      "courseIds": [5]
-    }
-    ,
+      "email": "constructoras@ifcet.edu.pe",
+      "courseIds": [5],
+      "enrollmentDate": "2025-06-15",
+      "avatar": null,
+      "progress": {
+        "5": 78
+      }
+    },
     {
       "id": 5,
       "username": "minera1",
       "password": "minera1",
       "fullName": "Estudiante Minera",
-      "courseIds": [6]
+      "email": "minera1@ifcet.edu.pe",
+      "courseIds": [6],
+      "enrollmentDate": "2025-05-20",
+      "avatar": null,
+      "progress": {
+        "6": 100
+      }
     },
     {
       "id": 6,
       "username": "asistentecontable",
       "password": "asistentecontable",
-      "docente": "William Mendoza",
       "fullName": "Estudiante Asistente Contable",
-      "courseIds": [7]
+      "email": "asistente@ifcet.edu.pe",
+      "docente": "William Mendoza",
+      "courseIds": [7],
+      "enrollmentDate": "2025-08-01",
+      "avatar": null,
+      "progress": {
+        "7": 45
+      }
     },
     {
       "id": 7,
       "username": "pericontable",
       "password": "pericontable",
       "fullName": "Estudiante Peritaje",
-      "courseIds": [8]
+      "email": "peritaje@ifcet.edu.pe",
+      "courseIds": [8],
+      "enrollmentDate": "2025-03-01",
+      "avatar": null,
+      "progress": {
+        "8": 100
+      }
     },
     {
       "id": 8,
       "username": "dmensual",
       "password": "dmensual",
       "fullName": "Declaraciones Mensuales",
-      "courseIds": [9]
+      "email": "declaraciones@ifcet.edu.pe",
+      "courseIds": [9],
+      "enrollmentDate": "2025-01-30",
+      "avatar": null,
+      "progress": {
+        "9": 100
+      }
     }
-
   ],
   "courses": [
     {
       "id": 1,
       "name": "Asistente Contable Tributario",
+      "description": "Curso completo de formación en contabilidad y tributación empresarial",
+      "instructor": "CPC. Miguel Carrillo Bautista",
       "zoom": "https://zoom.us/j/91288922269?pwd=1234567890",
       "startDate": "2025-08-12",
+      "endDate": "2025-11-15",
       "schedule": "Mar y Jue 7:00 p.m. - 9:00 p.m.",
+      "status": "active",
+      "totalSessions": 24,
       "recordings": [
-        { "title": "Sesión 1 - Introducción", "url": "https://zoom.us/rec/sesion1-demo" },
-        { "title": "Sesión 2 - IGV", "url": "https://zoom.us/rec/sesion2-demo" }
+        { 
+          "id": 1,
+          "title": "Sesión 1 - Introducción a la Contabilidad", 
+          "url": "https://zoom.us/rec/sesion1-demo",
+          "duration": "2h 15min",
+          "date": "2025-08-12",
+          "description": "Fundamentos básicos de la contabilidad empresarial"
+        },
+        { 
+          "id": 2,
+          "title": "Sesión 2 - IGV y Aspectos Tributarios", 
+          "url": "https://zoom.us/rec/sesion2-demo",
+          "duration": "2h 05min",
+          "date": "2025-08-14",
+          "description": "Manejo del IGV en operaciones comerciales"
+        }
       ],
       "materials": [
-        { "title": "Sílabo del curso (PDF)", "url": "/materiales/silabo-asistente-contable.pdf" },
-        { "title": "Plantilla Excel - Libro Diario", "url": "/materiales/plantilla-libro-diario.xlsx" }
+        { 
+          "id": 1,
+          "title": "Sílabo del curso (PDF)", 
+          "url": "/materiales/silabo-asistente-contable.pdf",
+          "type": "pdf",
+          "size": "2.5 MB",
+          "uploadDate": "2025-08-10"
+        },
+        { 
+          "id": 2,
+          "title": "Plantilla Excel - Libro Diario", 
+          "url": "/materiales/plantilla-libro-diario.xlsx",
+          "type": "excel",
+          "size": "1.2 MB",
+          "uploadDate": "2025-08-12"
+        }
+      ],
+      "tasks": [
+        {
+          "id": 1,
+          "title": "Ejercicio Práctico - Libro Diario",
+          "description": "Realizar asientos contables básicos usando las plantillas proporcionadas en las primeras 10 operaciones del ejercicio",
+          "dueDate": "2025-09-15",
+          "points": 20,
+          "status": "active",
+          "submissions": [],
+          "instructions": "Completar los asientos contables en la plantilla Excel proporcionada"
+        },
+        {
+          "id": 2,
+          "title": "Análisis de Estados Financieros",
+          "description": "Elaborar análisis horizontal y vertical de los EEFF proporcionados de la empresa ABC SAC",
+          "dueDate": "2025-09-25",
+          "points": 25,
+          "status": "active",
+          "submissions": [],
+          "instructions": "Usar los ratios financieros estudiados en clase"
+        },
+        {
+          "id": 3,
+          "title": "Caso Práctico IGV",
+          "description": "Resolver casos de aplicación del IGV en diferentes operaciones comerciales del sector servicios",
+          "dueDate": "2025-08-30",
+          "points": 15,
+          "status": "closed",
+          "submissions": [],
+          "instructions": "Aplicar las normas tributarias vigentes"
+        }
+      ],
+      "exams": [
+        {
+          "id": 1,
+          "title": "Examen Parcial - Contabilidad Básica",
+          "description": "Evaluación de conceptos fundamentales de contabilidad y primeros asientos",
+          "date": "2025-09-20",
+          "duration": 90,
+          "points": 100,
+          "status": "scheduled",
+          "attempts": 1,
+          "timeLimit": true,
+          "questions": 25
+        },
+        {
+          "id": 2,
+          "title": "Examen Final - Tributación Integral",
+          "description": "Evaluación integral de aspectos tributarios y contables avanzados",
+          "date": "2025-11-10",
+          "duration": 120,
+          "points": 100,
+          "status": "scheduled",
+          "attempts": 1,
+          "timeLimit": true,
+          "questions": 30
+        }
       ]
     },
     {
       "id": 2,
       "name": "Contabilidad Financiera",
+      "description": "Curso especializado en contabilidad financiera bajo NIIF",
+      "instructor": "CPC. María González",
       "zoom": "https://zoom.us/j/91288922269?pwd=1234567890",
       "startDate": "2025-07-15",
+      "endDate": "2025-10-30",
       "schedule": "Lun y Mié 6:00 p.m. - 8:00 p.m.",
+      "status": "active",
+      "totalSessions": 20,
       "recordings": [
-        { "title": "Sesión 1 - Marco Conceptual", "url": "https://zoom.us/rec/cf-s1" }
+        { 
+          "id": 1,
+          "title": "Sesión 1 - Marco Conceptual NIIF", 
+          "url": "https://zoom.us/rec/cf-s1",
+          "duration": "2h 00min",
+          "date": "2025-07-15",
+          "description": "Introducción a las Normas Internacionales de Información Financiera"
+        }
       ],
       "materials": [
-        { "title": "NIIF Resumen (PDF)", "url": "/materiales/niif-resumen.pdf" }
+        { 
+          "id": 1,
+          "title": "NIIF Resumen Ejecutivo (PDF)", 
+          "url": "/materiales/niif-resumen.pdf",
+          "type": "pdf",
+          "size": "3.8 MB",
+          "uploadDate": "2025-07-10"
+        }
+      ],
+      "tasks": [
+        {
+          "id": 1,
+          "title": "Aplicación NIIF 15",
+          "description": "Caso práctico de reconocimiento de ingresos bajo NIIF 15",
+          "dueDate": "2025-08-15",
+          "points": 30,
+          "status": "active",
+          "submissions": [],
+          "instructions": "Aplicar los cinco pasos del modelo de NIIF 15"
+        }
+      ],
+      "exams": [
+        {
+          "id": 1,
+          "title": "Examen Parcial - NIIF Básicas",
+          "description": "Evaluación de comprensión de NIIF fundamentales",
+          "date": "2025-08-30",
+          "duration": 120,
+          "points": 100,
+          "status": "scheduled",
+          "attempts": 1,
+          "timeLimit": true,
+          "questions": 20
+        }
       ]
     },
     {
       "id": 3,
       "name": "Excel para Contadores",
+      "description": "Curso práctico de Excel aplicado a contabilidad y finanzas",
+      "instructor": "Ing. Carlos Vega",
       "zoom": "https://zoom.us/j/91288922269?pwd=1234567890",
       "startDate": "2025-07-20",
+      "endDate": "2025-09-15",
       "schedule": "Sáb 2:00 p.m. - 4:00 p.m.",
+      "status": "active",
+      "totalSessions": 8,
       "recordings": [
-        { "title": "Sesión 1 - Funciones básicas", "url": "https://zoom.us/rec/excel-s1" }
+        { 
+          "id": 1,
+          "title": "Sesión 1 - Funciones Básicas y Fórmulas", 
+          "url": "https://zoom.us/rec/excel-s1",
+          "duration": "2h 00min",
+          "date": "2025-07-20",
+          "description": "Introducción a fórmulas esenciales para contadores"
+        }
       ],
       "materials": [
-        { "title": "Dataset Práctica (XLSX)", "url": "/materiales/dataset-practica.xlsx" }
-      ]
+        { 
+          "id": 1,
+          "title": "Dataset de Práctica Contable (XLSX)", 
+          "url": "/materiales/dataset-practica.xlsx",
+          "type": "excel",
+          "size": "0.8 MB",
+          "uploadDate": "2025-07-18"
+        }
+      ],
+      "tasks": [
+        {
+          "id": 1,
+          "title": "Hoja de Trabajo Automatizada",
+          "description": "Crear una hoja de trabajo con fórmulas automáticas para balance de comprobación",
+          "dueDate": "2025-08-10",
+          "points": 25,
+          "status": "active",
+          "submissions": [],
+          "instructions": "Usar funciones BUSCARV y SUMAR.SI para automatizar los cálculos"
+        }
+      ],
+      "exams": []
     },
     {
       "id": 4,
       "name": "Contabilidad Minera",
+      "description": "Especialización en contabilidad del sector minero peruano",
+      "instructor": "CPC. Roberto Silva",
       "codename": "contabilidad minera 0725",
       "zoom": "https://us02web.zoom.us/j/87940689278?pwd=hgdgEf53eacLSkHolPrOCmRQEOyDok.1",
       "startDate": "2025-07-20",
+      "endDate": "2025-10-20",
       "schedule": "Sáb 4:00 p.m. - 7:00 p.m.",
+      "status": "active",
+      "totalSessions": 12,
       "recordings": [
-        { "title": "Sesión 1", "url": "" },
-        { "title": "Sesión 2", "url": "" },
-        { "title": "Sesión 3", "url": "" },
-        { "title": "Sesión 4", "url": "" }
+        { "id": 1, "title": "Sesión 1 - Marco Legal Minero", "url": "", "duration": "3h 00min", "date": "2025-07-20", "description": "Introducción al marco legal del sector minero" },
+        { "id": 2, "title": "Sesión 2 - Costos Mineros", "url": "", "duration": "3h 00min", "date": "2025-07-27", "description": "Contabilización de costos en la actividad minera" },
+        { "id": 3, "title": "Sesión 3 - Depreciación y Agotamiento", "url": "", "duration": "3h 00min", "date": "2025-08-03", "description": "Métodos especiales de depreciación en minería" },
+        { "id": 4, "title": "Sesión 4 - Tributación Minera", "url": "", "duration": "3h 00min", "date": "2025-08-10", "description": "Aspectos tributarios específicos del sector" }
       ],
       "materials": [
-        { "title": "", "url": "" }
+        { "id": 1, "title": "Manual de Contabilidad Minera", "url": "", "type": "pdf", "size": "0 MB", "uploadDate": "2025-07-15" }
+      ],
+      "tasks": [
+        {
+          "id": 1,
+          "title": "Caso Práctico Mina El Dorado",
+          "description": "Contabilizar operaciones de una empresa minera ficticia durante un trimestre",
+          "dueDate": "2025-09-15",
+          "points": 40,
+          "status": "active",
+          "submissions": [],
+          "instructions": "Aplicar todos los conceptos vistos en clase sobre costos y tributación minera"
+        }
+      ],
+      "exams": [
+        {
+          "id": 1,
+          "title": "Examen Final - Contabilidad Minera",
+          "description": "Evaluación integral de conceptos de contabilidad minera",
+          "date": "2025-10-15",
+          "duration": 180,
+          "points": 100,
+          "status": "scheduled",
+          "attempts": 1,
+          "timeLimit": true,
+          "questions": 15
+        }
       ]
-    }
-    ,
+    },
     {
       "id": 5,
       "name": "Contabilidad de Constructoras e Inmobiliarias",
+      "description": "Contabilidad especializada para el sector construcción e inmobiliario",
+      "instructor": "CPC. Ana Martínez",
       "codename": "contabilidad constructoras 0125",
       "zoom": "https://us02web.zoom.us/j/82618987063?pwd=cBodz5rzE5utNYSWqKq6HFk0ODgN5Z.1",
       "startDate": "2025-07-09",
+      "endDate": "2025-10-09",
       "schedule": "Sáb 4:00 p.m. - 7:00 p.m.",
+      "status": "active",
+      "totalSessions": 12,
       "recordings": [
-        { "title": "Sesión 1", "url": "https://us02web.zoom.us/rec/play/nyXG00z6G4-c4kM4ZdAqvH9-HutORtle6N86suop6DCXIHd793utJ3HtHbbfUlomYkNtZW_96kTJpok5.TOlAFgB0b6quV8fW?eagerLoadZvaPages=sidemenu.billing.plan_management&accessLevel=meeting&canPlayFromShare=true&from=share_recording_detail&continueMode=true&componentName=rec-play&originRequestUrl=https%3A%2F%2Fus02web.zoom.us%2Frec%2Fshare%2FZJ-Z6S-1620dLFjAoCKH40knGxsMSoAE46e1PeGN-LVpFTWsEavmkUkVRCOBFF_j.A-zveHyTkTa7OO0V" },
-        { "title": "Sesión 2", "url": "https://us02web.zoom.us/rec/play/Q2A9lML0aO-D7iMAu9U-l73sRIdETfMTAWxnnAEMA6Ri_L11n1cDRoeR1d3lRh7fCEZPGGMyeSlNRYmh.knZY0ep2H7MqYLQu?eagerLoadZvaPages=sidemenu.billing.plan_management&accessLevel=meeting&canPlayFromShare=true&from=share_recording_detail&continueMode=true&componentName=rec-play&originRequestUrl=https%3A%2F%2Fus02web.zoom.us%2Frec%2Fshare%2F2yZ2BXV-WK37OacSyAQVYMTo3_QHkakpI6v-s9n2EieM6u2R4VsCSSOD3Hf5Gnla.UWCQhGxC75I345LI" },
-        { "title": "Sesión 3", "url": "" },
-        { "title": "Sesión 4", "url": "" }
+        { "id": 1, "title": "Sesión 1 - Introducción al Sector", "url": "https://us02web.zoom.us/rec/play/nyXG00z6G4-c4kM4ZdAqvH9-HutORtle6N86suop6DCXIHd793utJ3HtHbbfUlomYkNtZW_96kTJpok5.TOlAFgB0b6quV8fW", "duration": "3h 00min", "date": "2025-07-09", "description": "Marco normativo del sector construcción" },
+        { "id": 2, "title": "Sesión 2 - Costos de Construcción", "url": "https://us02web.zoom.us/rec/play/Q2A9lML0aO-D7iMAu9U-l73sRIdETfMTAWxnnAEMA6Ri_L11n1cDRoeR1d3lRh7fCEZPGGMyeSlNRYmh.knZY0ep2H7MqYLQu", "duration": "3h 00min", "date": "2025-07-16", "description": "Contabilización de costos directos e indirectos" },
+        { "id": 3, "title": "Sesión 3 - Avance de Obra", "url": "", "duration": "3h 00min", "date": "2025-07-23", "description": "Métodos de reconocimiento del avance de obra" },
+        { "id": 4, "title": "Sesión 4 - Tributación del Sector", "url": "", "duration": "3h 00min", "date": "2025-07-30", "description": "IGV, IR y otros tributos aplicables" }
       ],
       "materials": [
-        { "title": "", "url": "" }
+        { "id": 1, "title": "Casos Prácticos Constructoras", "url": "", "type": "pdf", "size": "0 MB", "uploadDate": "2025-07-05" }
+      ],
+      "tasks": [
+        {
+          "id": 1,
+          "title": "Proyecto Villa Los Pinos",
+          "description": "Contabilizar un proyecto inmobiliario completo desde inicio hasta entrega",
+          "dueDate": "2025-09-15",
+          "points": 50,
+          "status": "active",
+          "submissions": [],
+          "instructions": "Incluir todos los aspectos: costos, avance de obra, ventas y tributación"
+        }
+      ],
+      "exams": [
+        {
+          "id": 1,
+          "title": "Examen Parcial - Costos de Construcción",
+          "description": "Evaluación de métodos de costeo en construcción",
+          "date": "2025-08-20",
+          "duration": 120,
+          "points": 100,
+          "status": "scheduled",
+          "attempts": 1,
+          "timeLimit": true,
+          "questions": 18
+        }
       ]
     },
     {
       "id": 6,
-      "name": "Contabilidad de Minera",
+      "name": "Contabilidad Minera Avanzada",
+      "description": "Curso avanzado de contabilidad minera - Promoción finalizada",
+      "instructor": "CPC. Roberto Silva",
       "codename": "contabilidad minera 0625",
       "zoom": "https://us02web.zoom.us/j/84311600371?pwd=NlS5a7WinbcMoHpHa9hJQrNKDaJ6EC.1",
-      "startDate": "Finalizó.",
-      "schedule": "Finalizó.",
+      "startDate": "2025-06-01",
+      "endDate": "2025-08-30",
+      "schedule": "Curso Finalizado",
+      "status": "completed",
+      "totalSessions": 16,
       "recordings": [
-        { "title": "Sesión 1", "url": "https://us02web.zoom.us/rec/share/ihMOIvI4CtPrCCTCAU-Js72py0AVzlz0rfoB3APuoX_ayaepeDhfAvnvKcMRelW7.SUykDfl7e0OMBTJf" },
-        { "title": "Sesión 2", "url": "https://us02web.zoom.us/rec/share/cGvkGm4GLfxwYuN_Czq_3jTN_nwlDyd3gvMsvFYGuNUcNS9V2Dz6e0jZ0i7VnafL.8AIaymoNFf1hs69r" },
-        { "title": "Sesión 3", "url": "https://us02web.zoom.us/rec/share/V6A5YdkHaMC0geZ10ITjSdI3viATBhWCIyptIGJJnWBUze2dDof52NEzSMgK-dNy.N-keIDkwiM7eV2un" },
-        { "title": "Sesión 4", "url": "https://us02web.zoom.us/rec/share/UlRo9SGkDNDfCIwmQ6g9-qdNMmFTn8ktVk8XiNIW89ykNC4Ip7-mQgeU9Ehr8DsA.iLGXR_dD8PxeEkub " }
+        { "id": 1, "title": "Sesión 1 - Exploración Minera", "url": "https://us02web.zoom.us/rec/share/ihMOIvI4CtPrCCTCAU-Js72py0AVzlz0rfoB3APuoX_ayaepeDhfAvnvKcMRelW7.SUykDfl7e0OMBTJf", "duration": "3h 00min", "date": "2025-06-01", "description": "Contabilización de gastos de exploración" },
+        { "id": 2, "title": "Sesión 2 - Desarrollo de Mina", "url": "https://us02web.zoom.us/rec/share/cGvkGm4GLfxwYuN_Czq_3jTN_nwlDyd3gvMsvFYGuNUcNS9V2Dz6e0jZ0i7VnafL.8AIaymoNFf1hs69r", "duration": "3h 00min", "date": "2025-06-08", "description": "Inversiones en desarrollo y preparación" },
+        { "id": 3, "title": "Sesión 3 - Operaciones Mineras", "url": "https://us02web.zoom.us/rec/share/V6A5YdkHaMC0geZ10ITjSdI3viATBhWCIyptIGJJnWBUze2dDof52NEzSMgK-dNy.N-keIDkwiM7eV2un", "duration": "3h 00min", "date": "2025-06-15", "description": "Costos operativos y producción" },
+        { "id": 4, "title": "Sesión 4 - Cierre de Mina", "url": "https://us02web.zoom.us/rec/share/UlRo9SGkDNDfCIwmQ6g9-qdNMmFTn8ktVk8XiNIW89ykNC4Ip7-mQgeU9Ehr8DsA.iLGXR_dD8PxeEkub", "duration": "3h 00min", "date": "2025-06-22", "description": "Provisiones para cierre y restauración" }
       ],
       "materials": [
-        { "title": "Materiales 1", "url": "https://drive.google.com/drive/folders/1OSIf9KmApMAOWPWGEOaPkYFcYwz77Men?usp=sharing" },
-        { "title": "Materiales 2", "url": "https://drive.google.com/drive/folders/124P8YBMQzYK-hmk_WPS-v-udVRsunBUD?usp=sharing" },
-        { "title": "Materiales 3", "url": "https://drive.google.com/drive/folders/1dDeX7j3wl5TjokjOGXMFEZBo_b760_6i?usp=sharing" },
-        { "title": "Materiales 4", "url": "https://drive.google.com/drive/folders/1Sm_8NjpPF0t4cT_OK2OjeDOJXpRz6G7T?usp=sharing" }
-      ]
+        { "id": 1, "title": "Materiales Sesión 1-4", "url": "https://drive.google.com/drive/folders/1OSIf9KmApMAOWPWGEOaPkYFcYwz77Men?usp=sharing", "type": "drive", "size": "45 MB", "uploadDate": "2025-06-01" },
+        { "id": 2, "title": "Materiales Sesión 5-8", "url": "https://drive.google.com/drive/folders/124P8YBMQzYK-hmk_WPS-v-udVRsunBUD?usp=sharing", "type": "drive", "size": "38 MB", "uploadDate": "2025-06-29" },
+        { "id": 3, "title": "Materiales Sesión 9-12", "url": "https://drive.google.com/drive/folders/1dDeX7j3wl5TjokjOGXMFEZBo_b760_6i?usp=sharing", "type": "drive", "size": "42 MB", "uploadDate": "2025-07-27" },
+        { "id": 4, "title": "Materiales Sesión 13-16", "url": "https://drive.google.com/drive/folders/1Sm_8NjpPF0t4cT_OK2OjeDOJXpRz6G7T?usp=sharing", "type": "drive", "size": "35 MB", "uploadDate": "2025-08-24" }
+      ],
+      "tasks": [],
+      "exams": []
     },
     {
       "id": 7,
-      "name": "Asistente Contable Tributario",
+      "name": "Asistente Contable Tributario Premium",
+      "description": "Curso intensivo de asistente contable con certificación",
+      "instructor": "William Mendoza",
       "codename": "asistente contable tributario 0125",
       "zoom": "https://us02web.zoom.us/j/87417171780?pwd=SvllHTwJeRM8ArTVEY1VTHa49rbNmV.1",
-      "startDate": "13/08/2025",
+      "startDate": "2025-08-13",
+      "endDate": "2025-12-20",
       "schedule": "Mar. Jue. Vier. 7:00 p.m. - 9:00 p.m.",
+      "status": "active",
+      "totalSessions": 36,
       "recordings": [
-        { "title": "Sesión 1", "url": "https://us02web.zoom.us/rec/share/2u6MPUWbepSbEIP1vefUDgoDuhEhO16ZfTbIFzK4BXRjhIKFfq-grWUhHps7-mmU.h6AWbscr_gk5w5Jr" },
-        { "title": "Sesión 2", "url": "https://us02web.zoom.us/rec/share/xLF0TOQ8E261zNDjNgj1xw6UKtjs_s0IZcsJWDpJ7Z_b4E5e9-Sju8yzqqfJBqIE.9nJBLOKncB5kiZfN" },
-        { "title": "Sesión 3", "url": "" },
-        { "title": "Sesión 4", "url": "" }
+        { "id": 1, "title": "Sesión 1 - Fundamentos Contables", "url": "https://us02web.zoom.us/rec/share/2u6MPUWbepSbEIP1vefUDgoDuhEhO16ZfTbIFzK4BXRjhIKFfq-grWUhHps7-mmU.h6AWbscr_gk5w5Jr", "duration": "2h 00min", "date": "2025-08-13", "description": "Introducción a la contabilidad empresarial" },
+        { "id": 2, "title": "Sesión 2 - Plan Contable General", "url": "https://us02web.zoom.us/rec/share/xLF0TOQ8E261zNDjNgj1xw6UKtjs_s0IZcsJWDpJ7Z_b4E5e9-Sju8yzqqfJBqIE.9nJBLOKncB5kiZfN", "duration": "2h 00min", "date": "2025-08-15", "description": "Manejo del PCGE y estructura contable" },
+        { "id": 3, "title": "Sesión 3 - Libros Contables", "url": "", "duration": "2h 00min", "date": "2025-08-17", "description": "Elaboración y manejo de libros principales" },
+        { "id": 4, "title": "Sesión 4 - Tributación Básica", "url": "", "duration": "2h 00min", "date": "2025-08-20", "description": "Conceptos fundamentales de tributación" }
       ],
       "materials": [
-        { "title": "Material", "url": "https://docs.google.com/presentation/d/1e8GagYAyIZ0vDNFRWbA-euM5Ho9OPrmW/edit?usp=sharing&ouid=112580292696143211510&rtpof=true&sd=true" }
+        { "id": 1, "title": "Material Didáctico Completo", "url": "https://docs.google.com/presentation/d/1e8GagYAyIZ0vDNFRWbA-euM5Ho9OPrmW/edit?usp=sharing&ouid=112580292696143211510&rtpof=true&sd=true", "type": "presentation", "size": "15 MB", "uploadDate": "2025-08-10" }
+      ],
+      "tasks": [
+        {
+          "id": 1,
+          "title": "Caso Empresa Comercial ABC",
+          "description": "Registrar operaciones completas de una empresa comercial durante un mes",
+          "dueDate": "2025-09-30",
+          "points": 35,
+          "status": "active",
+          "submissions": [],
+          "instructions": "Incluir libro diario, mayor y balances de comprobación"
+        },
+        {
+          "id": 2,
+          "title": "Declaración Jurada Mensual",
+          "description": "Elaborar PDT 621 completo con datos proporcionados",
+          "dueDate": "2025-10-15",
+          "points": 30,
+          "status": "active",
+          "submissions": [],
+          "instructions": "Usar el programa PDT oficial de SUNAT"
+        }
+      ],
+      "exams": [
+        {
+          "id": 1,
+          "title": "Examen Parcial I - Contabilidad",
+          "description": "Evaluación de conocimientos contables básicos",
+          "date": "2025-09-25",
+          "duration": 120,
+          "points": 100,
+          "status": "scheduled",
+          "attempts": 1,
+          "timeLimit": true,
+          "questions": 25
+        },
+        {
+          "id": 2,
+          "title": "Examen Parcial II - Tributación",
+          "description": "Evaluación de aspectos tributarios",
+          "date": "2025-11-15",
+          "duration": 120,
+          "points": 100,
+          "status": "scheduled",
+          "attempts": 1,
+          "timeLimit": true,
+          "questions": 22
+        }
       ]
     },
     {
       "id": 8,
-      "name": "Peritaje Contable",
+      "name": "Peritaje Contable Judicial",
+      "description": "Especialización en peritaje contable para procesos judiciales",
+      "instructor": "Abg. CPC. Juan Carrasco",
       "codename": "peritaje contable 0325",
       "zoom": "",
-      "startDate": "",
-      "schedule": "Finalizó.",
+      "startDate": "2025-03-01",
+      "endDate": "2025-06-15",
+      "schedule": "Curso Finalizado",
+      "status": "completed",
+      "totalSessions": 16,
       "recordings": [
-        { "title": "Sesión 1", "url": "https://us02web.zoom.us/rec/share/ZilFXVZTZfLLT2jxfMC4lSbcY_qBJWoMz_zFPLQyPGSakSaAVJ6uDLbNk1N7CXT7.x64NYDvhiIMlRH8i" },
-        { "title": "Sesión 2", "url": "https://us02web.zoom.us/rec/share/cXmyGNrjr1DS1hMZdyscGrZ18__nFFJLkLsV8-J--6p6PmggUT1SMqAIVGioIIRq.2agPG49d-3YNE4Mx" },
-        { "title": "Sesión 3", "url": "https://us02web.zoom.us/rec/share/PRQz1l_4PDMozOY9aO1LZyJ3ssFeZt5-l9q0itu5juaGgO3j3wRIR5ra5OvQezW3.KfiHNFXp20nDhXoB" },
-        { "title": "Sesión 4", "url": "https://us02web.zoom.us/rec/share/8MThYw38G3LcKE03c5N0R39u_0ue_oWW35DLrDdNcyKGC-ot6-ZT4WvXCc1i4BZ4.p6yQiQnX6vxUqa_n" }
+        { "id": 1, "title": "Sesión 1 - Marco Legal del Peritaje", "url": "https://us02web.zoom.us/rec/share/ZilFXVZTZfLLT2jxfMC4lSbcY_qBJWoMz_zFPLQyPGSakSaAVJ6uDLbNk1N7CXT7.x64NYDvhiIMlRH8i", "duration": "2h 30min", "date": "2025-03-01", "description": "Fundamentos legales del peritaje contable" },
+        { "id": 2, "title": "Sesión 2 - Metodología Pericial", "url": "https://us02web.zoom.us/rec/share/cXmyGNrjr1DS1hMZdyscGrZ18__nFFJLkLsV8-J--6p6PmggUT1SMqAIVGioIIRq.2agPG49d-3YNE4Mx", "duration": "2h 30min", "date": "2025-03-08", "description": "Técnicas y procedimientos periciales" },
+        { "id": 3, "title": "Sesión 3 - Elaboración del Dictamen", "url": "https://us02web.zoom.us/rec/share/PRQz1l_4PDMozOY9aO1LZyJ3ssFeZt5-l9q0itu5juaGgO3j3wRIR5ra5OvQezW3.KfiHNFXp20nDhXoB", "duration": "2h 30min", "date": "2025-03-15", "description": "Estructura y contenido del dictamen pericial" },
+        { "id": 4, "title": "Sesión 4 - Casos Prácticos", "url": "https://us02web.zoom.us/rec/share/8MThYw38G3LcKE03c5N0R39u_0ue_oWW35DLrDdNcyKGC-ot6-ZT4WvXCc1i4BZ4.p6yQiQnX6vxUqa_n", "duration": "2h 30min", "date": "2025-03-22", "description": "Análisis de casos reales de peritaje" }
       ],
       "materials": [
-        { "title": "Url del Drive", "url": "https://drive.google.com/drive/folders/1NHT6HEZjtIaiScjDN7liJWPYpiXiu3j9?usp=drive_link" }
-      ]
-    }
-    ,
+        { "id": 1, "title": "Biblioteca de Casos Periciales", "url": "https://drive.google.com/drive/folders/1NHT6HEZjtIaiScjDN7liJWPYpiXiu3j9?usp=drive_link", "type": "drive", "size": "125 MB", "uploadDate": "2025-02-25" }
+      ],
+      "tasks": [],
+      "exams": []
+    },
     {
       "id": 9,
-      "name": "Declaraciones Mensuales",
+      "name": "Declaraciones Mensuales SUNAT",
+      "description": "Curso práctico de declaraciones tributarias mensuales",
+      "instructor": "CPC. Patricia López",
       "codename": "declaraciones mensuales 0125",
       "zoom": "",
-      "startDate": "16/02/2025",
-      "schedule": "Finalizó.",
+      "startDate": "2025-02-16",
+      "endDate": "2025-04-30",
+      "schedule": "Curso Finalizado",
+      "status": "completed",
+      "totalSessions": 12,
       "recordings": [
-        { "title": "Sesión 1", "url": "https://us02web.zoom.us/rec/share/jJDNdve2uIaiQ7n3GGAiTNeR1_GavHmu6a82j_J7KNfeBG19V_6TUpnQVKs6T486.qb9Fi4krnM6ULcd-" },
-        { "title": "Sesión 1", "url": "https://us02web.zoom.us/rec/share/1BKBAwLuytgJqAKwR4S7M2QskyNJnXsQWznIlV0wwifQMaIX8dtiikOMOMFhmH15.rPWr62Uph0KPoVMA" },
-        { "title": "Sesión 1", "url": "https://us02web.zoom.us/rec/share/7GCFs5HJkMV4jtxYLjLCIpK4TRlmDcl9C5a2HEHy6PxOeu_oijIKEUlwsH-J1iO_.kdX5jlBZBRTm6RP4" }
+        { "id": 1, "title": "Sesión 1 - PDT 621 IGV-Renta", "url": "https://us02web.zoom.us/rec/share/jJDNdve2uIaiQ7n3GGAiTNeR1_GavHmu6a82j_J7KNfeBG19V_6TUpnQVKs6T486.qb9Fi4krnM6ULcd-", "duration": "2h 00min", "date": "2025-02-16", "description": "Elaboración de declaraciones IGV y Renta" },
+        { "id": 2, "title": "Sesión 2 - PDT Planilla Electrónica", "url": "https://us02web.zoom.us/rec/share/1BKBAwLuytgJqAKwR4S7M2QskyNJnXsQWznIlV0wwifQMaIX8dtiikOMOMFhmH15.rPWr62Uph0KPoVMA", "duration": "2h 00min", "date": "2025-02-23", "description": "Manejo de planillas electrónicas T-REGISTRO" },
+        { "id": 3, "title": "Sesión 3 - Libros Electrónicos", "url": "https://us02web.zoom.us/rec/share/7GCFs5HJkMV4jtxYLjLCIpK4TRlmDcl9C5a2HEHy6PxOeu_oijIKEUlwsH-J1iO_.kdX5jlBZBRTm6RP4", "duration": "2h 00min", "date": "2025-03-02", "description": "Generación y envío de libros electrónicos" }
       ],
       "materials": [
-        { "title": "Material 1", "url": "https://drive.google.com/drive/folders/128teI6oTlz_B884FjC7sKxNGHiVKKJ76?usp=sharing" },
-        { "title": "Material 2", "url": "https://drive.google.com/drive/folders/133Y61jBc9g-brE3TZbEmSu-b7v27G1yF?usp=sharing" },
-        { "title": "Material 3", "url": "https://drive.google.com/drive/folders/10MfBPb5R3U8kNQOR2sQ8H80UoWncQ5Dn?usp=sharing" }
-      ]
+        { "id": 1, "title": "Casos Prácticos PDT", "url": "https://drive.google.com/drive/folders/128teI6oTlz_B884FjC7sKxNGHiVKKJ76?usp=sharing", "type": "drive", "size": "25 MB", "uploadDate": "2025-02-10" },
+        { "id": 2, "title": "Plantillas Excel Declaraciones", "url": "https://drive.google.com/drive/folders/133Y61jBc9g-brE3TZbEmSu-b7v27G1yF?usp=sharing", "type": "drive", "size": "18 MB", "uploadDate": "2025-02-15" },
+        { "id": 3, "title": "Manual de Procedimientos SUNAT", "url": "https://drive.google.com/drive/folders/10MfBPb5R3U8kNQOR2sQ8H80UoWncQ5Dn?usp=sharing", "type": "drive", "size": "12 MB", "uploadDate": "2025-02-20" }
+      ],
+      "tasks": [],
+      "exams": []
     }
   ]
 }

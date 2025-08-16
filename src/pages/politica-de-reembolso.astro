@@ -1,0 +1,105 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Aside } from '../components/aside';
+const title = 'Reembolso | IFCET';
+const description = 'Política de reembolso de cursos del Instituto de Formación Contable, Empresarial y Tributaria';
+const image = '/favicon.webp';
+---
+
+<Layout {title} {description} {image}>
+    <div class="w-full">
+        {/* Hero superior (por encima de los Aside) */}
+        <section class="bg-gradient-to-b from-slate-900 via-slate-900 to-black text-white">
+          <div class="max-w-7xl mx-auto px-4 py-12 md:py-16">
+            <div class="grid md:grid-cols-2 items-center gap-6 md:gap-10">
+              {/* Texto */}
+              <div class="flex flex-col gap-4 md:gap-6">
+                <h1 class="text-[clamp(1.8rem,4.5vw,3rem)] font-bold leading-tight">
+                  Políticas de Rembolso
+                </h1>
+                <p class="text-white/80">
+                  ¿Buscas información sobre la política de reembolso de IFCET? entendemos la importancia de la transparencia y la confianza. Nuestras políticas de reembolso están diseñadas para ser claras y justas para todos nuestros estudiantes.
+                </p>
+                <div class="flex flex-wrap gap-3 pt-1">
+                  {/* <Link
+                  to="/cursos"
+                  class="px-5 py-2.5 rounded-lg text-sm font-medium bg-[#ffb403] text-white hover:scale-[1.02] transition-transform focus:outline-none focus-visible:ring-2 focus-visible:ring-[#ffb403]"
+                >
+                  Ver cursos
+                </Link> */}
+                  <a
+                    href="#politicas"
+                    class="px-5 py-2.5 rounded-lg text-sm font-medium bg-[#ffb403] text-white hover:scale-[1.02] transition-transform focus:outline-none focus-visible:ring-2 focus-visible:ring-[#ffb403]"
+                  >
+                    Ver políticas
+                  </a>
+                </div>
+              </div>
+              {/* Imagen/Placeholder */}
+              <div class="relative h-[32vh] md:h-[46vh] flex items-center justify-center">
+                <div class="h-full w-full flex items-center justify-center border border-dashed border-white/30 rounded-xl">
+                  {/* Insertar imágen aquí: Ilustración de contacto/soporte académico, fondo limpio, formato .webp */}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Layout con Aside a los lados y contenido al centro */}
+        <section class="grid grid-cols-1 lg:grid-cols-[1fr_4fr_1fr] grid-rows-1 min-h-screen">
+          <div class="hidden lg:block">
+            <Aside />
+          </div>
+          <main class="p-4 sm:p-6 lg:p-8 text-black flex justify-center items-center flex-col w-full" >
+            <section id="politicas" class="w-full text-justify text-pretty">
+              <h1 class="text-3xl font-bold">Política de Reembolsos de IFCET</h1>
+              <p class="text-sm">Nuestra Politica de Reembolsos de IFCET refleja este compromiso con nuestros alumnos. En el <b>Instituto de Formación Contable, Empresarial y Tributaria</b>, entendemos que tomar la decisión de capacitarse profesionalmente implica tiempo, esfuerzo y recursos. Por ello, nos comprometemos a ofrecer una <b>experiencia educativa segura, flexible y transparente,</b> desde el proceso de matrícula hasta la finalización del curso.</p>
+              <h2 class="text-xl font-bold pt-8">¿En qué casos se puede solicitar un reembolso?</h2>
+              <p class="text-sm">En IFCET, puedes solicitar el reembolso total o parcial de tu pago en las siguientes situaciones:</p>
+              <ul class="text-sm pt-6 list-decimal">
+                <li>
+                  <b>Cancelación del curso por parte de IFCET:</b> Si, por razones internas o de fuerza mayor, IFCET no puede iniciar el curso o programa programado, se procederá al reembolso total del importe abonado.
+                </li>
+                <li>
+                  <b>Desistimiento voluntario del alumno antes del inicio del curso:</b> Si el alumno informa su decisión de no participar al menos 48 horas antes del inicio de clases, se podrá solicitar un reembolso parcial, descontando S/50 por gastos administrativos.
+                </li>
+                <li>
+                  <b>Problemas de fuerza mayor debidamente justificados:</b> En casos excepcionales y comprobados (salud, viajes imprevistos, razones laborales), IFCET podrá considerar un reembolso parcial o dejar un saldo a favor para futuras matrículas.
+                </li>
+              </ul>
+              <h1 class="text-3xl font-bold pt-6">Proceso para Solicitar un Reembolso</h1>
+              <p class="text-sm">Para asegurar una gestión eficiente de acuerdo a nuestra politica de reembolsos de IFCET, hemos establecido un procedimiento claro:</p>
+              <p class="text-sm pt-2"><b>1. Envío de Solicitud:</b> Escribir al correo electrónico oficial ifcet.chiclayo@gmail.com indicando:</p>
+              <ul class="text-sm pt-4 list-disc pl-8">
+                <li>Nombre completo del alumno</li>
+                <li>Nombre del curso</li>
+                <li>Motivo de la solicitud</li>
+                <li>Comprobante de pago adjunto</li>
+              </ul>
+              <p class="text-sm pt-2"><b>2. Evaluación de la Solicitud:</b> Nuestro equipo de atención académica evaluará el caso dentro de un plazo máximo de 3 días hábiles.</p>
+              <p class="text-sm pt-2"><b>3. Notificación de Resolución:</b> El alumno recibirá un correo confirmando la aceptación o denegatoria de su solicitud, con instrucciones para la devolución (en caso corresponda).</p>
+              <h1 class="text-3xl font-bold">Casos en los que No Aplica Reembolso</h1>
+              <ul class="text-sm pt-4 list-disc pl-8">
+                <li>Solicitudes realizadas una vez iniciado el curso.</li>
+                <li>Ausencia injustificada en clases o no asistencia sin comunicación previa.</li>
+                <li>Insatisfacción por causas ajenas a IFCET, como problemas de conexión a internet del alumno.</li>
+              </ul>
+              <h1 class="text-3xl font-bold pt-4">Alternativas al Reembolso</h1>
+              <p class="text-sm">En lugar de solicitar la devolución, también puedes optar por:</p>
+              <ul class="text-sm pt-6 list-decimal pl-8">
+                <li><b>Reprogramación del curso:</b> Acceder al mismo programa en una futura edición sin costo adicional.</li>
+                <li><b>Cambio de curso equivalente:</b> Siempre que haya vacantes y se mantenga el mismo valor.</li>
+                <li><b>Crédito a favor:</b> Puede usarse hasta por 3 meses desde la fecha de emisión.</li>
+              </ul>
+              <p class="text-sm pt-4">Para cualquier pregunta o duda adicional que tenga, escribe a ifcet.chiclayo@gmail.com o contáctanos directamente por WhatsApp a los números:</p>
+              {/* NUMEROS */}
+              <span class="text-sm pt-4">En IFCET, tu desarrollo profesional y seguridad académica son nuestra prioridad. Por ello, implementamos una política de reembolsos transparente y alineada con principios de ética financiera, garantizando la protección de tu inversión en formación contable, tributaria y empresarial. Si necesitas mayor detalle sobre devoluciones por inscripción, cronogramas o servicios académicos, nuestro equipo está listo para asesorarte con total claridad y respaldo institucional.</span>
+
+            </section>
+          </main>
+          <div class="hidden lg:block">
+            <Aside />
+          </div>
+        </section>
+      </div>
+</Layout>

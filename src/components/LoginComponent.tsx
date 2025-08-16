@@ -1,15 +1,35 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 interface LoginComponentProps {
   onLogin: (username: string, password: string) => void;
+  error?: string | null;
 }
 
-export function LoginComponent({ onLogin }: LoginComponentProps) {
+interface DotPosition {
+  top: number;
+  left: number;
+  animationDelay: number;
+  animationDuration: number;
+}
+
+export function LoginComponent({ onLogin, error }: LoginComponentProps) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [dotPositions, setDotPositions] = useState<DotPosition[]>([]);
+
+  // Generar posiciones de los puntos solo en el cliente para evitar hydration mismatch
+  useEffect(() => {
+    const positions = Array.from({ length: 20 }, () => ({
+      top: Math.random() * 100,
+      left: Math.random() * 100,
+      animationDelay: Math.random() * 2,
+      animationDuration: 3 + Math.random() * 2
+    }));
+    setDotPositions(positions);
+  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -69,6 +89,12 @@ export function LoginComponent({ onLogin }: LoginComponentProps) {
               </div>
             </div>
 
+            {error && (
+              <div className="p-3 bg-red-50 border border-red-200 rounded-lg">
+                <p className="text-sm text-red-600">{error}</p>
+              </div>
+            )}
+
             <button
               type="submit"
               disabled={isLoading}
@@ -107,15 +133,15 @@ export function LoginComponent({ onLogin }: LoginComponentProps) {
 
         {/* Patrón de puntos decorativos */}
         <div className="absolute inset-0 ">
-          {[...Array(20)].map((_, i) => (
+          {dotPositions.map((dot, i) => (
             <div
               key={i}
-              className="absolute w-2 h-2 bg-white/20 rounded-full"
+              className="absolute w-2 h-2 bg-white/20 rounded-full animate-pulse"
               style={{
-                top: `${Math.random() * 100}%`,
-                left: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 2}s`,
-                animationDuration: `${3 + Math.random() * 2}s`
+                top: `${dot.top}%`,
+                left: `${dot.left}%`,
+                animationDelay: `${dot.animationDelay}s`,
+                animationDuration: `${dot.animationDuration}s`
               }}
             />
           ))}
