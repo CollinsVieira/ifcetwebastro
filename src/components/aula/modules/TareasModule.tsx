@@ -266,6 +266,9 @@ export function TareasModule({ course }: TareasModuleProps) {
           <p className="text-gray-500">Las tareas y actividades aparecerán aquí cuando estén disponibles.</p>
         </div>
       )}
+      
+      {/* Extra padding for mobile scrolling */}
+      <div className="h-4 lg:h-0"></div>
     </div>
   );
 }

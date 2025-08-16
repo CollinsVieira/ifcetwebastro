@@ -289,7 +289,7 @@ export function AulaVirtualComponent() {
         {/* Main Content */}
         <div className="flex-1 flex flex-col min-w-0 overflow-hidden">
           <div className="flex-1 overflow-y-auto scrollbar-thin scrollbar-thumb-slate-300 scrollbar-track-slate-100">
-            <div className="p-3 lg:p-6 max-w-full">
+            <div className="p-3 lg:p-6 pb-6 lg:pb-8 max-w-full">
               {/* Course Header */}
               {activeCourse && (
                 <div className="mb-4 lg:mb-6">

@@ -203,6 +203,9 @@ export function InicioModule({ course, user, onModuleSelect }: InicioModuleProps
           <p className="text-sm text-blue-700 mt-1">Especialista en {course.name}</p>
         </div>
       )}
+      
+      {/* Extra padding for mobile scrolling */}
+      <div className="h-4 lg:h-0"></div>
     </div>
   );
 }

@@ -202,6 +202,9 @@ export function MaterialesModule({ course }: MaterialesModuleProps) {
           <p className="text-gray-500">Los materiales de clase aparecerán aquí cuando estén disponibles.</p>
         </div>
       )}
+      
+      {/* Extra padding for mobile scrolling */}
+      <div className="h-4 lg:h-0"></div>
     </div>
   );
 }

@@ -146,6 +146,9 @@ export function SesionesModule({ course }: SesionesModuleProps) {
           <p className="text-gray-500">Las sesiones grabadas aparecerán aquí después de cada clase.</p>
         </div>
       )}
+      
+      {/* Extra padding for mobile scrolling */}
+      <div className="h-4 lg:h-0"></div>
     </div>
   );
 }
