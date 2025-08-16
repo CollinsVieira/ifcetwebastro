@@ -1,0 +1,134 @@
+---
+import '../styles/global.css';
+
+export interface Props {
+	title: string;
+	description: string;
+	image?: string;
+	noindex?: boolean;
+}
+
+const { title, description, image = '/favicon.webp', noindex = false } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={Astro.url} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={new URL(image, Astro.url)} />
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content={Astro.url} />
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:description" content={description} />
+		<meta property="twitter:image" content={new URL(image, Astro.url)} />
+		
+		{noindex && <meta name="robots" content="noindex, nofollow" />}
+		
+		<!-- Preload critical fonts if any -->
+		<!-- <link rel="preload" href="/fonts/font.woff2" as="font" type="font/woff2" crossorigin> -->
+		
+		<!-- Critical CSS for faster loading -->
+		<style>
+			html {
+				font-family: system-ui, sans-serif;
+				height: 100%;
+				overflow: hidden;
+			}
+			
+			body {
+				margin: 0;
+				padding: 0;
+				height: 100%;
+				overflow: hidden;
+			}
+			
+			/* Custom scrollbar */
+			.scrollbar-thin {
+				scrollbar-width: thin;
+			}
+			
+			.scrollbar-thumb-slate-300::-webkit-scrollbar-thumb {
+				background-color: #cbd5e1;
+				border-radius: 4px;
+			}
+			
+			.scrollbar-track-slate-100::-webkit-scrollbar-track {
+				background-color: #f1f5f9;
+			}
+			
+			::-webkit-scrollbar {
+				width: 6px;
+			}
+			
+			/* Loading state */
+			.loading {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: 100vh;
+				background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+			}
+			
+			.loading-spinner {
+				width: 40px;
+				height: 40px;
+				border: 3px solid #e2e8f0;
+				border-top-color: #3b82f6;
+				border-radius: 50%;
+				animation: spin 1s linear infinite;
+			}
+			
+			@keyframes spin {
+				to {
+					transform: rotate(360deg);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Loading fallback -->
+		<div id="loading-fallback" class="loading">
+			<div class="loading-spinner"></div>
+		</div>
+		
+		<!-- Main content -->
+		<main id="main-content" style="opacity: 0; transition: opacity 0.3s ease;">
+			<slot />
+		</main>
+		
+		<script>
+			// Hide loading when content is ready
+			document.addEventListener('DOMContentLoaded', () => {
+				const loading = document.getElementById('loading-fallback');
+				const main = document.getElementById('main-content');
+				
+				if (loading && main) {
+					loading.style.display = 'none';
+					main.style.opacity = '1';
+				}
+			});
+			
+			// Handle page visibility changes for better UX
+			document.addEventListener('visibilitychange', () => {
+				if (document.hidden) {
+					document.title = '⏸️ ' + document.title.replace('⏸️ ', '');
+				} else {
+					document.title = document.title.replace('⏸️ ', '');
+				}
+			});
+		</script>
+	</body>
+</html>

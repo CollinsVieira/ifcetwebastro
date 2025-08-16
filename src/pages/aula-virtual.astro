@@ -1,5 +1,5 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import AulaLayout from '../layouts/AulaLayout.astro';
 import { AulaVirtualComponent } from '../components/AulaVirtualComponent';
 
 const title = 'Aula Virtual | IFCET';
@@ -8,6 +8,6 @@ const image = '/favicon.webp';
 const noindex = true;
 ---
 
-<Layout {title} {description} {image} {noindex}>
+<AulaLayout {title} {description} {image} {noindex}>
     <AulaVirtualComponent client:load />
-</Layout>
+</AulaLayout>

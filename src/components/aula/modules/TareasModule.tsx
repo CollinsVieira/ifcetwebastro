@@ -130,15 +130,15 @@ export function TareasModule({ course }: TareasModuleProps) {
   };
 
   return (
-    <div className="space-y-6">
-      <div className="flex items-center justify-between">
-        <h2 className="text-2xl font-bold text-gray-900">Tareas y Actividades</h2>
+    <div className="space-y-4 lg:space-y-6 w-full">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+        <h2 className="text-xl lg:text-2xl font-bold text-gray-900">Tareas y Actividades</h2>
         <div className="text-sm text-gray-500">
           {tasks.filter(t => t.status === 'active' || t.status === 'pending').length} tareas pendientes
         </div>
       </div>
 
-      <div className="grid gap-6">
+      <div className="grid gap-4 lg:gap-6">
         {tasks.map((task) => {
           const statusInfo = getStatusInfo(task.status);
           const daysUntilDue = getDaysUntilDue(task.dueDate);
@@ -146,25 +146,38 @@ export function TareasModule({ course }: TareasModuleProps) {
           return (
             <div 
               key={task.id} 
-              className="group bg-white/80 backdrop-blur-sm border border-gray-200/50 rounded-2xl p-6 hover:shadow-lg transition-all duration-300"
+              className="group bg-white/80 backdrop-blur-sm border border-gray-200/50 rounded-xl lg:rounded-2xl p-4 lg:p-6 hover:shadow-lg transition-all duration-300"
             >
-              <div className="flex items-start gap-6">
+              <div className="flex flex-col lg:flex-row lg:items-start gap-4 lg:gap-6">
                 {/* Status Icon */}
-                <div className="flex-shrink-0">
-                  <div className={`h-14 w-14 bg-gradient-to-br ${statusInfo.colorClass} rounded-xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300`}>
+                <div className="flex items-center gap-4 lg:gap-0 lg:flex-shrink-0">
+                  <div className={`h-12 w-12 lg:h-14 lg:w-14 bg-gradient-to-br ${statusInfo.colorClass} rounded-lg lg:rounded-xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300 flex-shrink-0`}>
                     {task.status === 'graded' ? (
-                      <CheckIcon className="h-7 w-7 text-white" />
+                      <CheckIcon className="h-6 w-6 lg:h-7 lg:w-7 text-white" />
                     ) : task.status === 'submitted' ? (
-                      <StarIcon className="h-7 w-7 text-white" />
+                      <StarIcon className="h-6 w-6 lg:h-7 lg:w-7 text-white" />
                     ) : (
-                      <TaskIcon className="h-7 w-7 text-white" />
+                      <TaskIcon className="h-6 w-6 lg:h-7 lg:w-7 text-white" />
                     )}
+                  </div>
+                  
+                  {/* Title and status on mobile - inline with icon */}
+                  <div className="lg:hidden flex-1 min-w-0">
+                    <div className="flex items-start justify-between gap-3">
+                      <h3 className="text-base font-semibold text-gray-900 group-hover:text-blue-700 transition-colors duration-200 line-clamp-2">
+                        {task.title}
+                      </h3>
+                      <span className={`px-2 py-1 text-xs font-medium border rounded-full ${statusInfo.bgClass} ${statusInfo.textClass} whitespace-nowrap`}>
+                        {statusInfo.label}
+                      </span>
+                    </div>
                   </div>
                 </div>
 
                 {/* Content */}
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-start justify-between mb-3">
+                <div className="flex-1 min-w-0 space-y-3 lg:space-y-4">
+                  {/* Title and status on desktop */}
+                  <div className="hidden lg:flex lg:items-start lg:justify-between lg:mb-3">
                     <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-700 transition-colors duration-200">
                       {task.title}
                     </h3>
@@ -178,26 +191,29 @@ export function TareasModule({ course }: TareasModuleProps) {
                     </div>
                   </div>
                   
-                  <p className="text-gray-600 mb-4 leading-relaxed">
+                  {/* Points on mobile */}
+                  <div className="lg:hidden text-sm font-medium text-blue-600">{task.points} puntos</div>
+                  
+                  <p className="text-sm lg:text-base text-gray-600 leading-relaxed">
                     {task.description}
                   </p>
 
                   {task.instructions && (
-                    <div className="mb-4 p-3 bg-blue-50 border border-blue-200 rounded-lg">
+                    <div className="p-3 bg-blue-50 border border-blue-200 rounded-lg">
                       <h4 className="text-sm font-medium text-blue-900 mb-1">Instrucciones:</h4>
                       <p className="text-sm text-blue-800">{task.instructions}</p>
                     </div>
                   )}
                   
-                  <div className="flex items-center gap-6 text-sm text-gray-500">
+                  <div className="flex flex-col lg:flex-row lg:items-center gap-2 lg:gap-6 text-sm text-gray-500">
                     <div className="flex items-center gap-2">
                       <CalendarIcon className="h-4 w-4" />
-                      <span>Vencimiento: {formatDate(task.dueDate)}</span>
+                      <span className="text-xs lg:text-sm">Vencimiento: {formatDate(task.dueDate)}</span>
                     </div>
                     {daysUntilDue !== null && task.status !== 'graded' && task.status !== 'closed' && (
                       <div className="flex items-center gap-2">
                         <ClockIcon className="h-4 w-4" />
-                        <span className={`font-medium ${
+                        <span className={`font-medium text-xs lg:text-sm ${
                           daysUntilDue < 0 ? 'text-red-600' : 
                           daysUntilDue <= 3 ? 'text-orange-600' : 
                           'text-green-600'
@@ -212,25 +228,25 @@ export function TareasModule({ course }: TareasModuleProps) {
                 </div>
 
                 {/* Action Button */}
-                <div className="flex-shrink-0">
+                <div className="flex-shrink-0 w-full lg:w-auto">
                   {task.status === 'active' || task.status === 'pending' ? (
-                    <button className="flex items-center gap-2 px-6 py-3 bg-purple-500 text-white rounded-xl hover:bg-purple-600 transition-all duration-200 shadow-lg shadow-purple-500/25 font-medium group-hover:scale-105">
-                      <UploadIcon className="h-5 w-5" />
+                    <button className="flex items-center justify-center gap-2 px-4 lg:px-6 py-2.5 lg:py-3 bg-purple-500 text-white rounded-lg lg:rounded-xl hover:bg-purple-600 transition-all duration-200 shadow-lg shadow-purple-500/25 font-medium group-hover:scale-105 text-sm lg:text-base w-full lg:w-auto">
+                      <UploadIcon className="h-4 w-4 lg:h-5 lg:w-5" />
                       Enviar tarea
                     </button>
                   ) : task.status === 'submitted' ? (
-                    <div className="flex items-center gap-2 px-6 py-3 bg-blue-100 text-blue-700 rounded-xl font-medium">
-                      <CheckIcon className="h-5 w-5" />
+                    <div className="flex items-center justify-center gap-2 px-4 lg:px-6 py-2.5 lg:py-3 bg-blue-100 text-blue-700 rounded-lg lg:rounded-xl font-medium text-sm lg:text-base w-full lg:w-auto">
+                      <CheckIcon className="h-4 w-4 lg:h-5 lg:w-5" />
                       Enviado
                     </div>
                   ) : task.status === 'graded' ? (
-                    <div className="flex items-center gap-2 px-6 py-3 bg-green-100 text-green-700 rounded-xl font-medium">
-                      <StarIcon className="h-5 w-5" />
+                    <div className="flex items-center justify-center gap-2 px-4 lg:px-6 py-2.5 lg:py-3 bg-green-100 text-green-700 rounded-lg lg:rounded-xl font-medium text-sm lg:text-base w-full lg:w-auto">
+                      <StarIcon className="h-4 w-4 lg:h-5 lg:w-5" />
                       Calificado
                     </div>
                   ) : (
-                    <div className="flex items-center gap-2 px-6 py-3 bg-gray-100 text-gray-500 rounded-xl font-medium">
-                      <ClockIcon className="h-5 w-5" />
+                    <div className="flex items-center justify-center gap-2 px-4 lg:px-6 py-2.5 lg:py-3 bg-gray-100 text-gray-500 rounded-lg lg:rounded-xl font-medium text-sm lg:text-base w-full lg:w-auto">
+                      <ClockIcon className="h-4 w-4 lg:h-5 lg:w-5" />
                       Cerrado
                     </div>
                   )}

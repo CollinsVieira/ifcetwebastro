@@ -96,6 +96,7 @@ export function AulaVirtualComponent() {
   const [loggedUser, setLoggedUser] = useState<User | null>(null);
   const [activeCourseId, setActiveCourseId] = useState<number | null>(null);
   const [activeModule, setActiveModule] = useState<ActiveModule>('inicio');
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
 
 
@@ -231,38 +232,79 @@ export function AulaVirtualComponent() {
   const activeCourse = myCourses.find((c) => c.id === activeCourseId) || myCourses[0];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50/30">
-      {/* Header */}
-      <div className="h-16 bg-gradient-to-r from-[#191c29] to-[#2d3748] shadow-lg">
-            </div>
-            
-      <div className="flex h-[calc(100vh-4rem)]">
+    <div className="h-screen bg-gradient-to-br from-slate-50 to-blue-50/30 flex flex-col overflow-hidden">
+      {/* Top Header Bar */}
+      <div className="h-12 bg-gradient-to-r from-[#191c29] to-[#2d3748] shadow-lg flex items-center px-4 lg:px-6 flex-shrink-0">
+        {/* Mobile Menu Button */}
+        <button
+          onClick={() => setSidebarOpen(!sidebarOpen)}
+          className="lg:hidden text-white hover:text-blue-200 transition-colors"
+          aria-label="Toggle menu"
+        >
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+        
+        {/* Title for mobile */}
+        <h1 className="lg:hidden ml-3 text-white font-semibold text-sm truncate">
+          {activeCourse?.name || 'Aula Virtual'}
+        </h1>
+      </div>
+
+      {/* Main Layout */}
+      <div className="flex flex-1 min-h-0 relative">
+        {/* Mobile Sidebar Overlay */}
+        {sidebarOpen && (
+          <div 
+            className="lg:hidden fixed inset-0 bg-black bg-opacity-50 z-40"
+            onClick={() => setSidebarOpen(false)}
+          />
+        )}
+
         {/* Sidebar */}
-        <AulaSidebar
-          user={loggedUser}
-          courses={myCourses}
-          activeCourseId={activeCourseId}
-          activeModule={activeModule}
-          onCourseSelect={selectCourse}
-          onModuleSelect={setActiveModule}
-          onLogout={handleLogout}
-        />
+        <div className={`
+          ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'}
+          lg:translate-x-0 transition-transform duration-300 ease-in-out
+          fixed lg:relative z-50 lg:z-auto
+          w-80 lg:w-72 xl:w-80 h-full
+          lg:flex-shrink-0
+        `}>
+          <div className="h-full overflow-hidden">
+            <AulaSidebar
+              user={loggedUser}
+              courses={myCourses}
+              activeCourseId={activeCourseId}
+              activeModule={activeModule}
+              onCourseSelect={selectCourse}
+              onModuleSelect={(module) => {
+                setActiveModule(module);
+                setSidebarOpen(false); // Close sidebar on mobile after selection
+              }}
+              onLogout={handleLogout}
+            />
+          </div>
+        </div>
 
         {/* Main Content */}
-        <div className="flex-1 flex flex-col overflow-hidden">
-          <div className="flex-1 overflow-y-auto p-6 space-y-6">
-            {/* Course Header */}
-            {activeCourse && (
-              <AulaCourseHeader course={activeCourse} error={error} />
-            )}
+        <div className="flex-1 flex flex-col min-w-0 overflow-hidden">
+          <div className="flex-1 overflow-y-auto scrollbar-thin scrollbar-thumb-slate-300 scrollbar-track-slate-100">
+            <div className="p-3 lg:p-6 max-w-full">
+              {/* Course Header */}
+              {activeCourse && (
+                <div className="mb-4 lg:mb-6">
+                  <AulaCourseHeader course={activeCourse} error={error} />
+                </div>
+              )}
 
-            {/* Module Content */}
-            <div className="flex-1">
-              {renderModuleContent()}
-                      </div>
-                    </div>
+              {/* Module Content */}
+              <div className="w-full">
+                {renderModuleContent()}
+              </div>
             </div>
           </div>
+        </div>
       </div>
+    </div>
   );
 }

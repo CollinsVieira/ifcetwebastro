@@ -74,77 +74,77 @@ export function InicioModule({ course, user, onModuleSelect }: InicioModuleProps
   const upcomingExams = course.exams?.filter(e => e.status === 'scheduled' || e.status === 'upcoming')?.length || 0;
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-4 lg:space-y-8 w-full">
       {/* Quick Stats */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-6">
         <button 
           onClick={() => onModuleSelect('sesiones')}
-          className="group p-6 bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-200 rounded-2xl hover:shadow-lg transition-all duration-300 text-left"
+          className="group p-4 lg:p-6 bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-200 rounded-xl lg:rounded-2xl hover:shadow-lg transition-all duration-300 text-left"
         >
-          <div className="flex items-center justify-between mb-4">
-            <div className="h-12 w-12 bg-blue-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-              <VideoIcon className="h-6 w-6 text-white" />
+          <div className="flex items-center justify-between mb-3 lg:mb-4">
+            <div className="h-10 w-10 lg:h-12 lg:w-12 bg-blue-500 rounded-lg lg:rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <VideoIcon className="h-5 w-5 lg:h-6 lg:w-6 text-white" />
             </div>
-            <ArrowRightIcon className="h-5 w-5 text-blue-600 group-hover:translate-x-1 transition-transform duration-300" />
+            <ArrowRightIcon className="h-4 w-4 lg:h-5 lg:w-5 text-blue-600 group-hover:translate-x-1 transition-transform duration-300" />
           </div>
-          <h3 className="font-semibold text-gray-900 mb-1">Sesiones Grabadas</h3>
-          <p className="text-sm text-gray-600 mb-2">{course.recordings.length} grabaciones disponibles</p>
+          <h3 className="font-semibold text-gray-900 mb-1 text-sm lg:text-base">Sesiones Grabadas</h3>
+          <p className="text-xs lg:text-sm text-gray-600 mb-2">{course.recordings.length} grabaciones disponibles</p>
           <span className="text-xs text-blue-600 font-medium">Ver todas →</span>
         </button>
 
         <button 
           onClick={() => onModuleSelect('materiales')}
-          className="group p-6 bg-gradient-to-br from-emerald-50 to-emerald-100 border border-emerald-200 rounded-2xl hover:shadow-lg transition-all duration-300 text-left"
+          className="group p-4 lg:p-6 bg-gradient-to-br from-emerald-50 to-emerald-100 border border-emerald-200 rounded-xl lg:rounded-2xl hover:shadow-lg transition-all duration-300 text-left"
         >
-          <div className="flex items-center justify-between mb-4">
-            <div className="h-12 w-12 bg-emerald-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-              <FileIcon className="h-6 w-6 text-white" />
+          <div className="flex items-center justify-between mb-3 lg:mb-4">
+            <div className="h-10 w-10 lg:h-12 lg:w-12 bg-emerald-500 rounded-lg lg:rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <FileIcon className="h-5 w-5 lg:h-6 lg:w-6 text-white" />
             </div>
-            <ArrowRightIcon className="h-5 w-5 text-emerald-600 group-hover:translate-x-1 transition-transform duration-300" />
+            <ArrowRightIcon className="h-4 w-4 lg:h-5 lg:w-5 text-emerald-600 group-hover:translate-x-1 transition-transform duration-300" />
           </div>
-          <h3 className="font-semibold text-gray-900 mb-1">Material de Clase</h3>
-          <p className="text-sm text-gray-600 mb-2">{course.materials.length} archivos disponibles</p>
+          <h3 className="font-semibold text-gray-900 mb-1 text-sm lg:text-base">Material de Clase</h3>
+          <p className="text-xs lg:text-sm text-gray-600 mb-2">{course.materials.length} archivos disponibles</p>
           <span className="text-xs text-emerald-600 font-medium">Ver todos →</span>
         </button>
 
         <button 
           onClick={() => onModuleSelect('tareas')}
-          className="group p-6 bg-gradient-to-br from-purple-50 to-purple-100 border border-purple-200 rounded-2xl hover:shadow-lg transition-all duration-300 text-left"
+          className="group p-4 lg:p-6 bg-gradient-to-br from-purple-50 to-purple-100 border border-purple-200 rounded-xl lg:rounded-2xl hover:shadow-lg transition-all duration-300 text-left"
         >
-          <div className="flex items-center justify-between mb-4">
-            <div className="h-12 w-12 bg-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-              <TaskIcon className="h-6 w-6 text-white" />
+          <div className="flex items-center justify-between mb-3 lg:mb-4">
+            <div className="h-10 w-10 lg:h-12 lg:w-12 bg-purple-500 rounded-lg lg:rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <TaskIcon className="h-5 w-5 lg:h-6 lg:w-6 text-white" />
             </div>
-            <ArrowRightIcon className="h-5 w-5 text-purple-600 group-hover:translate-x-1 transition-transform duration-300" />
+            <ArrowRightIcon className="h-4 w-4 lg:h-5 lg:w-5 text-purple-600 group-hover:translate-x-1 transition-transform duration-300" />
           </div>
-          <h3 className="font-semibold text-gray-900 mb-1">Tareas</h3>
-          <p className="text-sm text-gray-600 mb-2">{pendingTasks} tareas pendientes</p>
+          <h3 className="font-semibold text-gray-900 mb-1 text-sm lg:text-base">Tareas</h3>
+          <p className="text-xs lg:text-sm text-gray-600 mb-2">{pendingTasks} tareas pendientes</p>
           <span className="text-xs text-purple-600 font-medium">Ver todas →</span>
         </button>
 
         <button 
           onClick={() => onModuleSelect('examenes')}
-          className="group p-6 bg-gradient-to-br from-orange-50 to-orange-100 border border-orange-200 rounded-2xl hover:shadow-lg transition-all duration-300 text-left"
+          className="group p-4 lg:p-6 bg-gradient-to-br from-orange-50 to-orange-100 border border-orange-200 rounded-xl lg:rounded-2xl hover:shadow-lg transition-all duration-300 text-left"
         >
-          <div className="flex items-center justify-between mb-4">
-            <div className="h-12 w-12 bg-orange-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-              <ExamIcon className="h-6 w-6 text-white" />
+          <div className="flex items-center justify-between mb-3 lg:mb-4">
+            <div className="h-10 w-10 lg:h-12 lg:w-12 bg-orange-500 rounded-lg lg:rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <ExamIcon className="h-5 w-5 lg:h-6 lg:w-6 text-white" />
             </div>
-            <ArrowRightIcon className="h-5 w-5 text-orange-600 group-hover:translate-x-1 transition-transform duration-300" />
+            <ArrowRightIcon className="h-4 w-4 lg:h-5 lg:w-5 text-orange-600 group-hover:translate-x-1 transition-transform duration-300" />
           </div>
-          <h3 className="font-semibold text-gray-900 mb-1">Exámenes</h3>
-          <p className="text-sm text-gray-600 mb-2">{upcomingExams} próximos exámenes</p>
+          <h3 className="font-semibold text-gray-900 mb-1 text-sm lg:text-base">Exámenes</h3>
+          <p className="text-xs lg:text-sm text-gray-600 mb-2">{upcomingExams} próximos exámenes</p>
           <span className="text-xs text-orange-600 font-medium">Ver todos →</span>
         </button>
       </div>
 
       {/* Resources Section */}
-      <div className="bg-white/80 backdrop-blur-sm border border-gray-200/50 rounded-2xl p-6">
-        <h3 className="text-lg font-semibold text-gray-900 mb-6 flex items-center gap-3">
-          <BookIcon className="h-6 w-6 text-blue-500" />
+      <div className="bg-white/80 backdrop-blur-sm border border-gray-200/50 rounded-xl lg:rounded-2xl p-4 lg:p-6">
+        <h3 className="text-base lg:text-lg font-semibold text-gray-900 mb-4 lg:mb-6 flex items-center gap-2 lg:gap-3">
+          <BookIcon className="h-5 w-5 lg:h-6 lg:w-6 text-blue-500" />
           Recursos de Aprendizaje
         </h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 lg:gap-4">
           <a 
             href="#"
             className="group p-4 border border-gray-200 rounded-xl hover:border-blue-300 hover:bg-blue-50/50 transition-all duration-200"
