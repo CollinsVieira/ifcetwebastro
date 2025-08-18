@@ -12,10 +12,10 @@ import sitemap from '@astrojs/sitemap';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://ifcet.com.pe',
+  output: 'static',
   vite: {
     plugins: [tailwindcss()]
   },
 
-  integrations: [react(), sitemap()],
-  adapter: netlify()
+  integrations: [react(), sitemap()]
 });
