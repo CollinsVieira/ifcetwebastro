@@ -89,8 +89,17 @@ interface Course {
 type ActiveModule = 'inicio' | 'sesiones' | 'materiales' | 'tareas' | 'examenes';
 
 export function AulaVirtualComponent() {
+  const [isLoading, setIsLoading] = useState(true);
   const users: User[] = data.users as any;
   const courses: Course[] = data.courses as any;
+
+  // Simular un tiempo de carga mínimo para evitar parpadeos
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 500);
+    return () => clearTimeout(timer);
+  }, []);
 
   const [error, setError] = useState<string | null>(null);
   const [loggedUser, setLoggedUser] = useState<User | null>(null);
@@ -127,51 +136,74 @@ export function AulaVirtualComponent() {
 
   // Restore session and intended course from URL/localStorage
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+    
     try {
-      const raw = typeof window !== 'undefined' ? localStorage.getItem('aulaUser') : null;
+      const raw = localStorage.getItem('aulaUser');
       if (raw) {
         const parsed = JSON.parse(raw) as User;
         setLoggedUser(parsed);
       }
-    } catch {}
+    } catch (error) {
+      console.error('Error restoring session:', error);
+      localStorage.removeItem('aulaUser');
+    }
   }, []);
 
   useEffect(() => {
-    if (!loggedUser) return;
-    const url = new URL(window.location.href);
-    const qp = url.searchParams.get('curso') || url.searchParams.get('c');
-    const wanted = qp ? Number(qp) : NaN;
-    const stored = Number(localStorage.getItem('activeCourseId'));
-    const firstAllowed = loggedUser.courseIds[0] ?? null;
+    if (!loggedUser || typeof window === 'undefined') return;
+    
+    try {
+      const url = new URL(window.location.href);
+      const qp = url.searchParams.get('curso') || url.searchParams.get('c');
+      const wanted = qp ? Number(qp) : NaN;
+      const stored = Number(localStorage.getItem('activeCourseId'));
+      const firstAllowed = loggedUser.courseIds[0] ?? null;
 
-    if (!Number.isNaN(wanted) && canAccessCourse(wanted)) {
-      setActiveCourseId(wanted);
-    } else if (!Number.isNaN(stored) && canAccessCourse(stored)) {
-      setActiveCourseId(stored);
-    } else {
+      if (!Number.isNaN(wanted) && canAccessCourse(wanted)) {
+        setActiveCourseId(wanted);
+      } else if (!Number.isNaN(stored) && canAccessCourse(stored)) {
+        setActiveCourseId(stored);
+      } else {
+        setActiveCourseId(firstAllowed);
+      }
+
+      if (!Number.isNaN(wanted) && !canAccessCourse(wanted)) {
+        setError("No tienes acceso a este curso.");
+      }
+    } catch (error) {
+      console.error('Error setting active course:', error);
+      const firstAllowed = loggedUser.courseIds[0] ?? null;
       setActiveCourseId(firstAllowed);
-    }
-
-    if (!Number.isNaN(wanted) && !canAccessCourse(wanted)) {
-      setError("No tienes acceso a este curso.");
     }
   }, [loggedUser, canAccessCourse]);
 
   // Persist session and sync URL when course changes
   useEffect(() => {
-    if (loggedUser) {
-      localStorage.setItem('aulaUser', JSON.stringify(loggedUser));
-    } else {
-      localStorage.removeItem('aulaUser');
+    if (typeof window === 'undefined') return;
+
+    try {
+      if (loggedUser) {
+        localStorage.setItem('aulaUser', JSON.stringify(loggedUser));
+      } else {
+        localStorage.removeItem('aulaUser');
+      }
+    } catch (error) {
+      console.error('Error persisting session:', error);
     }
   }, [loggedUser]);
 
   useEffect(() => {
-    if (!activeCourseId || !canAccessCourse(activeCourseId)) return;
-    const url = new URL(window.location.href);
-    url.searchParams.set('curso', String(activeCourseId));
-    window.history.replaceState({}, '', url);
-    localStorage.setItem('activeCourseId', String(activeCourseId));
+    if (!activeCourseId || !canAccessCourse(activeCourseId) || typeof window === 'undefined') return;
+    
+    try {
+      const url = new URL(window.location.href);
+      url.searchParams.set('curso', String(activeCourseId));
+      window.history.replaceState({}, '', url);
+      localStorage.setItem('activeCourseId', String(activeCourseId));
+    } catch (error) {
+      console.error('Error updating URL and storing course ID:', error);
+    }
   }, [activeCourseId, canAccessCourse]);
 
   const handleLogin = useCallback((username: string, password: string) => {
@@ -224,6 +256,14 @@ export function AulaVirtualComponent() {
         return <InicioModule course={activeCourse} user={loggedUser!} onModuleSelect={setActiveModule} />;
     }
   };
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-blue-50/30">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+      </div>
+    );
+  }
 
   if (!loggedUser) {
     return <LoginComponent onLogin={handleLogin} error={error} />;

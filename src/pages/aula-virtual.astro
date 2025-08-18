@@ -9,5 +9,15 @@ const noindex = true;
 ---
 
 <AulaLayout {title} {description} {image} {noindex}>
-    <AulaVirtualComponent client:load />
+    <div id="aula-virtual-root">
+        <AulaVirtualComponent client:only="react" />
+    </div>
 </AulaLayout>
+
+<style>
+    #aula-virtual-root {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+</style>
