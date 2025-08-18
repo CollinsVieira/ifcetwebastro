@@ -88,10 +88,36 @@ interface Course {
 
 type ActiveModule = 'inicio' | 'sesiones' | 'materiales' | 'tareas' | 'examenes';
 
+const APP_VERSION = '1.0.1'; // Incrementar esto cuando haya cambios importantes
+
 export function AulaVirtualComponent() {
   const [isLoading, setIsLoading] = useState(true);
+  const [hasError, setHasError] = useState(false);
   const users: User[] = data.users as any;
   const courses: Course[] = data.courses as any;
+
+  // Verificar versión y limpiar caché si es necesario
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    try {
+      const storedVersion = localStorage.getItem('appVersion');
+      if (storedVersion !== APP_VERSION) {
+        // Limpiar toda la caché si la versión es diferente
+        localStorage.clear();
+        localStorage.setItem('appVersion', APP_VERSION);
+        
+        // Recargar la página si es necesario
+        if (storedVersion) {
+          window.location.reload();
+          return;
+        }
+      }
+    } catch (error) {
+      console.error('Error checking version:', error);
+      setHasError(true);
+    }
+  }, []);
 
   // Simular un tiempo de carga mínimo para evitar parpadeos
   useEffect(() => {
@@ -110,13 +136,13 @@ export function AulaVirtualComponent() {
 
 
   const myCourses = useMemo(() => {
-    if (!loggedUser) return [] as Course[];
+    if (!loggedUser || !loggedUser.courseIds) return [] as Course[];
     return courses.filter((c) => loggedUser.courseIds.includes(c.id));
   }, [loggedUser, courses]);
 
   const canAccessCourse = useCallback(
     (courseId: number | null) => {
-      if (!loggedUser || courseId == null) return false;
+      if (!loggedUser || !loggedUser.courseIds || courseId == null) return false;
       return loggedUser.courseIds.includes(courseId);
     },
     [loggedUser]
@@ -158,7 +184,7 @@ export function AulaVirtualComponent() {
       const qp = url.searchParams.get('curso') || url.searchParams.get('c');
       const wanted = qp ? Number(qp) : NaN;
       const stored = Number(localStorage.getItem('activeCourseId'));
-      const firstAllowed = loggedUser.courseIds[0] ?? null;
+      const firstAllowed = loggedUser.courseIds && loggedUser.courseIds.length > 0 ? loggedUser.courseIds[0] : null;
 
       if (!Number.isNaN(wanted) && canAccessCourse(wanted)) {
         setActiveCourseId(wanted);
@@ -173,7 +199,7 @@ export function AulaVirtualComponent() {
       }
     } catch (error) {
       console.error('Error setting active course:', error);
-      const firstAllowed = loggedUser.courseIds[0] ?? null;
+      const firstAllowed = loggedUser.courseIds && loggedUser.courseIds.length > 0 ? loggedUser.courseIds[0] : null;
       setActiveCourseId(firstAllowed);
     }
   }, [loggedUser, canAccessCourse]);
@@ -214,8 +240,15 @@ export function AulaVirtualComponent() {
       setError("Usuario o contraseña incorrectos");
       return;
     }
+    
+    // Verificar que el usuario tenga cursos asignados
+    if (!found.courseIds || found.courseIds.length === 0) {
+      setError("No tienes cursos asignados. Contacta a soporte.");
+      return;
+    }
+    
     setLoggedUser(found);
-    setActiveCourseId(found.courseIds[0] ?? null);
+    setActiveCourseId(found.courseIds[0]);
     } catch (err) {
       setError("Error al iniciar sesión. Inténtalo de nuevo.");
       console.error("Login error:", err);
@@ -257,10 +290,32 @@ export function AulaVirtualComponent() {
     }
   };
 
-  if (isLoading) {
+  if (isLoading || hasError) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-blue-50/30">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+      <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-slate-50 to-blue-50/30 p-4">
+        {hasError ? (
+          <>
+            <div className="text-red-600 mb-4">
+              Hubo un problema al cargar el aula virtual
+            </div>
+            <button
+              onClick={() => {
+                if (typeof window !== 'undefined') {
+                  localStorage.clear();
+                  window.location.reload();
+                }
+              }}
+              className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Intentar nuevamente
+            </button>
+            <p className="mt-4 text-sm text-gray-600 text-center">
+              Si el problema persiste, intenta limpiar la caché de tu navegador o contacta a soporte.
+            </p>
+          </>
+        ) : (
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+        )}
       </div>
     );
   }
