@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import { Aside } from '../../components/aside.tsx';
 import blogData from '../../data/blog.json';
+import { renderBlogContent } from '../../utils/blogContentRenderer.ts';
 
 export async function getStaticPaths() {
   return blogData.posts.map((post) => ({
@@ -68,6 +69,9 @@ const title = `${post.title} | Blog IFCET`;
 const description = post.excerpt;
 const image = post.image;
 const canonical = `https://ifcet.com.pe/blog/${post.slug}`;
+
+// Renderizar el contenido del blog con soporte para tablas
+const renderedContent = renderBlogContent(post.content);
 
 // Datos estructurados para SEO
 const structuredData = {
@@ -170,43 +174,7 @@ const structuredData = {
               />
             </div>
           )}
-          <div class="prose prose-lg max-w-none">
-            {post.content.split('\n\n').map((paragraph, index) => {
-              if (paragraph.startsWith('## ')) {
-                return (
-                  <h2 key={index} class="text-2xl font-bold text-gray-900 mt-8 mb-4">
-                    {paragraph.replace('## ', '')}
-                  </h2>
-                );
-              } else if (paragraph.startsWith('### ')) {
-                return (
-                  <h3 key={index} class="text-xl font-semibold text-gray-800 mt-6 mb-3">
-                    {paragraph.replace('### ', '')}
-                  </h3>
-                );
-              } else if (paragraph.startsWith('- ')) {
-                return (
-                  <ul key={index} class="list-disc list-inside space-y-2 my-4">
-                    {paragraph.split('\n').filter(item => item.startsWith('- ')).map((item, i) => (
-                      <li key={i} class="text-gray-700">{item.replace('- ', '')}</li>
-                    ))}
-                  </ul>
-                );
-              } else if (paragraph.startsWith('**') && paragraph.includes('**')) {
-                return (
-                  <p key={index} class="font-semibold text-gray-900 my-4">
-                    {paragraph.replace(/\*\*/g, '')}
-                  </p>
-                );
-              } else if (paragraph.trim()) {
-                return (
-                  <p key={index} class="text-gray-700 leading-relaxed my-4">
-                    {paragraph}
-                  </p>
-                );
-              }
-              return null;
-            })}
+          <div class="prose prose-lg max-w-none" set:html={renderedContent}>
           </div>
 
           <!-- Tags -->
@@ -214,7 +182,6 @@ const structuredData = {
             <div class="flex flex-wrap gap-2">
               {post.tags.map((tag, index) => (
                 <span
-                  key={index}
                   class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"
                 >
                   #{tag}
@@ -282,7 +249,6 @@ const structuredData = {
               <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {relatedPosts.map((relatedPost) => (
                   <article
-                    key={relatedPost.id}
                     class="bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition-colors group"
                   >
                     <a href={`/blog/${relatedPost.slug}`} class="block">
