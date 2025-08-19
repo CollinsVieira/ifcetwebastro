@@ -70,6 +70,81 @@ export function BlogComponent() {
     });
   };
 
+  // Función para renderizar contenido con tablas
+  const renderContentWithTables = (content: string) => {
+    const paragraphs = content.split('\n\n');
+    
+    return paragraphs.map((paragraph, index) => {
+      // Detectar si es una tabla (comienza con |)
+      if (paragraph.includes('|') && paragraph.includes('---|')) {
+        const lines = paragraph.split('\n');
+        const tableLines = lines.filter(line => line.trim().startsWith('|'));
+        
+        if (tableLines.length >= 3) { // Header + separator + at least one row
+          const headers = tableLines[0].split('|').filter(cell => cell.trim()).map(cell => cell.trim());
+          const rows = tableLines.slice(2).map(row => 
+            row.split('|').filter(cell => cell.trim()).map(cell => cell.trim())
+          );
+          
+          return (
+            <div key={index} className="overflow-x-auto my-6">
+              <table className="min-w-full bg-white border border-gray-300 rounded-lg shadow-sm">
+                <thead className="bg-gray-50">
+                  <tr>
+                    {headers.map((header, headerIndex) => (
+                      <th 
+                        key={headerIndex}
+                        className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-b"
+                      >
+                        {header}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-200">
+                  {rows.map((row, rowIndex) => (
+                    <tr key={rowIndex} className={rowIndex % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                      {row.map((cell, cellIndex) => (
+                        <td 
+                          key={cellIndex}
+                          className="px-4 py-3 text-sm text-gray-900 border-b"
+                        >
+                          {cell}
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          );
+        }
+      }
+      
+      // Renderizado normal para otros tipos de contenido
+      if (paragraph.startsWith('## ')) {
+        return (
+          <h2 key={index} className="text-2xl font-bold text-gray-900 mt-8 mb-4">
+            {paragraph.replace('## ', '')}
+          </h2>
+        );
+      } else if (paragraph.startsWith('### ')) {
+        return (
+          <h3 key={index} className="text-xl font-semibold text-gray-800 mt-6 mb-3">
+            {paragraph.replace('### ', '')}
+          </h3>
+        );
+      } else if (paragraph.trim()) {
+        return (
+          <p key={index} className="text-gray-700 leading-relaxed my-4">
+            {paragraph}
+          </p>
+        );
+      }
+      return null;
+    }).filter(Boolean);
+  };
+
 
 
 
