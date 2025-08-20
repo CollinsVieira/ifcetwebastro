@@ -375,7 +375,7 @@
       "id": 5,
       "name": "Contabilidad de Constructoras e Inmobiliarias",
       "description": "Contabilidad especializada para el sector construcción e inmobiliario",
-      "instructor": "CPC. Ana Martínez",
+      "instructor": "CPC.",
       "codename": "contabilidad constructoras 0125",
       "zoom": "https://us02web.zoom.us/j/82618987063?pwd=cBodz5rzE5utNYSWqKq6HFk0ODgN5Z.1",
       "startDate": "2025-07-09",
@@ -386,7 +386,7 @@
       "recordings": [
         { "id": 1, "title": "Sesión 1 - Introducción al Sector", "url": "https://us02web.zoom.us/rec/play/nyXG00z6G4-c4kM4ZdAqvH9-HutORtle6N86suop6DCXIHd793utJ3HtHbbfUlomYkNtZW_96kTJpok5.TOlAFgB0b6quV8fW", "duration": "3h 00min", "date": "2025-07-09", "description": "Marco normativo del sector construcción" },
         { "id": 2, "title": "Sesión 2 - Costos de Construcción", "url": "https://us02web.zoom.us/rec/play/Q2A9lML0aO-D7iMAu9U-l73sRIdETfMTAWxnnAEMA6Ri_L11n1cDRoeR1d3lRh7fCEZPGGMyeSlNRYmh.knZY0ep2H7MqYLQu", "duration": "3h 00min", "date": "2025-07-16", "description": "Contabilización de costos directos e indirectos" },
-        { "id": 3, "title": "Sesión 3 - Avance de Obra", "url": "", "duration": "3h 00min", "date": "2025-07-23", "description": "Métodos de reconocimiento del avance de obra" },
+        { "id": 3, "title": "Sesión 3 - Avance de Obra", "url": "https://us02web.zoom.us/rec/share/sUPVrsfu1sef4nhkZYZG5GIWFvvrr93Cta2a6EEEfZCeMHiRtUVRAW83hIL5_gZi.gbXztBlTDnoyVTt2", "duration": "2h 00min", "date": "2025-07-23", "description": "Métodos de reconocimiento del avance de obra" },
         { "id": 4, "title": "Sesión 4 - Tributación del Sector", "url": "", "duration": "3h 00min", "date": "2025-07-30", "description": "IGV, IR y otros tributos aplicables" }
       ],
       "materials": [
