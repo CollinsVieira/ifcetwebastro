@@ -145,6 +145,19 @@
       "progress": {
         "12": 100
       }
+    },
+    {
+      "id": 12,
+      "username": "caindustrial",
+      "password": "caindustrial",
+      "fullName": "Contabilidad Agro Industrial",
+      "email": "agroindustrial@ifcet.com.pe",
+      "courseIds": [13],
+      "enrollmentDate": "2025-01-30",
+      "avatar": null,
+      "progress": {
+        "13": 100
+      }
     }
   ],
   "courses": [
@@ -470,66 +483,20 @@
       "endDate": "2025-12-20",
       "schedule": "Mar. Jue. Vier. 7:00 p.m. - 9:00 p.m.",
       "status": "active",
-      "totalSessions": 36,
+      "totalSessions": 4,
       "recordings": [
-        { "id": 1, "title": "Sesión 1 - Fundamentos Contables", "url": "https://us02web.zoom.us/rec/share/2u6MPUWbepSbEIP1vefUDgoDuhEhO16ZfTbIFzK4BXRjhIKFfq-grWUhHps7-mmU.h6AWbscr_gk5w5Jr", "duration": "2h 00min", "date": "2025-08-13", "description": "Introducción a la contabilidad empresarial" },
-        { "id": 2, "title": "Sesión 2 - Plan Contable General", "url": "https://us02web.zoom.us/rec/share/xLF0TOQ8E261zNDjNgj1xw6UKtjs_s0IZcsJWDpJ7Z_b4E5e9-Sju8yzqqfJBqIE.9nJBLOKncB5kiZfN", "duration": "2h 00min", "date": "2025-08-15", "description": "Manejo del PCGE y estructura contable" },
-        { "id": 3, "title": "Sesión 3 - Libros Contables", "url": "https://us02web.zoom.us/rec/share/VeaIUgBJsOCunmKGBzvAqlJIPPNOIRPNGQtw8ycodZ1GGHvYjtkkUal8jY59Gxde.iiqKZn1wgtMhm0hO", "duration": "2h 00min", "date": "2025-08-17", "description": "Elaboración y manejo de libros principales" },
-        { "id": 4, "title": "Sesión 4 - Tributación Básica", "url": "", "duration": "2h 00min", "date": "2025-08-20", "description": "Conceptos fundamentales de tributación" }
+        { "id": 1, "title": "Sesión 1 - ", "url": "https://us02web.zoom.us/rec/share/2u6MPUWbepSbEIP1vefUDgoDuhEhO16ZfTbIFzK4BXRjhIKFfq-grWUhHps7-mmU.h6AWbscr_gk5w5Jr", "duration": "2h 00min", "date": "2025-08-13", "description": "Introducción a la contabilidad empresarial" },
+        { "id": 2, "title": "Sesión 2 - ", "url": "https://us02web.zoom.us/rec/share/xLF0TOQ8E261zNDjNgj1xw6UKtjs_s0IZcsJWDpJ7Z_b4E5e9-Sju8yzqqfJBqIE.9nJBLOKncB5kiZfN", "duration": "2h 00min", "date": "2025-08-15", "description": "Manejo del PCGE y estructura contable" },
+        { "id": 3, "title": "Sesión 3 - ", "url": "https://us02web.zoom.us/rec/share/VeaIUgBJsOCunmKGBzvAqlJIPPNOIRPNGQtw8ycodZ1GGHvYjtkkUal8jY59Gxde.iiqKZn1wgtMhm0hO", "duration": "2h 00min", "date": "2025-08-17", "description": "Elaboración y manejo de libros principales" },
+        { "id": 4, "title": "Sesión 4 - ", "url": "https://us02web.zoom.us/rec/share/1jhnBgdmi1stRbuTg1121PtSEd0-e7RgNXaZ-u0CnE_wZ-1ACzMwuZN5MFCDNTmq.0K1TJmbonCDhPE0e", "duration": "2h 00min", "date": "2025-08-20", "description": "Conceptos fundamentales de tributación" }
       ],
       "materials": [
         { "id": 1, "title": "Material Didáctico Completo", "url": "https://docs.google.com/presentation/d/1e8GagYAyIZ0vDNFRWbA-euM5Ho9OPrmW/edit?usp=sharing&ouid=112580292696143211510&rtpof=true&sd=true", "type": "presentation", "size": "15 MB", "uploadDate": "2025-08-10" },
         { "id": 2, "title": "Material Didáctico Completo", "url": "https://docs.google.com/presentation/d/1e8GagYAyIZ0vDNFRWbA-euM5Ho9OPrmW/edit?usp=sharing&ouid=112580292696143211510&rtpof=true&sd=true", "type": "presentation", "size": "15 MB", "uploadDate": "2025-08-10" },
         { "id": 3, "title": "Material Didáctico Completo", "url": "https://docs.google.com/presentation/d/1e8GagYAyIZ0vDNFRWbA-euM5Ho9OPrmW/edit?usp=sharing&ouid=112580292696143211510&rtpof=true&sd=true", "type": "presentation", "size": "15 MB", "uploadDate": "2025-08-10" }
       ],
-      "tasks": [
-        {
-          "id": 1,
-          "title": "Caso Empresa Comercial ABC",
-          "description": "Registrar operaciones completas de una empresa comercial durante un mes",
-          "dueDate": "2025-09-30",
-          "points": 35,
-          "status": "active",
-          "submissions": [],
-          "instructions": "Incluir libro diario, mayor y balances de comprobación"
-        },
-        {
-          "id": 2,
-          "title": "Declaración Jurada Mensual",
-          "description": "Elaborar PDT 621 completo con datos proporcionados",
-          "dueDate": "2025-10-15",
-          "points": 30,
-          "status": "active",
-          "submissions": [],
-          "instructions": "Usar el programa PDT oficial de SUNAT"
-        }
-      ],
-      "exams": [
-        {
-          "id": 1,
-          "title": "Examen Parcial I - Contabilidad",
-          "description": "Evaluación de conocimientos contables básicos",
-          "date": "2025-09-25",
-          "duration": 120,
-          "points": 100,
-          "status": "scheduled",
-          "attempts": 1,
-          "timeLimit": true,
-          "questions": 25
-        },
-        {
-          "id": 2,
-          "title": "Examen Parcial II - Tributación",
-          "description": "Evaluación de aspectos tributarios",
-          "date": "2025-11-15",
-          "duration": 120,
-          "points": 100,
-          "status": "scheduled",
-          "attempts": 1,
-          "timeLimit": true,
-          "questions": 22
-        }
-      ]
+      "tasks": [],
+      "exams": []
     },
     {
       "id": 8,
@@ -665,6 +632,137 @@
         { "id": 2, "title": "Materiales", "url": "https://drive.google.com/drive/folders/1M0rDt0UCKJ59tM1NhOVdF_xcZJlTSX6s?usp=sharing", "type": "drive", "size": "18 MB", "uploadDate": "2025-01-30" },
         { "id": 3, "title": "Materiales", "url": "https://drive.google.com/drive/folders/10xUlsQYV4v2oTncsLi16WThRE0ogyWCM?usp=sharing", "type": "drive", "size": "12 MB", "uploadDate": "2025-01-30" },
         { "id": 4, "title": "Materiales", "url": "https://drive.google.com/drive/folders/16U4LGnVlWkKa_BowDmmdXNnPLa4uWi6f?usp=sharing", "type": "drive", "size": "12 MB", "uploadDate": "2025-01-30" }
+      ],
+      "tasks": [],
+      "exams": []
+    },
+    {
+      "id": 13,
+      "name": "Contabilidad Agroindustrial",
+      "description": "Curso práctico de Contabilidad Agroindustrial",
+      "instructor": "CPC. ",
+      "codename": "contabilidad agroindustrial 0125",
+      "zoom": "",
+      "startDate": "2025-01-30",
+      "endDate": "2025-03-30",
+      "schedule": "Curso Finalizado",
+      "status": "completed",
+      "totalSessions": 8,
+      "recordings": [
+        {
+          "id": 1,
+          "title": "SESION I",
+          "url": "https://us02web.zoom.us/rec/share/Q4PqiSn9n19yFfnJJit6ZyQWpFfm_SZ8iDl3aVDWsn8ZYKLH_olnbYd-Jx-ewCCT.5aWyzVBKiMxBojx_",
+          "duration": "2h 00min",
+          "date": "2025-08-23",
+          "description": "Grabación de la primera sesión del curso."
+        },
+        {
+          "id": 2,
+          "title": "SESION II",
+          "url": "https://us02web.zoom.us/rec/share/XOeH997ss0MrhzMmlWD4_a7bqUhuPim1D5okxhEhx090_fEitmJONx4V3xgp5TiY.eH56NvHaaRHtjYB7",
+          "duration": "2h 00min",
+          "date": "2025-08-30",
+          "description": "Grabación de la segunda sesión del curso."
+        },
+        {
+          "id": 3,
+          "title": "SESION IV",
+          "url": "https://us02web.zoom.us/rec/share/JtwX5hzntpulSrEfAccy-VeyOZiyP-7WT1tmX4_oph4Tsbwio8-IwH1SZpGKAL4.4D8jf84J2Nrim_k3",
+          "duration": "2h 00min",
+          "date": "2025-09-13",
+          "description": "Grabación de la cuarta sesión del curso."
+        },
+        {
+          "id": 4,
+          "title": "SESION V",
+          "url": "https://us02web.zoom.us/rec/share/qUd39GMw1q8UFwWJRu2M8bA-wMJ8m3f_mw4Rl9Ykdoe-XMyNiqTZKkqNHVqRhdee.PoCCaVAMIJdQkLxW",
+          "duration": "2h 00min",
+          "date": "2025-09-20",
+          "description": "Grabación de la quinta sesión del curso."
+        },
+        {
+          "id": 5,
+          "title": "SESION VI",
+          "url": "https://us02web.zoom.us/rec/share/O7IVSrkqyZkJuDURKrYDVGjltcaXQBHFJOMuzTbaMomfwUBLfJ1L0FaAC_l8xfOi.jVINRLMrl_VrXTgL",
+          "duration": "2h 00min",
+          "date": "2025-09-27",
+          "description": "Grabación de la sexta sesión del curso."
+        },
+        {
+          "id": 6,
+          "title": "SESION VII",
+          "url": "https://us02web.zoom.us/rec/share/VS86dRNKGhsXYDvsNIs12sAPeCOMFVUUW2Vr1be_yb46zG7jrEzc5AN71O6M7xl7.EKBTpTVmSn_b4CUL",
+          "duration": "2h 00min",
+          "date": "2025-10-04",
+          "description": "Grabación de la séptima sesión del curso."
+        },
+        {
+          "id": 7,
+          "title": "SESION VIII",
+          "url": "https://us02web.zoom.us/rec/share/7cDY-0a4KYPoEwuYbXCy_ELkN7iWl6bSFJ6T6zBB44ktRjUJkYJl031kOfJ22kGC.3NsVPw_SEeBSynwv",
+          "duration": "2h 00min",
+          "date": "2025-10-11",
+          "description": "Grabación de la octava sesión del curso."
+        }
+      ],
+      "materials": [
+        {
+          "id": 1,
+          "title": "Materiales Sesión 1",
+          "url": "https://us02web.zoom.us/rec/share/7cDY-0a4KYPoEwuYbXCy_ELkN7iWl6bSFJ6T6zBB44ktRjUJkYJl031kOfJ22kGC.3NsVPw_SEeBSynwv",
+          "type": "zoom_asset",
+          "size": "N/A",
+          "uploadDate": "2025-08-23"
+        },
+        {
+          "id": 2,
+          "title": "Materiales Sesión 2",
+          "url": "https://drive.google.com/drive/folders/1-UixGTEfLiJscAcELlsPJ6WlfUCKtyQO?usp=sharing",
+          "type": "drive",
+          "size": "N/A",
+          "uploadDate": "2025-08-30"
+        },
+        {
+          "id": 3,
+          "title": "Materiales Sesión 3",
+          "url": "https://drive.google.com/drive/folders/1sCXNoCACg4LycgTprKeonnn47GqNv7Wk?usp=sharing",
+          "type": "drive",
+          "size": "N/A",
+          "uploadDate": "2025-09-06"
+        },
+        {
+          "id": 4,
+          "title": "Materiales Sesión 4",
+          "url": "https://drive.google.com/drive/folders/1dgXh3w4DZMdnacWgryZKi8qmCnzrXBs_?usp=sharing",
+          "type": "drive",
+          "size": "N/A",
+          "uploadDate": "2025-09-13"
+        },
+        {
+          "id": 5,
+          "title": "Materiales Sesión 5",
+          "url": "https://drive.google.com/drive/folders/1TKe0QPO8JcmJVEFi4H37TWBk_Z1bfFu3?usp=sharing",
+          "type": "drive",
+          "size": "N/A",
+          "uploadDate": "2025-09-20"
+        },
+        {
+          "id": 6,
+          "title": "Materiales Sesión 7",
+          "url": "https://drive.google.com/drive/folders/1ro8KShpCblX7V7YVKL8NmUr3PI3Cbav5?usp=sharing",
+          "type": "drive",
+          "size": "N/A",
+          "uploadDate": "2025-10-04"
+        },
+        {
+          "id": 7,
+          "title": "Materiales Sesión 8",
+          "url": "https://drive.google.com/drive/folders/1wjOa8hPUmWGb7EqT1EWihIaaEyehR6cr?usp=sharing",
+          "type": "drive",
+          "size": "N/A",
+          "uploadDate": "2025-10-11"
+        }
       ],
       "tasks": [],
       "exams": []
