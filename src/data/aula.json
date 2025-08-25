@@ -158,6 +158,19 @@
       "progress": {
         "13": 100
       }
+    },
+    {
+      "id": 13,
+      "username": "tesoreria",
+      "password": "tesoreria",
+      "fullName": "Especialista en Gestión de Tesorería",
+      "email": "tesoreria@ifcet.com.pe",
+      "courseIds": [14],
+      "enrollmentDate": "2025-08-25",
+      "avatar": null,
+      "progress": {
+        "14": 45
+      }
     }
   ],
   "courses": [
@@ -763,6 +776,33 @@
           "size": "N/A",
           "uploadDate": "2025-10-11"
         }
+      ],
+      "tasks": [],
+      "exams": []
+    },
+    {
+      "id": 14,
+      "name": "Especialista en Gestión de Tesorería",
+      "description": "Curso práctico de Regimen Laboral Minero",
+      "instructor": "CPC. ",
+      "codename": "especialista en gestion de tesoreria 0125",
+      "zoom": "",
+      "startDate": "2025-01-30",
+      "endDate": "2025-03-30",
+      "schedule": "Curso Finalizado",
+      "status": "completed",
+      "totalSessions": 4,
+      "recordings": [
+        { "id": 1, "title": "Sesión 1", "url": "https://us02web.zoom.us/rec/share/LGFbheHJ_00iH6NTxWZsqe6mUjYadk8kLLx7LoIcn8hcgaEG4vkc9WxlfoLmD93U.h8Dbw11QOcow5hGA", "duration": "2h 00min", "date": "2025-08-23", "description": "" },
+        { "id": 2, "title": "Sesión 2", "url": "https://us02web.zoom.us/rec/share/mlF7qbEHd6BL3k1ub86nY5mRDUo084_aD9TppCNeQ5xn9d5EvV0LDaxuKJ9I8PxN.eC2KqNW6Dnkhz53G", "duration": "2h 00min", "date": "2025-08-24", "description": "" },
+        { "id": 3, "title": "Sesión 3", "url": "", "duration": "2h 00min", "date": "", "description": "" },
+        { "id": 4, "title": "Sesión 4", "url": "", "duration": "2h 00min", "date": "", "description": "" }
+      ],
+      "materials": [
+        { "id": 1, "title": "Materiales", "url": "https://drive.google.com/drive/folders/12GwbHtY6OMF_jqLlencMonZ-dCAgpRML?usp=sharing", "type": "drive", "size": "25 MB", "uploadDate": "2025-01-30" },
+        { "id": 2, "title": "Materiales", "url": "https://drive.google.com/drive/folders/18FvghJ4XRRUDsC2INNVqKTTVLbKeO0De?usp=sharing", "type": "drive", "size": "18 MB", "uploadDate": "2025-01-30" },
+        { "id": 3, "title": "Materiales", "url": "", "type": "drive", "size": "12 MB", "uploadDate": "2025-01-30" },
+        { "id": 4, "title": "Materiales", "url": "", "type": "drive", "size": "12 MB", "uploadDate": "2025-01-30" }
       ],
       "tasks": [],
       "exams": []
