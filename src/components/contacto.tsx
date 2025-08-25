@@ -1,6 +1,7 @@
 import React from "react";
 import { ContactForm } from "./ContactForm.tsx";
 import { Aside } from "../components/aside.tsx";
+import contactoImagen from "../assets/IFCET-contactos-mejor-instituto-contable-Peru.webp";
 
 export function ContactoComponent() {
   const paymentMethods = [
@@ -106,8 +107,8 @@ export function ContactoComponent() {
             </div>
             {/* Imagen/Placeholder */}
             <div className="relative h-[32vh] md:h-[46vh] flex items-center justify-center">
-              <div className="h-full w-full flex items-center justify-center border border-dashed border-white/30 rounded-xl">
-                {/* <img src="/contactanos-ifcet.webp" alt="Contacto" className="w-full h-full object-contain" /> */}
+              <div className="h-full w-full flex items-center justify-center rounded-xl overflow-hidden">
+                <img src={contactoImagen.src} alt="Contacto" className="w-full h-full object-cover" />
               </div>
             </div>
           </div>

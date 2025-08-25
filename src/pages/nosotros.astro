@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 const title = 'Nosotros | IFCET';
 const description = 'Conoce al Instituto de Formación Contable, Empresarial y Tributaria: misión, visión, historia y compromiso con la excelencia académica.';
 const image = '/favicon.webp';
+import nosotrosImagen from '../assets/IFCET-nosotros-estudio-contable-empresarial-tributario.webp';
 ---
 
 <Layout {title} {description} {image}>
@@ -22,15 +23,7 @@ const image = '/favicon.webp';
             </div>
           </div>
           <div class="relative h-[32vh] md:h-[46vh] rounded-xl overflow-hidden border border-white/10 bg-white/5">
-            <div class="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent" />
-            <div class="absolute inset-0 grid grid-cols-3 gap-2 p-6">
-              <div class="rounded-lg bg-white/10"></div>
-              <div class="rounded-lg bg-white/10"></div>
-              <div class="rounded-lg bg-white/10"></div>
-              <div class="rounded-lg bg-white/10"></div>
-              <div class="rounded-lg bg-white/10"></div>
-              <div class="rounded-lg bg-white/10"></div>
-            </div>
+            <img src={nosotrosImagen.src} alt="Nosotros" class="w-full h-full object-cover" />
           </div>
         </div>
       </div>
