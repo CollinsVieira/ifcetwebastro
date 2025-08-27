@@ -2,10 +2,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "./swipermodules.css";
 import { FreeMode, Pagination } from "swiper/modules";
 import { Card } from "./card.tsx";
-import cursosData from "../data/cursos.json";
+import categoriasData from "../data/cursos.json";
 
 export function Cursos() {
-  const cursos = cursosData;
+  // Extraer todos los cursos de todas las categorías
+  const todosLosCursos = categoriasData.flatMap(categoria => categoria.cursos);
 
   return (
     <section className="bg-white overflow-x-hidden w-full">
@@ -43,15 +44,15 @@ export function Cursos() {
           modules={[FreeMode, Pagination]}
           className="courses-swiper"
         >
-          {cursos.map((curso, index) => (
+          {todosLosCursos.map((curso, index) => (
             <SwiperSlide key={index} className="pb-8">
               <Card
                 img={curso.img}
                 title={curso.title}
                 docente={curso.docente}
                 Inicio={curso.Inicio}
-                lessons={curso.lessons}
-                students={curso.students}
+                lessons={parseInt(curso.lessons)}
+                students={parseInt(curso.students)}
                 hours={curso.hours}
                 link={curso.link}
               />

@@ -1,18 +1,19 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import cursos from '../data/cursos.json';
+import categorias from '../data/cursos.json';
 const title = 'Cursos IFCET | Programas profesionales con clases en vivo';
 const description = 'Explora cursos de contabilidad, tributación, finanzas, laboral y auditoría. Metodología práctica, docentes expertos y certificación.';
 const image = '/favicon.webp';
 import cursosImagen from '../assets/IFCET-cursos-certificados-diplomados-seminarios-tributacion-laboral-finanzas-auditoria-peritaje-Peru.webp';
+import personaSosteniendoUnaLaptop from '../assets/persona-sosteniendo-una-laptop-ifcet.webp';
 ---
 
 <Layout {title} {description} {image}>
   <div class="w-full">
     <!-- Hero Section -->
     <section class="bg-gradient-to-b from-slate-900 via-slate-900 to-black text-white">
-      <div class="max-w-7xl mx-auto px-4 py-14 md:py-20">
-        <div class="grid md:grid-cols-2 items-center gap-8">
+      <div class="max-w-7xl mx-auto pt-20">
+        <div class="grid md:grid-cols-2 items-center gap-8 ">
           <div class="space-y-5">
             <h1 class="text-[clamp(1.8rem,4.5vw,3rem)] font-extrabold leading-tight">
               Descubre nuestros cursos profesionales
@@ -21,84 +22,172 @@ import cursosImagen from '../assets/IFCET-cursos-certificados-diplomados-seminar
               Programas diseñados para potenciar tu perfil en contabilidad, tributación y gestión empresarial. Clases en vivo, enfoque práctico y certificación.
             </p>
             <div class="flex flex-wrap gap-3">
-              <a href="#lista-cursos" class="px-5 py-2.5 rounded-lg text-sm font-medium bg-[#ffb403] text-black hover:scale-[1.02] transition-transform">
-                Ver cursos disponibles
+              <a href="#categorias-cursos" class="px-5 py-2.5 rounded-lg text-sm font-medium bg-[#ffb403] text-black hover:scale-[1.02] transition-transform">
+                Ver categorías disponibles
               </a>
               <a href="/contacto#contacto" class="px-5 py-2.5 rounded-lg text-sm font-medium bg-white/10 text-white border border-white/30 hover:bg-white/15 hover:scale-[1.02] transition-transform">
                 Contáctanos
               </a>
             </div>
           </div>
-
-          <div class="relative h-[32vh] md:h-[46vh] rounded-xl overflow-hidden border border-white/10 bg-white/5">
-            <img src={cursosImagen.src} alt="Cursos" class="w-full h-full object-cover" />
-            </div>
+          <div class="relative h-[32vh] md:h-[46vh] w-full items-center justify-center hidden sm:flex">
+            <img src={personaSosteniendoUnaLaptop.src} alt="Cursos" class="max-w-full max-h-full object-contain" />
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Lista de Cursos -->
-    <section id="lista-cursos" class="bg-white">
-      <div class="max-w-7xl mx-auto px-4 py-12 md:py-16">
-        <div class="mb-8">
-          <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900">Cursos disponibles</h2>
-          <p class="text-gray-600 mt-2">Explora nuestros programas y solicita información por WhatsApp.</p>
+    <!-- Categorías de Cursos -->
+    <section id="categorias-cursos" class="bg-white w-screen">
+      <div class="w-full bg-slate-200 flex sm:flex-row flex-col justify-center items-center ">
+        <div class="p-4 w-full sm:w-1/2 sm:p-4 sm:ml-8 lg:ml-60">
+          <div class="sm:max-w-xl text-pretty">
+            <h2 class="text-xl md:text-3xl font-extrabold text-gray-900">El complemento ideal para tu formación académica ;)</h2>
+            <p class="text-gray-600 mt-2 text-pretty text-sm sm:text-base">
+              Eleva tus competencias académicas con la formación en contabilidad de IFCET. Descubre por qué las principales compañías confían en nuestra plataforma para el desarrollo de sus profesionales. 
+              Nuestros cursos, diseñados por expertos, ofrecen las herramientas y conocimientos esenciales para gestionar las finanzas de forma eficiente y estratégica. Capacitacitate con los programas de contabilidad 
+              más demandados y asegura el éxito financiero de tu organización.
+            </p>
+          </div>
         </div>
+        <div class="w-full sm:w-1/2">
+          <img src={cursosImagen.src} alt="persona-sosteniendo-una-laptop-ifcet" >
+        </div>
+      </div>
+      <div class="max-w-7xl mx-auto px-4 py-12 md:py-16 ">
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {cursos.map((curso) => (
-            <article class="group relative rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 overflow-hidden">
-              <!-- Media -->
-              <div class="relative h-56 overflow-hidden">
-                <img src={curso.img} alt={curso.title} class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" />
-                <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
-                <div class="absolute top-3 left-3">
-                  <span class="px-3 py-1 text-xs font-semibold rounded-full bg-white/90 text-gray-900 backdrop-blur-sm">Inicio: {curso.Inicio}</span>
-                </div>
-                <div class="absolute top-3 right-3">
-                  <span class="px-3 py-1 text-xs font-semibold rounded-full bg-blue-600 text-white">{(curso.hours || '').toString().trim()}h</span>
+        {categorias.map((categoria, categoriaIndex) => (
+          <div class="mb-16 last:mb-0">
+            <!-- Encabezado de categoría -->
+            <div class="mb-8 bg-slate-100 p-4 rounded-lg">
+              <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-3">{categoria.categoria}</h3>
+              <p class="text-gray-600 max-w-3xl">{categoria.descripcion}</p>
+            </div>
+
+            <!-- Grid de cursos -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {categoria.cursos.slice(0, 4).map((curso) => (
+                <article class="group relative flex flex-col rounded-3xl bg-white shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 overflow-hidden border border-gray-100">
+                  <!-- Imagen -->
+                  <div class="relative aspect-square overflow-hidden">
+                    <img src={curso.img} alt={curso.title} 
+                      class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
+                      loading="lazy" />
+                    <div class="absolute top-3 left-3">
+                      <span class="px-3 py-1 text-xs font-semibold rounded-full bg-amber-500 text-white">Inicio: {curso.Inicio}</span>
+                    </div>
+                  </div>
+
+                  <!-- Contenido -->
+                  <div class="flex-1 flex flex-col p-6">
+                    <h4 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors line-clamp-2">
+                      {curso.title}
+                    </h4>
+
+                    <p class="text-sm text-gray-600 mb-4 line-clamp-2">{curso.docente}</p>
+
+                    <div class="flex flex-wrap gap-2 text-xs text-gray-600 mb-4">
+                      <span class="px-2 py-1 rounded-full bg-gray-100">{curso.lessons} lecciones</span>
+                      <span class="px-2 py-1 rounded-full bg-gray-100">{curso.students} estudiantes</span>
+                      <span class="px-2 py-1 rounded-full bg-gray-100">{curso.duration}h</span>
+                    </div>
+
+                    <!-- CTA -->
+                    <a href={curso.link} target="_blank" rel="noopener noreferrer" 
+                      class="mt-auto inline-flex items-center justify-center w-full bg-gradient-to-r from-amber-500 to-orange-500 hover:from-blue-600 hover:to-indigo-600 text-white font-semibold py-3 px-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl">
+                      Solicitar información
+                      <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                      </svg>
+                    </a>
+                  </div>
+                </article>
+              ))}
+            </div>
+
+            <!-- Cursos adicionales (ocultos inicialmente) -->
+            {categoria.cursos.length > 4 && (
+              <div id={`cursos-adicionales-${categoriaIndex}`} class="hidden mt-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                  {categoria.cursos.slice(4).map((curso) => (
+                    <article class="group relative flex flex-col rounded-3xl bg-white shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 overflow-hidden border border-gray-100">
+                      <!-- Imagen -->
+                      <div class="relative aspect-square overflow-hidden">
+                        <img src={curso.img} alt={curso.title} 
+                          class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
+                          loading="lazy" />
+                        <div class="absolute top-3 left-3">
+                          <span class="px-3 py-1 text-xs font-semibold rounded-full bg-amber-500 text-white">Inicio: {curso.Inicio}</span>
+                        </div>
+                      </div>
+
+                      <!-- Contenido -->
+                      <div class="flex-1 flex flex-col p-6">
+                        <h4 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors line-clamp-2">
+                          {curso.title}
+                        </h4>
+
+                        <p class="text-sm text-gray-600 mb-4 line-clamp-2">{curso.docente}</p>
+
+                        <div class="flex flex-wrap gap-2 text-xs text-gray-600 mb-4">
+                          <span class="px-2 py-1 rounded-full bg-gray-100">{curso.lessons} lecciones</span>
+                          <span class="px-2 py-1 rounded-full bg-gray-100">{curso.students} estudiantes</span>
+                          <span class="px-2 py-1 rounded-full bg-gray-100">{curso.duration}h</span>
+                        </div>
+
+                        <!-- CTA -->
+                        <a href={curso.link} target="_blank" rel="noopener noreferrer" 
+                          class="mt-auto inline-flex items-center justify-center w-full bg-gradient-to-r from-amber-500 to-orange-500 hover:from-blue-600 hover:to-indigo-600 text-white font-semibold py-3 px-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl">
+                          Solicitar información
+                          <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                          </svg>
+                        </a>
+                      </div>
+                    </article>
+                  ))}
                 </div>
               </div>
+            )}
 
-              <!-- Content -->
-              <div class="p-6">
-                <h3 class="text-[clamp(1rem,2.5vw,1.25rem)] font-bold text-gray-900 leading-tight mb-2 line-clamp-2">{curso.title}</h3>
-
-                <div class="flex items-center gap-3 mb-4">
-                  <div class="w-10 h-10 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs font-bold">
-                    {curso.docente.split(' ').map(n => n[0]).join('').slice(0,2)}
-                  </div>
-                  <div>
-                    <p class="text-sm font-semibold text-gray-800">{curso.docente}</p>
-                    <p class="text-xs text-gray-500">{curso.Horario}</p>
-                  </div>
-                </div>
-
-                <div class="grid grid-cols-3 gap-2 mb-5">
-                  <div class="flex items-center gap-2 rounded-lg bg-gray-50 px-3 py-2">
-                    <svg fill="#585D69" width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8,3 L8,17 L19,17 L19,3.5 C19,3.22385763 18.7761424,3 18.5,3 L8,3 Z M7,3 L6.5,3 C5.67157288,3 5,3.67157288 5,4.5 L5,17.4998169 C5.41783027,17.1859724 5.93719704,17 6.5,17 L7,17 L7,3 Z M4.15121433,20.3582581 C4.05793442,20.2674293 4,20.1404803 4,20 L4,4.5 C4,3.11928813 5.11928813,2 6.5,2 L18.5,2 C19.3284271,2 20,2.67157288 20,3.5 L20,20.5 C20,21.3284271 19.3284271,22 18.5,22 L6.5,22 C5.42082093,22 4.50134959,21.3162099 4.15121433,20.3582581 L4.15121433,20.3582581 Z M19,18 L6.5,18 C5.67157288,18 5,18.6715729 5,19.5 C5,20.3284271 5.67157288,21 6.5,21 L18.5,21 C18.7761424,21 19,20.7761424 19,20.5 L19,18 Z M10.5,10 C10.2238576,10 10,9.77614237 10,9.5 C10,9.22385763 10.2238576,9 10.5,9 L16.5,9 C16.7761424,9 17,9.22385763 17,9.5 C17,9.77614237 16.7761424,10 16.5,10 L10.5,10 Z M10.5,8 C10.2238576,8 10,7.77614237 10,7.5 C10,7.22385763 10.2238576,7 10.5,7 L14.5,7 C14.7761424,7 15,7.22385763 15,7.5 C15,7.77614237 14.7761424,8 14.5,8 L10.5,8 Z"/></svg>
-                    <span class="text-xs">{curso.lessons}</span>
-                  </div>
-                  <div class="flex items-center gap-2 rounded-lg bg-gray-50 px-3 py-2">
-                    <svg width="16" height="16" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" stroke-width="3" stroke="#585D69" fill="none"><path d="M48.61,56.07A16.61,16.61,0,0,0,32,39.45h0A16.61,16.61,0,0,0,15.39,56.07Z"/><path d="M39.41,28a8.11,8.11,0,0,1-8.25,8.1,8.28,8.28,0,0,1-7.95-8.37V16.45a.06.06,0,0,1,.05-.06,60.56,60.56,0,0,1,8.27-.68,54.93,54.93,0,0,1,7.91.68.06.06,0,0,1,.06.06Z"/><path d="M23.21,20.14l-8.27-3.8a.08.08,0,0,1,0-.13L31.32,8.39h.06l16.33,7.74a.07.07,0,0,1,0,.12L39.5,20.14"/><path d="M23.21,24.35H20.89s-2,0-2,3.1c0,2.86,2,2.86,2,2.86l2.72,0"/><path d="M39.41,24.71h2.32s2,0,2,3.09c0,2.86-2,2.86-2,2.86H39"/><line x1="46.85" y1="33.15" x2="46.85" y2="16.72"/><circle cx="46.85" cy="35.28" r="2.13"/><path d="M39.5,23a42.89,42.89,0,0,0-7.95-.69,40.85,40.85,0,0,0-8.34.69"/></svg>
-                    <span class="text-xs font-medium">{curso.students}</span>
-                  </div>
-                  <div class="flex items-center gap-2 rounded-lg bg-gray-50 px-3 py-2">
-                    <svg fill="#585D69" width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12,23 C5.92486775,23 1,18.0751322 1,12 C1,5.92486775 5.92486775,1 12,1 C18.0751322,1 23,5.92486775 23,12 C23,18.0751322 18.0751322,23 12,23 Z M12,21 C16.9705627,21 21,16.9705627 21,12 C21,7.02943725 16.9705627,3 12,3 C7.02943725,3 3,7.02943725 3,12 C3,16.9705627 7.02943725,21 12,21 Z M13,11 L17,11 L17,13 L11,13 L11,6 L13,6 L13,11 Z"/></svg>
-                    <span class="text-xs font-medium">{(curso.duration || '').toString().trim()}h</span>
-                  </div>
-                </div>
-
-                <a href={curso.link} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-[#ffb204] hover:to-orange-400 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 shadow-sm hover:shadow-md">
-                  Solicitar información
-                  <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-                </a>
+            <!-- Botón Mostrar más/menos si hay más de 4 cursos -->
+            {categoria.cursos.length > 4 && (
+              <div class="mt-8 flex justify-center">
+                <button 
+                  id={`btn-toggle-${categoriaIndex}`}
+                  class="px-6 py-3 text-sm font-medium text-blue-600 bg-white border border-blue-600 rounded-lg hover:bg-blue-50 transition-colors"
+                  onclick={`toggleCursos(${categoriaIndex}, ${categoria.cursos.length - 4})`}
+                >
+                  Mostrar {categoria.cursos.length - 4} más
+                </button>
               </div>
-            </article>
-          ))}
-        </div>
+            )}
+          </div>
+        ))}
       </div>
     </section>
   </div>
+
+  <script is:inline>
+    function toggleCursos(categoriaIndex, cantidadCursos) {
+      const cursosAdicionales = document.getElementById(`cursos-adicionales-${categoriaIndex}`);
+      const btnToggle = document.getElementById(`btn-toggle-${categoriaIndex}`);
+      
+      if (!cursosAdicionales || !btnToggle) return;
+      
+      if (cursosAdicionales.classList.contains('hidden')) {
+        // Mostrar cursos adicionales
+        cursosAdicionales.classList.remove('hidden');
+        btnToggle.textContent = `Mostrar menos`;
+        btnToggle.classList.remove('text-blue-600', 'border-blue-600', 'hover:bg-blue-50');
+        btnToggle.classList.add('text-orange-600', 'border-orange-600', 'hover:bg-orange-50');
+      } else {
+        // Ocultar cursos adicionales
+        cursosAdicionales.classList.add('hidden');
+        btnToggle.textContent = `Mostrar ${cantidadCursos} más`;
+        btnToggle.classList.remove('text-orange-600', 'border-orange-600', 'hover:bg-orange-50');
+        btnToggle.classList.add('text-blue-600', 'border-blue-600', 'hover:bg-blue-50');
+      }
+    }
+  </script>
 </Layout>

@@ -1,39 +1,260 @@
 [
   {
-    "img": "/Asistente-Contable-Tributario-Curso-IFCET.webp",
-    "title": "Curso en Asistente Contable Tributario",
-    "duration": "120",
-    "docente": "CPC. William Mendoza Tarrillo",
-    "Inicio": "13 de Agosto",
-    "Horario": "07:00 p.m.",
-    "lessons": 4,
-    "students": 23,
-    "hours": "120",
-    "link": "https://wa.link/e08zhh"
+    "categoria": "Tributación y Fiscalización",
+    "descripcion": "Programas especializados en normativa tributaria, fiscalización y cumplimiento de obligaciones fiscales.",
+    "cursos": [
+      {
+        "img": "/cursos/IFCET-Prescripcion-Tributaria.webp",
+        "title": "Curso En Prescripcion Tributaria",
+        "duration": "",
+        "docente": "",
+        "Inicio": "",
+        "Horario": "",
+        "lessons": "7",
+        "students": "32",
+        "hours": "220",
+        "link": ""
+      },
+      {
+        "img": "/cursos/IFCET-Operaciones-Reales-No-Reales-y-Trazabilidad-Tributaria.webp",
+        "title": "Curso En Operaciones Reales No Reales y Trazabilidad Tributaria",
+        "duration": "",
+        "docente": "",
+        "Inicio": "",
+        "Horario": "",
+        "lessons": "9",
+        "students": "28",
+        "hours": "220",
+        "link": ""
+      },
+      {
+        "img": "/cursos/IFCET-Medios-de-Extincion-de-la-Obligacion-Tributaria.webp",
+        "title": "Curso En Medios de Extincion de la Obligacion Tributaria",
+        "duration": "",
+        "docente": "",
+        "Inicio": "",
+        "Horario": "",
+        "lessons": "5",
+        "students": "22",
+        "hours": "220",
+        "link": ""
+      },
+      {
+        "img": "/cursos/IFCET-Incremento-Patrimonial-No-Justificado.webp",
+        "title": "Curso En Incremento Patrimonial No Justificado",
+        "duration": "",
+        "docente": "",
+        "Inicio": "",
+        "Horario": "",
+        "lessons": "6",
+        "students": "19",
+        "hours": "220",
+        "link": ""
+      },
+      {
+        "img": "/cursos/IFCET-Como-Afrontar-una-Fiscalizacion-Tributaria.webp",
+        "title": "Curso En Como Afrontar una Fiscalizacion Tributaria",
+        "duration": "",
+        "docente": "",
+        "Inicio": "",
+        "Horario": "",
+        "lessons": "9",
+        "students": "36",
+        "hours": "220",
+        "link": ""
+      },
+      {
+        "img": "/cursos/IFCET-Cautelares-Ejecucion-Coactiva-y-Cobranza-Tributaria.webp",
+        "title": "Curso En Cautelares Ejecucion Coactiva y Cobranza Tributaria",
+        "duration": "",
+        "docente": "",
+        "Inicio": "",
+        "Horario": "",
+        "lessons": "8",
+        "students": "30",
+        "hours": "220",
+        "link": ""
+      }
+    ]
   },
   {
-    "img": "/auditoria-tributaria-preventiva-curso.jpg",
-    "title": "Curso Especializado de Auditoría Tributaria Preventiva",
-    "duration": "120 ",
-    "docente": "CPC. William Mendoza Tarrillo",
-    "Inicio": "10 de Agosto",
-    "Horario": "",
-    "lessons": 2,
-    "students": 13,
-    "hours": "4",
-    "link": "https://wa.link/xo0zg1"
+    "categoria": "Contabilidad Especializada",
+    "descripcion": "Cursos avanzados en contabilidad sectorial y especializada para diferentes tipos de empresas y actividades económicas.",
+    "cursos": [
+      {
+        "img": "/cursos/IFCET-Contabilidad-de-Empresas-Avicolas.webp",
+        "title": "Curso En Contabilidad de Empresas Avicolas",
+        "duration": "",
+        "docente": "",
+        "Inicio": "",
+        "Horario": "",
+        "lessons": "8",
+        "students": "33",
+        "hours": "220",
+        "link": ""
+      },
+      {
+        "img": "/cursos/IFCET-Contabilidad-de-Empresas-Arroceras.webp",
+        "title": "Curso En Contabilidad de Empresas Arroceras",
+        "duration": "",
+        "docente": "",
+        "Inicio": "",
+        "Horario": "",
+        "lessons": "6",
+        "students": "21",
+        "hours": "220",
+        "link": ""
+      },
+      {
+        "img": "/cursos/IFCET-Contabilidad-Agroindustrial.webp",
+        "title": "Curso En Contabilidad Agroindustrial",
+        "duration": "",
+        "docente": "",
+        "Inicio": "",
+        "Horario": "",
+        "lessons": "7",
+        "students": "27",
+        "hours": "220",
+        "link": ""
+      },
+      {
+        "img": "/cursos/IFCET-Contabilidad-de-Empresas-Azucareras.webp",
+        "title": "Curso En Contabilidad de Empresas Azucareras",
+        "duration": "",
+        "docente": "",
+        "Inicio": "",
+        "Horario": "",
+        "lessons": "7",
+        "students": "25",
+        "hours": "220",
+        "link": ""
+      },
+      {
+        "img": "/cursos/IFCET-Contabilidad-de-Fiscalizacion-Tributaria.webp",
+        "title": "Curso En Contabilidad de Fiscalizacion Tributaria",
+        "duration": "",
+        "docente": "",
+        "Inicio": "",
+        "Horario": "",
+        "lessons": "7",
+        "students": "29",
+        "hours": "220",
+        "link": ""
+      }
+    ]
   },
   {
-    "img": "/curso-contabilidad-minera.webp",
-    "title": "Curso Especializado de Contabilidad Minera",
-    "duration": "120",
-    "docente": "CPC. Carlos Manrique de Lara Sarmiento",
-    "Inicio": "16 de Agosto",
-    "Horario": "4:00 p.m. - 7:00 p.m.",
-    "lessons": 4,
-    "students": 18,
-    "hours": "12 ",
-    "link": ""
+    "categoria": "Valorización y Gestión Patrimonial",
+    "descripcion": "Programas especializados en valorización de activos, gestión patrimonial y análisis financiero empresarial.",
+    "cursos": [
+      {
+        "img": "/cursos/IFCET-Valorizacion-de-Acciones-y-Patrimonio.webp",
+        "title": "Curso En Valorizacion de Acciones y Patrimonio",
+        "duration": "",
+        "docente": "",
+        "Inicio": "",
+        "Horario": "",
+        "lessons": "8",
+        "students": "25",
+        "hours": "220",
+        "link": ""
+      },
+      {
+        "img": "/cursos/IFCET-Sistema-Spot-y-su-Tabla-de-Aplicacion-Porcentual.webp",
+        "title": "Curso En Sistema Spot y su Tabla de Aplicacion Porcentual",
+        "duration": "",
+        "docente": "",
+        "Inicio": "",
+        "Horario": "",
+        "lessons": "6",
+        "students": "18",
+        "hours": "220",
+        "link": ""
+      },
+      {
+        "img": "/cursos/IFCET-Determinacion-de-Inventarios-Suministros-Mermas-y-Desmedros.webp",
+        "title": "Curso En Determinacion de Inventarios Suministros Mermas y Desmedros",
+        "duration": "",
+        "docente": "",
+        "Inicio": "",
+        "Horario": "",
+        "lessons": "9",
+        "students": "38",
+        "hours": "220",
+        "link": ""
+      }
+    ]
+  },
+  {
+    "categoria": "Especialización Legal y Regulatoria",
+    "descripcion": "Cursos de especialización en normativas legales, cumplimiento regulatorio y prevención de delitos financieros.",
+    "cursos": [
+      {
+        "img": "/cursos/IFCET-Especialista-en-Lavado-de-Activos.webp",
+        "title": "Curso En Especialista en Lavado de Activos",
+        "duration": "",
+        "docente": "",
+        "Inicio": "",
+        "Horario": "",
+        "lessons": "10",
+        "students": "42",
+        "hours": "220",
+        "link": ""
+      },
+      {
+        "img": "/cursos/IFCET-Especialista-en-la-Ley-y-su-Reglamento-del-IGV-e-ISC.webp",
+        "title": "Curso En Especialista en la Ley y su Reglamento del IGV e ISC",
+        "duration": "",
+        "docente": "",
+        "Inicio": "",
+        "Horario": "",
+        "lessons": "7",
+        "students": "26",
+        "hours": "220",
+        "link": ""
+      },
+      {
+        "img": "/cursos/IFCET-Especialista-en-Delito-Tributario.webp",
+        "title": "Curso En Especialista en Delito Tributario",
+        "duration": "",
+        "docente": "",
+        "Inicio": "",
+        "Horario": "",
+        "lessons": "8",
+        "students": "31",
+        "hours": "220",
+        "link": ""
+      },
+      {
+        "img": "/cursos/IFCET-Especialista-en-Beneficiario-Final.webp",
+        "title": "Curso En Especialista en Beneficiario Final",
+        "duration": "",
+        "docente": "",
+        "Inicio": "",
+        "Horario": "",
+        "lessons": "6",
+        "students": "24",
+        "hours": "220",
+        "link": ""
+      }
+    ]
+  },
+  {
+    "categoria": "Tecnología y Sistemas Contables",
+    "descripcion": "Programas enfocados en sistemas electrónicos, libros contables digitales y herramientas tecnológicas para la gestión contable.",
+    "cursos": [
+      {
+        "img": "/cursos/IFCET-Libros-Electronicos-y-Sire.webp",
+        "title": "Curso En Libros Electronicos y Sire",
+        "duration": "",
+        "docente": "",
+        "Inicio": "",
+        "Horario": "",
+        "lessons": "8",
+        "students": "35",
+        "hours": "220",
+        "link": ""
+      }
+    ]
   }
-  
 ] 

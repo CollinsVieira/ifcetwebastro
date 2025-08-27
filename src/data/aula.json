@@ -783,14 +783,14 @@
     {
       "id": 14,
       "name": "Especialista en Gestión de Tesorería",
-      "description": "Curso práctico de Regimen Laboral Minero",
+      "description": "Curso práctico de Gestión de Tesorería",
       "instructor": "CPC. ",
       "codename": "especialista en gestion de tesoreria 0125",
       "zoom": "",
       "startDate": "2025-01-30",
       "endDate": "2025-03-30",
-      "schedule": "Curso Finalizado",
-      "status": "completed",
+      "schedule": "En Proceso",
+      "status": "in_progress",
       "totalSessions": 4,
       "recordings": [
         { "id": 1, "title": "Sesión 1", "url": "https://us02web.zoom.us/rec/share/LGFbheHJ_00iH6NTxWZsqe6mUjYadk8kLLx7LoIcn8hcgaEG4vkc9WxlfoLmD93U.h8Dbw11QOcow5hGA", "duration": "2h 00min", "date": "2025-08-23", "description": "" },
