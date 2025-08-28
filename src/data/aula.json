@@ -513,7 +513,7 @@
     },
     {
       "id": 7,
-      "name": "Asistente Contable Tributario Premium",
+      "name": "Asistente Contable Tributario",
       "description": "Curso intensivo de asistente contable con certificación",
       "instructor": "William Mendoza",
       "codename": "asistente contable tributario 0125",
@@ -522,12 +522,14 @@
       "endDate": "2025-12-20",
       "schedule": "Mar. Jue. Vier. 7:00 p.m. - 9:00 p.m.",
       "status": "active",
-      "totalSessions": 4,
+      "totalSessions": 5,
       "recordings": [
         { "id": 1, "title": "Sesión 1 - ", "url": "https://us02web.zoom.us/rec/share/2u6MPUWbepSbEIP1vefUDgoDuhEhO16ZfTbIFzK4BXRjhIKFfq-grWUhHps7-mmU.h6AWbscr_gk5w5Jr", "duration": "2h 00min", "date": "2025-08-13", "description": "Introducción a la contabilidad empresarial" },
         { "id": 2, "title": "Sesión 2 - ", "url": "https://us02web.zoom.us/rec/share/xLF0TOQ8E261zNDjNgj1xw6UKtjs_s0IZcsJWDpJ7Z_b4E5e9-Sju8yzqqfJBqIE.9nJBLOKncB5kiZfN", "duration": "2h 00min", "date": "2025-08-15", "description": "Manejo del PCGE y estructura contable" },
         { "id": 3, "title": "Sesión 3 - ", "url": "https://us02web.zoom.us/rec/share/VeaIUgBJsOCunmKGBzvAqlJIPPNOIRPNGQtw8ycodZ1GGHvYjtkkUal8jY59Gxde.iiqKZn1wgtMhm0hO", "duration": "2h 00min", "date": "2025-08-17", "description": "Elaboración y manejo de libros principales" },
-        { "id": 4, "title": "Sesión 4 - ", "url": "https://us02web.zoom.us/rec/share/1jhnBgdmi1stRbuTg1121PtSEd0-e7RgNXaZ-u0CnE_wZ-1ACzMwuZN5MFCDNTmq.0K1TJmbonCDhPE0e", "duration": "2h 00min", "date": "2025-08-20", "description": "Conceptos fundamentales de tributación" }
+        { "id": 4, "title": "Sesión 4 - ", "url": "https://us02web.zoom.us/rec/share/1jhnBgdmi1stRbuTg1121PtSEd0-e7RgNXaZ-u0CnE_wZ-1ACzMwuZN5MFCDNTmq.0K1TJmbonCDhPE0e", "duration": "2h 00min", "date": "2025-08-20", "description": "Conceptos fundamentales de tributación" },
+        { "id": 5, "title": "Sesión 45- ", "url": "https://us02web.zoom.us/rec/share/b4t27Xxe_zZiLgipuIdUKIgUcdtBbCXeH6pxj6p1-035BnV2eZD8UGU5bl6MZlvN.e08e6Wmo8FBiLQf7", "duration": "2h 00min", "date": "2025-08-28", "description": "" }
+
       ],
       "materials": [
         { "id": 1, "title": "Material Didáctico Completo", "url": "https://docs.google.com/presentation/d/1e8GagYAyIZ0vDNFRWbA-euM5Ho9OPrmW/edit?usp=sharing&ouid=112580292696143211510&rtpof=true&sd=true", "type": "presentation", "size": "15 MB", "uploadDate": "2025-08-10" },
