@@ -161,19 +161,19 @@ export function Header2() {
         }`}
       >
         <div className="p-2 flex justify-center items-center gap-x-4">
-          <a href="" className="hover:opacity-80" target="_blank">
+          <a href="https://wa.link/4v4o2a" className="hover:opacity-80" target="_blank">
             <WhatsApp className="w-[28px] h-[28px]" />
           </a>
-          <a href="" className="hover:opacity-80" target="_blank">
+          <a href="https://www.facebook.com/ifcet.contables" className="hover:opacity-80" target="_blank">
             <Facebook className="w-[28px] h-[28px]" />
           </a>
-          <a href="" className="hover:opacity-80" target="_blank">
+          <a href="https://www.instagram.com/ifcet.contables/" className="hover:opacity-80" target="_blank">
             <Instagram className="w-[28px] h-[28px]" />
           </a>
-          <a href="" className="hover:opacity-80" target="_blank">
+          <a href="https://www.linkedin.com/in/ifcet-cursos-de-contabilidad-55a843331/?originalSubdomain=pe" className="hover:opacity-80" target="_blank">
             <LinkedIn className="w-[28px] h-[28px]" />
           </a>
-          <a href="" className="hover:opacity-80" target="_blank">
+          <a href="https://www.tiktok.com/@ifcet.contables" className="hover:opacity-80" target="_blank">
             <TikTok className="w-[28px] h-[28px]" />
           </a>
         </div>

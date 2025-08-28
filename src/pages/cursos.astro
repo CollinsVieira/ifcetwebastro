@@ -6,6 +6,7 @@ const description = 'Explora cursos de contabilidad, tributación, finanzas, lab
 const image = '/favicon.webp';
 import cursosImagen from '../assets/IFCET-cursos-certificados-diplomados-seminarios-tributacion-laboral-finanzas-auditoria-peritaje-Peru.webp';
 import personaSosteniendoUnaLaptop from '../assets/persona-sosteniendo-una-laptop-ifcet.webp';
+import ifcetcontadores from '../assets/ifcet-contadores.webp'
 ---
 
 <Layout {title} {description} {image}>
@@ -73,14 +74,15 @@ import personaSosteniendoUnaLaptop from '../assets/persona-sosteniendo-una-lapto
                     <img src={curso.img} alt={curso.title} 
                       class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
                       loading="lazy" />
-                    <div class="absolute top-3 left-3">
-                      <span class="px-3 py-1 text-xs font-semibold rounded-full bg-amber-500 text-white">Inicio: {curso.Inicio}</span>
-                    </div>
                   </div>
 
                   <!-- Contenido -->
                   <div class="flex-1 flex flex-col p-6">
-                    <h4 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors line-clamp-2">
+                    <img src={ifcetcontadores.src} alt="ifcet-contadores" class="w-50 h-auto object-contain" />
+                    <h4 class="text-lg font-bold text-[#010943] group-hover:text-blue-600 transition-colors line-clamp-2">
+                      Curso especializado:
+                    </h4>
+                    <h4 class="text-lg font-bold text-[#010943] group-hover:text-blue-600 transition-colors line-clamp-2">
                       {curso.title}
                     </h4>
 
