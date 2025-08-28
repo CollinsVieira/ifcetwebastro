@@ -173,25 +173,12 @@
       }
     },
     {
-      "id": 14,
-      "username": "regimenm",
-      "password": "regimenm",
-      "fullName": "Regimen Laboral Minero",
-      "email": "regimen@ifcet.com.pe",
-      "courseIds": [15],
-      "enrollmentDate": "2025-01-29",
-      "avatar": null,
-      "progress": {
-        "16": 100
-      }
-    },
-    {
       "id": 15,
       "username": "minera01",
       "password": "minera01",
       "fullName": "Contabilidad Minera",
       "email": "minera@ifcet.com.pe",
-      "courseIds": [16],
+      "courseIds": [15],
       "enrollmentDate": "2025-06-28",
       "avatar": null,
       "progress": {
@@ -528,7 +515,7 @@
         { "id": 2, "title": "Sesión 2 - ", "url": "https://us02web.zoom.us/rec/share/xLF0TOQ8E261zNDjNgj1xw6UKtjs_s0IZcsJWDpJ7Z_b4E5e9-Sju8yzqqfJBqIE.9nJBLOKncB5kiZfN", "duration": "2h 00min", "date": "2025-08-15", "description": "Manejo del PCGE y estructura contable" },
         { "id": 3, "title": "Sesión 3 - ", "url": "https://us02web.zoom.us/rec/share/VeaIUgBJsOCunmKGBzvAqlJIPPNOIRPNGQtw8ycodZ1GGHvYjtkkUal8jY59Gxde.iiqKZn1wgtMhm0hO", "duration": "2h 00min", "date": "2025-08-17", "description": "Elaboración y manejo de libros principales" },
         { "id": 4, "title": "Sesión 4 - ", "url": "https://us02web.zoom.us/rec/share/1jhnBgdmi1stRbuTg1121PtSEd0-e7RgNXaZ-u0CnE_wZ-1ACzMwuZN5MFCDNTmq.0K1TJmbonCDhPE0e", "duration": "2h 00min", "date": "2025-08-20", "description": "Conceptos fundamentales de tributación" },
-        { "id": 5, "title": "Sesión 45- ", "url": "https://us02web.zoom.us/rec/share/b4t27Xxe_zZiLgipuIdUKIgUcdtBbCXeH6pxj6p1-035BnV2eZD8UGU5bl6MZlvN.e08e6Wmo8FBiLQf7", "duration": "2h 00min", "date": "2025-08-28", "description": "" }
+        { "id": 5, "title": "Sesión 5- ", "url": "https://us02web.zoom.us/rec/share/b4t27Xxe_zZiLgipuIdUKIgUcdtBbCXeH6pxj6p1-035BnV2eZD8UGU5bl6MZlvN.e08e6Wmo8FBiLQf7", "duration": "2h 00min", "date": "2025-08-28", "description": "" }
 
       ],
       "materials": [
@@ -837,33 +824,6 @@
     },
     {
       "id": 15,
-      "name": "Régimen Laboral Minero",
-      "description": "Curso práctico de Régimen Laboral Minero",
-      "instructor": "CPC. ",
-      "codename": "regimen laboral minero 0125",
-      "zoom": "",
-      "startDate": "2025-01-29",
-      "endDate": "2025-03-29",
-      "schedule": "Finalizado",
-      "status": "completed",
-      "totalSessions": 4,
-      "recordings": [
-        { "id": 1, "title": "Sesión 1", "url": "https://us02web.zoom.us/rec/share/gqNL7QYv91ALtERBiWsdyh_DH74tMkoYPV79LJvD3n-eIKGRDPJDhSHQ3G31nhCD.EobLMv0422-wY-Lp", "duration": "2h 00min", "date": "2025-08-23", "description": "" },
-        { "id": 2, "title": "Sesión 2", "url": "https://us02web.zoom.us/rec/share/VsiXv_exsRWaaWQrfea77rKg8s16V0whgh8NO6bsORVEBCWDe0TTarYm3B1qwFWy.BSQVE_vWTgbzhHbi", "duration": "2h 00min", "date": "2025-08-24", "description": "" },
-        { "id": 3, "title": "Sesión 3", "url": "https://us02web.zoom.us/rec/share/ESf7aereFwV7ISV7xiKNOHDyX1_rs8u_cmIxqt1F-FOzMYzgX3RJ1PVGa4HGStig.kOA2IV7RP_ZzM1Mk", "duration": "2h 00min", "date": "", "description": "" },
-        { "id": 4, "title": "Sesión 4", "url": "https://us02web.zoom.us/rec/share/p2tbl0JMlMFOlnW-7Tg9PzMxju8udkj5HLF_5anq2g73hUuiu29t-cT-fMkveYag._ZhFGrecyXL6dRuG", "duration": "2h 00min", "date": "", "description": "" }
-      ],
-      "materials": [
-        { "id": 1, "title": "Materiales", "url": "https://drive.google.com/drive/folders/1OkjoE6uBDCi5Yj6MSp_ajvpihPM1B3CM?usp=sharing", "type": "drive", "size": "25 MB", "uploadDate": "2025-01-30" },
-        { "id": 2, "title": "Materiales", "url": "https://drive.google.com/drive/folders/1M0rDt0UCKJ59tM1NhOVdF_xcZJlTSX6s?usp=sharing", "type": "drive", "size": "18 MB", "uploadDate": "2025-01-30" },
-        { "id": 3, "title": "Materiales", "url": "https://drive.google.com/drive/folders/10xUlsQYV4v2oTncsLi16WThRE0ogyWCM?usp=sharing", "type": "drive", "size": "12 MB", "uploadDate": "2025-01-30" },
-        { "id": 4, "title": "Materiales", "url": "https://drive.google.com/drive/folders/16U4LGnVlWkKa_BowDmmdXNnPLa4uWi6f?usp=sharing", "type": "drive", "size": "12 MB", "uploadDate": "2025-01-30" }
-      ],
-      "tasks": [],
-      "exams": []
-    },
-    {
-      "id": 16,
       "name": "Contabilidad Minera",
       "description": "Curso práctico de Contabilidad Minera",
       "instructor": "CPC. ",
