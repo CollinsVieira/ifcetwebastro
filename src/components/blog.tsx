@@ -11,51 +11,36 @@ interface Category {
   color: string;
 }
 
-export function BlogComponent() {
-  const [posts, setPosts] = useState<Post[]>([]);
+// 1. Aceptamos 'allPosts' como prop
+export function BlogComponent({ allPosts }: { allPosts: Post[] }) {
+  // 2. Usamos 'allPosts' para inicializar el estado
+  const [posts, setPosts] = useState<Post[]>(allPosts);
   const [categories, setCategories] = useState<Category[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [postsPerPage] = useState<number>(3);
-  const [isLoading, setIsLoading] = useState(true);
+  // 3. Ya no necesitamos isLoading ni error para la carga inicial
+  const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  // Cargar posts desde la API
+  // 4. ¡Podemos ELIMINAR todo este bloque de useEffect!
+  // La carga de datos ahora la hace Astro.
   useEffect(() => {
-    const loadPosts = async () => {
-      try {
-        setIsLoading(true);
-        setError(null);
-
-        // Obtener todos los posts
-        const allPosts = await BlogService.getAllPosts();
-        setPosts(allPosts);
-
-        // Generar categorías dinámicamente desde los posts
-        const uniqueCategories = [
-          ...new Set(allPosts.map((post) => post.category).filter(Boolean)),
-        ];
-        const dynamicCategories: Category[] = uniqueCategories.map(
-          (cat, index) => ({
-            id: cat!,
-            name: cat!,
-            description: `Artículos sobre ${cat}`,
-            color: getCategoryColor(index),
-          })
-        );
-
-        setCategories(dynamicCategories);
-      } catch (err) {
-        console.error("Error loading posts:", err);
-        setError("No se pudieron cargar los posts del blog");
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    loadPosts();
-  }, []);
+    // Generar categorías dinámicamente desde los posts recibidos
+    const uniqueCategories = [
+      ...new Set(allPosts.map((post) => post.category).filter(Boolean)),
+    ];
+    const dynamicCategories: Category[] = uniqueCategories.map(
+      (cat, index) => ({
+        id: cat!,
+        name: cat!,
+        description: `Artículos sobre ${cat}`,
+        color: getCategoryColor(index),
+      })
+    );
+    setCategories(dynamicCategories);
+  }, [allPosts]); // Se ejecuta solo si allPosts cambia
 
   // Función para asignar colores a las categorías
   const getCategoryColor = (index: number): string => {

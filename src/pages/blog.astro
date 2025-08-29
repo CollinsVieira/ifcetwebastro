@@ -1,12 +1,18 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { BlogService } from '../services/blogService.ts';
 import { BlogComponent } from '../components/blog.tsx';
+
+// 1. Obtenemos todos los posts aquí, durante el build
+const allPosts = await BlogService.getAllPosts();
+
 const title = 'Blog de Contabilidad Perú | IFCET';
-const description = 'Descubre nuestro blog contable sobre noticias, artículos y recursos sobre tributación, contabilidad, finanzas y gestión empresarial en Perú. Mantente al día con las últimas actualizaciones legales y normativas contables.';
+const description = 'Descubre nuestro blog contable sobre noticias, artículos y recursos sobre tributación, contabilidad, finanzas y gestión empresarial en Perú. Mantente al día con las últimas actualizaciones legales y normativas contables.'; // [cite: 61, 62]
 const canonical = 'https://ifcet.com.pe/blog';
 const image = '/favicon.webp';
 ---
 
 <Layout {title} {description} {image}>
-	<BlogComponent client:load />
+	{/* 2. Pasamos los posts como una prop al componente */}
+	<BlogComponent allPosts={allPosts} client:load />
 </Layout>
