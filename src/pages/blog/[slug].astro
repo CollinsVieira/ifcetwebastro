@@ -1,30 +1,21 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { Aside } from '../../components/aside.tsx';
-import blogData from '../../data/blog.json';
+import { BlogService } from '../../services/blogService.ts';
 import { renderBlogContent } from '../../utils/blogContentRenderer.ts';
+import type { Post } from '../../types/index';
 
 export async function getStaticPaths() {
-  return blogData.posts.map((post) => ({
-    params: { slug: post.slug },
-    props: { post },
-  }));
-}
-
-interface Post {
-  id: number;
-  slug: string;
-  title: string;
-  excerpt: string;
-  content: string;
-  category: string;
-  author: string;
-  authorRole: string;
-  publishedAt: string;
-  readTime: string;
-  image: string;
-  featured: boolean;
-  tags: string[];
+  try {
+    const posts = await BlogService.getAllPosts();
+    return posts.map((post) => ({
+      params: { slug: post.slug },
+      props: { post },
+    }));
+  } catch (error) {
+    console.error('Error generating static paths:', error);
+    return [];
+  }
 }
 
 interface Category {
@@ -35,11 +26,20 @@ interface Category {
 }
 
 const { post } = Astro.props as { post: Post };
-const categories: Category[] = blogData.categories;
+
+// Categorías hardcodeadas para mantener los colores (puedes moverlas a la API si es necesario)
+const categories: Category[] = [
+  { id: 'contabilidad', name: 'Contabilidad', description: 'Artículos sobre contabilidad', color: 'bg-blue-500' },
+  { id: 'tributacion', name: 'Tributación', description: 'Artículos sobre tributación', color: 'bg-green-500' },
+  { id: 'auditoria', name: 'Auditoría', description: 'Artículos sobre auditoría', color: 'bg-purple-500' },
+  { id: 'finanzas', name: 'Finanzas', description: 'Artículos sobre finanzas', color: 'bg-orange-500' },
+  { id: 'costos', name: 'Costos', description: 'Artículos sobre costos', color: 'bg-red-500' }
+];
 
 // Obtener información de la categoría
-const getCategoryInfo = (categoryId: string) => {
-  return categories.find(cat => cat.id === categoryId);
+const getCategoryInfo = (categoryId: string | null | undefined) => {
+  if (!categoryId) return categories[0];
+  return categories.find(cat => cat.id === categoryId) || categories[0];
 };
 
 // Formatear fecha
@@ -52,26 +52,49 @@ const formatDate = (dateString: string) => {
 };
 
 // Obtener artículos relacionados (misma categoría, excluyendo el actual)
-let relatedPosts = blogData.posts
-  .filter(p => p.category === post.category && p.id !== post.id)
-  .slice(0, 3);
+let relatedPosts: Post[] = [];
+try {
+  const allPosts = await BlogService.getAllPosts();
+  relatedPosts = allPosts
+    .filter(p => p.category === post.category && p.id !== post.id)
+    .slice(0, 3);
 
-// Si no hay suficientes artículos relacionados, agregar artículos de otras categorías
-if (relatedPosts.length < 3) {
-  const otherPosts = blogData.posts
-    .filter(p => p.category !== post.category && p.id !== post.id)
-    .slice(0, 3 - relatedPosts.length);
-  relatedPosts = [...relatedPosts, ...otherPosts];
+  // Si no hay suficientes artículos relacionados, agregar artículos de otras categorías
+  if (relatedPosts.length < 3) {
+    const otherPosts = allPosts
+      .filter(p => p.category !== post.category && p.id !== post.id)
+      .slice(0, 3 - relatedPosts.length);
+    relatedPosts = [...relatedPosts, ...otherPosts];
+  }
+} catch (error) {
+  console.error('Error fetching related posts:', error);
+  relatedPosts = [];
 }
 
 // Meta tags dinámicos para SEO
 const title = `${post.title} | Blog IFCET`;
 const description = post.excerpt;
-const image = post.image;
+const image = post.image || '';
 const canonical = `https://ifcet.com.pe/blog/${post.slug}`;
 
-// Renderizar el contenido del blog con soporte para tablas
-const renderedContent = renderBlogContent(post.content);
+// Renderizar el contenido del blog en el servidor para evitar problemas de hidratación
+let renderedContent = '';
+try {
+  // Limpiar el contenido antes de procesarlo
+  let cleanContent = post.content;
+  
+  // Reemplazar caracteres de escape comunes
+  cleanContent = cleanContent.replace(/\\n\\n/g, '\n\n');
+  cleanContent = cleanContent.replace(/\\n/g, '\n');
+  cleanContent = cleanContent.replace(/\\"/g, '"');
+  cleanContent = cleanContent.replace(/\\'/g, "'");
+  
+  renderedContent = renderBlogContent(cleanContent);
+} catch (error) {
+  console.error('Error rendering blog content:', error);
+  // Fallback: mostrar el contenido como texto plano
+  renderedContent = `<div class="prose prose-lg max-w-none"><p class="text-gray-700">${post.content}</p></div>`;
+}
 
 // Datos estructurados para SEO
 const structuredData = {
@@ -82,8 +105,8 @@ const structuredData = {
   "image": post.image ? `https://ifcet.com.pe${post.image}` : undefined,
   "author": {
     "@type": "Person",
-    "name": post.author,
-    "jobTitle": post.authorRole
+    "name": post.author?.name || 'Autor Desconocido',
+    "jobTitle": post.author?.role || 'Autor'
   },
   "publisher": {
     "@type": "Organization",
@@ -93,8 +116,8 @@ const structuredData = {
       "url": "https://ifcet.com.pe/favicon.webp"
     }
   },
-  "datePublished": post.publishedAt,
-  "dateModified": post.publishedAt,
+  "datePublished": post.published_at,
+  "dateModified": post.published_at,
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": canonical
@@ -134,8 +157,8 @@ const structuredData = {
           <span class={`px-3 py-1 rounded-full text-white text-xs font-medium ${getCategoryInfo(post.category)?.color}`}>
             {getCategoryInfo(post.category)?.name}
           </span>
-          <span>{formatDate(post.publishedAt)}</span>
-          <span>{post.readTime}</span>
+          <span>{formatDate(post.published_at)}</span>
+          <span>{post.read_time}</span>
         </div>
 
         <h1 class="text-4xl font-bold text-gray-900 mb-4">{post.title}</h1>
@@ -143,11 +166,11 @@ const structuredData = {
 
         <div class="flex items-center space-x-4">
           <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
-            {post.author.split(' ').map(n => n[0]).join('')}
+            {post.author?.name ? post.author.name.split(' ').map(n => n[0]).join('') : 'A'}
           </div>
           <div>
-            <p class="font-semibold text-gray-900">{post.author}</p>
-            <p class="text-sm text-gray-600">{post.authorRole}</p>
+            <p class="font-semibold text-gray-900">{post.author?.name || 'Autor Desconocido'}</p>
+            <p class="text-sm text-gray-600">{post.author?.role || 'Autor'}</p>
           </div>
         </div>
       </div>
@@ -174,8 +197,9 @@ const structuredData = {
               />
             </div>
           )}
-          <div class="prose prose-lg max-w-none" set:html={renderedContent}>
-          </div>
+          
+          <!-- Contenido del blog renderizado en el servidor -->
+          <div class="prose prose-lg max-w-none blog-content" set:html={renderedContent}></div>
 
           <!-- Tags -->
           <div class="mt-8 pt-6 border-t border-gray-200">
@@ -231,10 +255,10 @@ const structuredData = {
                 <div class="flex items-center space-x-2">
                   <div class="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
                     <span class="text-white font-bold text-xs">
-                      {post.author.split(' ').map(n => n[0]).join('')}
+                      {post.author?.name ? post.author.name.split(' ').map(n => n[0]).join('') : 'A'}
                     </span>
                   </div>
-                  <span class="text-sm font-medium text-gray-900">{post.author}</span>
+                  <span class="text-sm font-medium text-gray-900">{post.author?.name || 'Autor Desconocido'}</span>
                 </div>
               </div>
             </div>
@@ -266,7 +290,7 @@ const structuredData = {
                         <span class={`px-2 py-1 rounded-full text-white text-xs font-medium ${getCategoryInfo(relatedPost.category)?.color}`}>
                           {getCategoryInfo(relatedPost.category)?.name}
                         </span>
-                        <span class="text-xs text-gray-500">{relatedPost.readTime}</span>
+                        <span class="text-xs text-gray-500">{relatedPost.read_time}</span>
                       </div>
 
                       <h3 class="font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors line-clamp-2">
@@ -281,12 +305,12 @@ const structuredData = {
                         <div class="flex items-center space-x-2">
                           <div class="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
                             <span class="text-white font-bold text-xs">
-                              {relatedPost.author.split(' ').map(n => n[0]).join('')}
+                              {relatedPost.author?.name ? relatedPost.author.name.split(' ').map(n => n[0]).join('') : 'A'}
                             </span>
                           </div>
-                          <span class="text-xs text-gray-600">{relatedPost.author}</span>
+                          <span class="text-xs text-gray-600">{relatedPost.author?.name || 'Autor Desconocido'}</span>
                         </div>
-                        <span class="text-xs text-gray-500">{formatDate(relatedPost.publishedAt)}</span>
+                        <span class="text-xs text-gray-500">{formatDate(relatedPost.published_at)}</span>
                       </div>
                     </a>
                   </article>

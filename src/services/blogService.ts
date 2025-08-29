@@ -1,9 +1,7 @@
 import type { Post, BlogFilters, BlogApiResponse, Author } from '../types/index';
 
 // Configuración de la API - cambiar según el entorno
-const API_BASE_URL = import.meta.env.DEV 
-  ? 'http://localhost:8000/api/v1'  // Desarrollo local (HTTP)
-  : 'https://ifcetwebbackend.onrender.com/api/v1'; // Producción (HTTPS)
+const API_BASE_URL = 'https://ifcetwebbackend.onrender.com/api/v1'; // Producción (HTTPS)
 
 
 export class BlogService {
@@ -24,6 +22,18 @@ export class BlogService {
       console.error('Error fetching posts:', error);
       throw new Error('No se pudieron cargar los posts del blog');
     }
+  }
+  async getPostBySlug(slug: string): Promise<Post | null> {
+    // Asumiendo que tu API soporta un endpoint como /posts?slug=mi-post-slug
+    // o si tienes un endpoint directo /posts/mi-post-slug
+    const response = await fetch(`${API_BASE_URL}/blog/posts/`); 
+    if (!response.ok) {
+      return null;
+    }
+    const posts = await response.json();
+    // Si tu API devuelve un array, toma el primer elemento. 
+    // Si devuelve un objeto directo, solo retorna `posts`.
+    return posts[0] || null;
   }
 
   /**
