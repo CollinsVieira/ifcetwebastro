@@ -1,22 +1,7 @@
-import { useState } from 'react';
-import blogData from '../data/blog.json';
+import { useState, useEffect } from 'react';
+import { BlogService } from '../services/blogService';
 import { Aside } from '../components/aside';
-
-interface Post {
-  id: number;
-  slug: string;
-  title: string;
-  excerpt: string;
-  content: string;
-  category: string;
-  author: string;
-  authorRole: string;
-  publishedAt: string;
-  readTime: string;
-  image: string;
-  featured: boolean;
-  tags: string[];
-}
+import type { Post } from '../types/index';
 
 interface Category {
   id: string;
@@ -26,24 +11,74 @@ interface Category {
 }
 
 export function BlogComponent() {
-  // Ordenar posts por fecha de publicación (más reciente primero)
-  const sortedPosts = [...blogData.posts].sort((a, b) => {
-    return new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime();
-  });
-
-  const [posts] = useState<Post[]>(sortedPosts);
-  const [categories] = useState<Category[]>(blogData.categories);
+  const [posts, setPosts] = useState<Post[]>([]);
+  const [categories, setCategories] = useState<Category[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [postsPerPage] = useState<number>(3);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
-  const featuredPosts = posts.filter(post => post.featured);
-  const filteredPosts = posts.filter(post => {
+  // Cargar posts desde la API
+  useEffect(() => {
+    const loadPosts = async () => {
+      try {
+        setIsLoading(true);
+        setError(null);
+        
+        // Obtener todos los posts
+        const allPosts = await BlogService.getAllPosts();
+        setPosts(allPosts);
+        
+        // Generar categorías dinámicamente desde los posts
+        const uniqueCategories = [...new Set(allPosts.map(post => post.category).filter(Boolean))];
+        const dynamicCategories: Category[] = uniqueCategories.map((cat, index) => ({
+          id: cat!,
+          name: cat!,
+          description: `Artículos sobre ${cat}`,
+          color: getCategoryColor(index)
+        }));
+        
+        setCategories(dynamicCategories);
+      } catch (err) {
+        console.error('Error loading posts:', err);
+        setError('No se pudieron cargar los posts del blog');
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    loadPosts();
+  }, []);
+
+  // Función para asignar colores a las categorías
+  const getCategoryColor = (index: number): string => {
+    const colors = [
+      'bg-blue-600',
+      'bg-green-600', 
+      'bg-purple-600',
+      'bg-red-600',
+      'bg-yellow-600',
+      'bg-indigo-600',
+      'bg-pink-600',
+      'bg-teal-600'
+    ];
+    return colors[index % colors.length];
+  };
+
+  // Ordenar posts por fecha de publicación (más reciente primero)
+  const sortedPosts = [...posts].sort((a, b) => {
+    return new Date(b.published_at).getTime() - new Date(a.published_at).getTime();
+  });
+
+  const featuredPosts = sortedPosts.filter(post => post.featured);
+  
+  const filteredPosts = sortedPosts.filter(post => {
     const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory;
     const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         post.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+                         (post.tags && post.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())));
     return matchesCategory && matchesSearch;
   });
 
@@ -145,6 +180,41 @@ export function BlogComponent() {
     }).filter(Boolean);
   };
 
+  // Mostrar estado de carga
+  if (isLoading) {
+    return (
+      <div className="w-full min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <p className="text-xl text-gray-600">Cargando blog...</p>
+        </div>
+      </div>
+    );
+  }
+
+  // Mostrar error si ocurrió
+  if (error) {
+    return (
+      <div className="w-full min-h-screen flex items-center justify-center">
+        <div className="text-center max-w-md mx-auto px-4">
+          <div className="text-red-500 mb-4">
+            <svg className="mx-auto h-16 w-16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+            </svg>
+          </div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">Error al cargar el blog</h2>
+          <p className="text-gray-600 mb-6">{error}</p>
+          <button
+            onClick={() => window.location.reload()}
+            className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Intentar nuevamente
+          </button>
+        </div>
+      </div>
+    );
+  }
+
 
 
 
@@ -182,9 +252,9 @@ export function BlogComponent() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                   </div>
                 )}
-                <div className={`w-12 h-12 rounded-xl mb-4 ${getCategoryInfo(post.category)?.color} flex items-center justify-center`}>
+                <div className={`w-12 h-12 rounded-xl mb-4 ${getCategoryInfo(post.category || '')?.color || 'bg-gray-600'} flex items-center justify-center`}>
                   <span className="text-white font-bold text-lg">
-                    {getCategoryInfo(post.category)?.name.charAt(0)}
+                    {getCategoryInfo(post.category || '')?.name?.charAt(0) || 'B'}
                   </span>
                 </div>
                 
@@ -200,12 +270,12 @@ export function BlogComponent() {
                   <div className="flex items-center space-x-2">
                     <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
                       <span className="text-white text-xs font-bold">
-                        {post.author.split(' ').map(n => n[0]).join('')}
+                        {post.author?.name?.split(' ').map(n => n[0]).join('') || 'A'}
                       </span>
                     </div>
-                    <span className="text-blue-100 text-sm">{post.author}</span>
+                    <span className="text-blue-100 text-sm">{post.author?.name || 'Autor'}</span>
                   </div>
-                  <span className="text-blue-100 text-sm">{post.readTime}</span>
+                  <span className="text-blue-100 text-sm">{post.read_time}</span>
                 </div>
               </a>
             ))}
@@ -345,10 +415,10 @@ export function BlogComponent() {
                       )}
                       <div className="p-6">
                         <div className="flex items-center space-x-3 mb-4">
-                          <span className={`px-3 py-1 rounded-full sm:text-[11px] text-white text-[clamp(0.6rem,1.5vw,0.8rem)] font-medium ${getCategoryInfo(post.category)?.color}`}>
-                            {getCategoryInfo(post.category)?.name}
+                          <span className={`px-3 py-1 rounded-full sm:text-[11px] text-white text-[clamp(0.6rem,1.5vw,0.8rem)] font-medium ${getCategoryInfo(post.category || '')?.color || 'bg-gray-600'}`}>
+                            {getCategoryInfo(post.category || '')?.name || 'Sin categoría'}
                           </span>
-                          <span className="text-sm text-gray-500">{post.readTime}</span>
+                          <span className="text-sm text-gray-500">{post.read_time}</span>
                         </div>
 
                         <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
@@ -363,15 +433,15 @@ export function BlogComponent() {
                           <div className="flex items-center space-x-3">
                             <div className="w-10 h-10 rounded-full items-center justify-center hidden 2xl:flex 2xl:bg-amber-200">
                               <span className="text-black font-bold text-sm">
-                                {post.author.split(' ').map(n => n[0]).join('')}
+                                {post.author?.name?.split(' ').map(n => n[0]).join('') || 'A'}
                               </span>
                             </div>
                             <div>
-                              <p className="font-medium text-gray-900 text-sm">{post.author}</p>
-                              <p className="text-xs text-gray-500">{post.authorRole}</p>
+                              <p className="font-medium text-gray-900 text-sm">{post.author?.name || 'Autor'}</p>
+                              <p className="text-xs text-gray-500">{post.author?.role || 'Escritor'}</p>
                             </div>
                           </div>
-                          <span className="text-sm text-gray-500">{formatDate(post.publishedAt)}</span>
+                          <span className="text-sm text-gray-500">{formatDate(post.published_at)}</span>
                         </div>
                       </div>
                       </a>
