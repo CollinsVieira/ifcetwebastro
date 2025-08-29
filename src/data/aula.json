@@ -184,7 +184,20 @@
       "progress": {
         "17": 100
       }
+    },
+    {
+    "id": 15,
+    "username": "concarbn",
+    "password": "concarbn",
+    "fullName": "Especializar en Concar",
+    "email": "concar@ifcet.com.pe",
+    "courseIds": [16],
+    "enrollmentDate": "2025-08-29",
+    "avatar": null,
+    "progress": {
+      "16": 100
     }
+  }
   ],
   "courses": [
     {
@@ -845,6 +858,33 @@
         { "id": 2, "title": "Materiales", "url": "https://drive.google.com/drive/folders/1b_-l4xCnZbC33P4DdXthqT_7w73T5ZS6?usp=sharing", "type": "drive", "size": "18 MB", "uploadDate": "2025-01-30" },
         { "id": 3, "title": "Materiales", "url": "https://drive.google.com/drive/folders/1OLdYGikdehPbOH5DG4I09bxh9GkjgFuV?usp=sharing", "type": "drive", "size": "12 MB", "uploadDate": "2025-01-30" },
         { "id": 4, "title": "Materiales", "url": "https://drive.google.com/drive/folders/1nu7ikZezXI4Wjw4x8KeQIWONNoanR9qi?usp=sharing", "type": "drive", "size": "12 MB", "uploadDate": "2025-01-30" }
+      ],
+      "tasks": [],
+      "exams": []
+    },
+    {
+      "id": 16,
+      "name": "Especializar en Concar",
+      "description": "Curso práctico de Especializar en Concar",
+      "instructor": "CPC. ",
+      "codename": "especializar en concar 0825",
+      "zoom": "",
+      "startDate": "2025-08-29",
+      "endDate": "2025-10-29",
+      "schedule": "Finalizado",
+      "status": "completed",
+      "totalSessions": 4,
+      "recordings": [
+        { "id": 1, "title": "Sesión 1", "url": "https://us02web.zoom.us/rec/share/kn5-yHi7UVLDDN1TkoE5_IiMTxtBnMMHJyPSefZnwfme3N0T1My2j3ed9zMm418E.hXCcSjqxeF-tHSvK", "duration": "2h 00min", "date": "2025-08-23", "description": "" },
+        { "id": 2, "title": "Sesión 2", "url": "https://us02web.zoom.us/rec/share/s0yBL5PmV4A0hOGwYY9cdOzA5oj8odYqPq7Pw0mw1nRs_SWI4Voz-6eHMaY-d1Jx.DRs4xEzuLqdAyRxO", "duration": "2h 00min", "date": "2025-08-24", "description": "" },
+        { "id": 3, "title": "Sesión 3", "url": "https://us02web.zoom.us/rec/share/cdBDvRj9T5O7bwtZlNWFTvdjD54uE4s44ys3zjn7kRSwnrmJlICEQ6nCP698ETm_.R8EpoYKyyK4PtYXi", "duration": "2h 00min", "date": "", "description": "" },
+        { "id": 4, "title": "Sesión 4", "url": "https://us02web.zoom.us/rec/share/xKzwXcccoMWsXkdP1Wpblb-8y7dbLESA5nYpREGzQ-oU8Lcx_kb-YhyrwGgQR3rp.f0qrGTKAhrfbuD1P", "duration": "2h 00min", "date": "", "description": "" }
+      ],
+      "materials": [
+        { "id": 1, "title": "Materiales", "url": "https://drive.google.com/drive/folders/1azuzyK-URRBe-c9M8nUwQWDnKoyt6r6b?usp=sharing", "type": "drive", "size": "25 MB", "uploadDate": "2025-01-30" },
+        { "id": 2, "title": "Materiales", "url": "https://drive.google.com/drive/folders/1AHNdIata_D-gkErU7Mro4ABINCmv3ueA?usp=sharing", "type": "drive", "size": "18 MB", "uploadDate": "2025-01-30" },
+        { "id": 3, "title": "Materiales", "url": "https://drive.google.com/drive/folders/1Uw1zFpI0ZfCpGO3QJp-KoINpgD9J06pd?usp=sharing", "type": "drive", "size": "12 MB", "uploadDate": "2025-01-30" },
+        { "id": 4, "title": "Materiales", "url": "https://drive.google.com/drive/folders/108dqY180apOnStPYZIYCiaLe1nyHFwYi?usp=sharing", "type": "drive", "size": "12 MB", "uploadDate": "2025-01-30" }
       ],
       "tasks": [],
       "exams": []
