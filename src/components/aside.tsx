@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-const DEFAULT_VIDEO_URL = "/IFCET-asistente-contable-tributario-william-mendoza-tarrillo.mp4";
+const DEFAULT_VIDEO_URL = "/IFCET-contador-tributario-william-mendoza-tarrillo.webm";
 
 interface AsideProps {
   videoUrl?: string;
