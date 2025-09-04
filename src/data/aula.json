@@ -423,12 +423,13 @@
       "totalSessions": 12,
       "recordings": [
         { "id": 1, "title": "Sesión 1", "url": "https://us02web.zoom.us/rec/share/P4d64v-TnSHMuKuF6raNzsa5VQpW0MHHUfLG-N4Wv2c9QWyLR1hBZTy5IEpz38AH.tuCdW2bbb23Jccu3", "duration": "2h 00min", "date": "2025-07-16", "description": "" },
-        { "id": 2, "title": "Sesión 2", "url": "", "duration": "2h 00min", "date": "2025-07-23", "description": "" },
+        { "id": 2, "title": "Sesión 2", "url": "https://us02web.zoom.us/rec/share/ha2yC5tPCzFDpJKNJw-n5uPt6VQj5HnFbM-NJWPK-vnJOarUWRpz-sY6yObrtdQ_.4M-iZClQ8Qo7ntjk", "duration": "2h 00min", "date": "2025-07-23", "description": "" },
         { "id": 3, "title": "Sesión 3", "url": "", "duration": "2h 00min", "date": "2025-07-30", "description": "" },
         { "id": 4, "title": "Sesión 4", "url": "", "duration": "2h 00min", "date": "2025-08-06", "description": "" }
       ],
       "materials": [
-        { "id": 1, "title": "Materiales de la sesión 1", "url": "https://drive.google.com/drive/folders/1B2Mm313QqZc2Ht8rjUahV8dsV7I9cywr?usp=sharing", "type": "drive", "size": "10 MB", "uploadDate": "2025-07-18" }
+        { "id": 1, "title": "Materiales de la sesión 1", "url": "https://drive.google.com/drive/folders/1B2Mm313QqZc2Ht8rjUahV8dsV7I9cywr?usp=sharing", "type": "drive", "size": "10 MB", "uploadDate": "2025-07-18" },
+        { "id": 1, "title": "Materiales de la sesión 2", "url": "https://drive.google.com/drive/folders/1VQKX7qvV6x2IgkR0DwxH5c4h7rCYxOao?usp=sharing", "type": "drive", "size": "10 MB", "uploadDate": "2025-07-23" }
       ],
       "tasks": [
         {
@@ -823,13 +824,13 @@
       "recordings": [
         { "id": 1, "title": "Sesión 1", "url": "https://us02web.zoom.us/rec/share/LGFbheHJ_00iH6NTxWZsqe6mUjYadk8kLLx7LoIcn8hcgaEG4vkc9WxlfoLmD93U.h8Dbw11QOcow5hGA", "duration": "2h 00min", "date": "2025-08-23", "description": "" },
         { "id": 2, "title": "Sesión 2", "url": "https://us02web.zoom.us/rec/share/mlF7qbEHd6BL3k1ub86nY5mRDUo084_aD9TppCNeQ5xn9d5EvV0LDaxuKJ9I8PxN.eC2KqNW6Dnkhz53G", "duration": "2h 00min", "date": "2025-08-24", "description": "" },
-        { "id": 3, "title": "Sesión 3", "url": "", "duration": "2h 00min", "date": "", "description": "" },
+        { "id": 3, "title": "Sesión 3", "url": "https://us02web.zoom.us/rec/share/GRXZczTDhud7Fbq40qcP9qefcqPI9QzKyeu83XgDnhBSuBThl39fCToNXtIogv4d.jBOWvlxDNXxEo4Wq", "duration": "2h 00min", "date": "", "description": "" },
         { "id": 4, "title": "Sesión 4", "url": "", "duration": "2h 00min", "date": "", "description": "" }
       ],
       "materials": [
         { "id": 1, "title": "Materiales", "url": "https://drive.google.com/drive/folders/12GwbHtY6OMF_jqLlencMonZ-dCAgpRML?usp=sharing", "type": "drive", "size": "25 MB", "uploadDate": "2025-01-30" },
         { "id": 2, "title": "Materiales", "url": "https://drive.google.com/drive/folders/18FvghJ4XRRUDsC2INNVqKTTVLbKeO0De?usp=sharing", "type": "drive", "size": "18 MB", "uploadDate": "2025-01-30" },
-        { "id": 3, "title": "Materiales", "url": "", "type": "drive", "size": "12 MB", "uploadDate": "2025-01-30" },
+        { "id": 3, "title": "Materiales", "url": "https://drive.google.com/drive/folders/1Jvf6R_zw8NlR9cNFxH40hGmgl1jNg4Yb?usp=sharing", "type": "drive", "size": "12 MB", "uploadDate": "2025-01-30" },
         { "id": 4, "title": "Materiales", "url": "", "type": "drive", "size": "12 MB", "uploadDate": "2025-01-30" }
       ],
       "tasks": [],
