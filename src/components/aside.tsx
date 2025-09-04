@@ -1,12 +1,14 @@
 import { useEffect, useRef, useState } from "react";
 
 const DEFAULT_VIDEO_URL = "/IFCET-contador-tributario-william-mendoza-tarrillo.webm";
+const DEFAULT_LINK_URL = "https://wa.link/wppjwg";
 
 interface AsideProps {
   videoUrl?: string;
+  linkUrl?: string;
 }
 
-export function Aside({ videoUrl = DEFAULT_VIDEO_URL }: AsideProps) {
+export function Aside({ videoUrl = DEFAULT_VIDEO_URL, linkUrl = DEFAULT_LINK_URL }: AsideProps) {
   const [isVisible, setIsVisible] = useState(true);
   const [isFixed, setIsFixed] = useState(false);
   const [fixedLeft, setFixedLeft] = useState(0);
@@ -64,59 +66,61 @@ export function Aside({ videoUrl = DEFAULT_VIDEO_URL }: AsideProps) {
         className={`${isFixed ? "fixed top-20" : "relative"} h-screen`}
         style={isFixed ? { left: fixedLeft, width: fixedWidth } : undefined}
       >
-        <div className="px-4">
-          <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
-            {/* Header de la publicidad */}
-            <div className="bg-[#101fd2] px-4 py-3">
-              <div className="flex items-center justify-between">
-                <h3 className="text-white font-bold text-sm">PUBLICIDAD</h3>
-                <div className="flex items-center space-x-2">
-                  <div className="flex space-x-1">
-                    <div className="w-2 h-2 bg-white/50 rounded-full"></div>
-                    <div className="w-2 h-2 bg-white/50 rounded-full"></div>
-                    <div className="w-2 h-2 bg-white/50 rounded-full"></div>
-                  </div>
-                  <button
-                    onClick={handleClose}
-                    className="text-white/70 hover:text-white transition-colors"
-                  >
-                    <svg
-                      className="w-4 h-4"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M6 18L18 6M6 6l12 12"
-                      />
-                    </svg>
-                  </button>
-                </div>
-              </div>
-            </div>
+                 <div className="px-4">
+           <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
+             <a href={linkUrl} className="block hover:shadow-xl transition-shadow duration-300" target="_blank">
+               {/* Header de la publicidad */}
+               <div className="bg-[#101fd2] px-4 py-3">
+                 <div className="flex items-center justify-between">
+                   <h3 className="text-white font-bold text-sm">PUBLICIDAD</h3>
+                   <div className="flex items-center space-x-2">
+                     <div className="flex space-x-1">
+                       <div className="w-2 h-2 bg-white/50 rounded-full"></div>
+                       <div className="w-2 h-2 bg-white/50 rounded-full"></div>
+                       <div className="w-2 h-2 bg-white/50 rounded-full"></div>
+                     </div>
+                     <button
+                       onClick={handleClose}
+                       className="text-white/70 hover:text-white transition-colors"
+                     >
+                       <svg
+                         className="w-4 h-4"
+                         fill="none"
+                         stroke="currentColor"
+                         viewBox="0 0 24 24"
+                       >
+                         <path
+                           strokeLinecap="round"
+                           strokeLinejoin="round"
+                           strokeWidth={2}
+                           d="M6 18L18 6M6 6l12 12"
+                         />
+                       </svg>
+                     </button>
+                   </div>
+                 </div>
+               </div>
 
-            <div className="flex justify-center items-center">
-              <video
-                src={videoUrl}
-                autoPlay
-                loop
-                muted
-                className="w-full"
-              ></video>
-            </div>
-            
+               <div className="flex justify-center items-center">
+                 <video
+                   src={videoUrl}
+                   autoPlay
+                   loop
+                   muted
+                   className="w-full"
+                 ></video>
+               </div>
+               
 
-            {/* Footer de la publicidad */}
-            <div className="bg-gray-50 px-4 py-2 border-t border-gray-200">
-              <p className="text-xs text-gray-500 text-center">
-                Publicidad • IFCET Perú
-              </p>
-            </div>
-          </div>
-        </div>
+               {/* Footer de la publicidad */}
+               <div className="bg-gray-50 px-4 py-2 border-t border-gray-200">
+                 <p className="text-xs text-gray-500 text-center">
+                   Publicidad • IFCET Perú
+                 </p>
+               </div>
+             </a>
+           </div>
+         </div>
       </div>
     </aside>
   );
