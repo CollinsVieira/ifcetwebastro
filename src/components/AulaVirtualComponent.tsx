@@ -11,80 +11,8 @@ import { SesionesModule } from "./aula/modules/SesionesModule";
 import { MaterialesModule } from "./aula/modules/MaterialesModule";
 import { TareasModule } from "./aula/modules/TareasModule";
 import { ExamenesModule } from "./aula/modules/ExamenesModule";
+import type { User, Course } from "../types/index";
 
-interface User {
-  id: number;
-  username: string;
-  password: string;
-  fullName: string;
-  email: string;
-  courseIds: number[];
-  enrollmentDate: string;
-  avatar: string | null;
-  progress: Record<string, number>;
-  docente?: string;
-}
-
-interface Recording {
-  id: number;
-  title: string;
-  url: string;
-  duration: string;
-  date: string;
-  description: string;
-}
-
-interface Material {
-  id: number;
-  title: string;
-  url: string;
-  type: string;
-  size: string;
-  uploadDate: string;
-}
-
-interface Task {
-  id: number;
-  title: string;
-  description: string;
-  dueDate: string;
-  points: number;
-  status: string;
-  submissions: any[];
-  instructions: string;
-}
-
-interface Exam {
-  id: number;
-  title: string;
-  description: string;
-  date: string;
-  duration: number;
-  points: number;
-  status: string;
-  attempts: number;
-  timeLimit: boolean;
-  questions: number;
-  grade?: number;
-}
-
-interface Course {
-  id: number;
-  name: string;
-  description: string;
-  instructor: string;
-  zoom: string;
-  startDate: string;
-  endDate: string;
-  schedule: string;
-  status: string;
-  totalSessions: number;
-  codename?: string;
-  recordings: Recording[];
-  materials: Material[];
-  tasks?: Task[];
-  exams?: Exam[];
-}
 
 type ActiveModule = 'inicio' | 'sesiones' | 'materiales' | 'tareas' | 'examenes';
 

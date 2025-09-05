@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import libros from "../data/libros.json";
 import { Aside } from "./aside";
-import bibliotecaImagen from "../assets/IFCET-biblioteca-certificados-contables.webp";
+import bibliotecaImagen from "../assets/IFCET-biblioteca-certificados-cursos-instituto-formacion-contable.webp";
 
 type Libro = {
   nombre?: string;
@@ -62,9 +62,9 @@ export function BibliotecaComponent() {
             </div>
             {/* Imagen/Placeholder */}
             <div className="relative h-[32vh] md:h-[46vh] flex items-center justify-center">
-              <div className="h-full w-full flex items-center justify-center border border-dashed border-white/30 rounded-xl">
+              <div className="h-full w-full flex items-center justify-center">
                 {/* Insertar imágen aquí: Portadas de libros en grilla, estilo limpio, formato .webp */}
-                <img src={bibliotecaImagen.src} alt="Portadas de libros" className="w-full h-full object-cover" />
+                <img src={bibliotecaImagen.src} alt="Portadas de libros" className="w-full h-full object-contain" />
               </div>
             </div>
           </div>

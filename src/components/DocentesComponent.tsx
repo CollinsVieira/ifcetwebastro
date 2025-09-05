@@ -1,6 +1,6 @@
 import { Aside } from "./aside";
 import docentesData from "../data/docentes.json";
-import docentesp from "../assets/IFCET-equipo-docente-estudio-contable-empresarial-tributario-Peru-scaled.webp";
+import docentesp from "../assets/IFCET-equipo-docente-instituto-formacion-contable-trubitaria.webp";
 
 
 interface Docente {
@@ -48,9 +48,9 @@ export function DocentesComponent() {
 
             {/* Imagen/Placeholder */}
             <div className="relative h-[32vh] md:h-[46vh] flex items-center justify-center">
-              <div className="h-full w-full flex items-center justify-center border border-dashed border-white/30 rounded-xl">
+              <div className="h-full w-full flex items-center justify-center">
                 {/* Insertar imágen aquí: Fotografía de docentes profesionales en ambiente académico, iluminación suave, espacio negativo lateral */}
-                <img src={docentesp.src} alt="Docentes" className="w-full h-full object-cover" />
+                <img src={docentesp.src} alt="Docentes" className="w-full h-full object-contain" />
               </div>
             </div>
           </div>
