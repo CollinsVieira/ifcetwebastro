@@ -173,7 +173,7 @@
       }
     },
     {
-      "id": 15,
+      "id": 14,
       "username": "minera01",
       "password": "minera01",
       "fullName": "Contabilidad Minera",
@@ -197,7 +197,21 @@
     "progress": {
       "16": 100
     }
+  },
+  {
+    "id": 16,
+    "username": "prpublico",
+    "password": "prpublico",
+    "fullName": "Especialista en Presupuesto Público",
+    "email": "publico@ifcet.com.pe",
+    "courseIds": [17],
+    "enrollmentDate": "2025-04-04",
+    "avatar": null,
+    "progress": {
+      "16": 100
+    }
   }
+  
   ],
   "courses": [
     {
@@ -825,7 +839,7 @@
         { "id": 1, "title": "Sesión 1", "url": "https://us02web.zoom.us/rec/share/LGFbheHJ_00iH6NTxWZsqe6mUjYadk8kLLx7LoIcn8hcgaEG4vkc9WxlfoLmD93U.h8Dbw11QOcow5hGA", "duration": "2h 00min", "date": "2025-08-23", "description": "" },
         { "id": 2, "title": "Sesión 2", "url": "https://us02web.zoom.us/rec/share/mlF7qbEHd6BL3k1ub86nY5mRDUo084_aD9TppCNeQ5xn9d5EvV0LDaxuKJ9I8PxN.eC2KqNW6Dnkhz53G", "duration": "2h 00min", "date": "2025-08-24", "description": "" },
         { "id": 3, "title": "Sesión 3", "url": "https://us02web.zoom.us/rec/share/GRXZczTDhud7Fbq40qcP9qefcqPI9QzKyeu83XgDnhBSuBThl39fCToNXtIogv4d.jBOWvlxDNXxEo4Wq", "duration": "2h 00min", "date": "", "description": "" },
-        { "id": 4, "title": "Sesión 4", "url": "", "duration": "2h 00min", "date": "", "description": "" }
+        { "id": 4, "title": "Sesión 4", "url": "https://us02web.zoom.us/rec/share/AIBQDvYW21gvaLvXm5icd0QXC1Sm90wvtlvkC5R-MsFqKP7pY1GONFy0-ihRFy4.rFYG1iy5nG_XpNpR", "duration": "2h 00min", "date": "", "description": "" }
       ],
       "materials": [
         { "id": 1, "title": "Materiales", "url": "https://drive.google.com/drive/folders/12GwbHtY6OMF_jqLlencMonZ-dCAgpRML?usp=sharing", "type": "drive", "size": "25 MB", "uploadDate": "2025-01-30" },
@@ -888,6 +902,35 @@
         { "id": 3, "title": "Materiales", "url": "https://drive.google.com/drive/folders/1Uw1zFpI0ZfCpGO3QJp-KoINpgD9J06pd?usp=sharing", "type": "drive", "size": "12 MB", "uploadDate": "2025-01-30" },
         { "id": 4, "title": "Materiales", "url": "https://drive.google.com/drive/folders/108dqY180apOnStPYZIYCiaLe1nyHFwYi?usp=sharing", "type": "drive", "size": "12 MB", "uploadDate": "2025-01-30" },
         { "id": 5, "title": "Materiales", "url": "https://drive.google.com/drive/folders/108dqY180apOnStPYZIYCiaLe1nyHFwYi?usp=sharing", "type": "drive", "size": "12 MB", "uploadDate": "2025-01-30" }
+      ],
+      "tasks": [],
+      "exams": []
+    },
+    {
+      "id": 17,
+      "name": "Especialista en Presupuesto Público",
+      "description": "Curso práctico de Especialista en Presupuesto Público",
+      "instructor": "CPC. ",
+      "codename": "especialista en presupuesto publico 0125",
+      "zoom": "",
+      "startDate": "2025-04-04",
+      "endDate": "2025-06-04",
+      "schedule": "Finalizado",
+      "status": "completed",
+      "totalSessions": 4,
+      "recordings": [
+        { "id": 1, "title": "Sesión 1", "url": "", "duration": "2h 00min", "date": "2025-08-23", "description": "" },
+        { "id": 2, "title": "Sesión 2", "url": "https://us02web.zoom.us/rec/share/yWc8UTgq4-fZzzQKFGfmJd7iC-HeDDTkTOQrq0cA9ruIuyhWGnw8OGvf9_QQlCig.Y3RyEGMRQlLC38a8", "duration": "2h 00min", "date": "2025-08-24", "description": "" },
+        { "id": 3, "title": "Sesión 3", "url": "https://us02web.zoom.us/rec/share/5ERmW8j1HU52SlmZsrgZf33O3C9NVYuHPrgGB9zh_mH9-lK4NhSQMwc0E_gmSBxJ.-CswQ_881wzUEXOL", "duration": "2h 00min", "date": "", "description": "" },
+        { "id": 4, "title": "Sesión 4", "url": "https://us02web.zoom.us/rec/share/Mc2OYHcvWaoWeQ9TSscVCrPwJUv6cRA7I3cCoCtCsggcHVfVWqoCZAnqX45nIB5-.nOtnIlc4m_ERZjRl", "duration": "2h 00min", "date": "", "description": "" },
+        { "id": 5, "title": "Sesión 4", "url": "https://us02web.zoom.us/rec/share/Sr-bkRp4-wKwnePBRkgOocsb6mwkI7nHx4hvlz60ePbUxfXR1ouWfIFCu7RijmTM.UxMUj7sCahTrZiK7", "duration": "2h 00min", "date": "", "description": "" }
+      ],
+      "materials": [
+        { "id": 1, "title": "Materiales", "url": "https://drive.google.com/drive/folders/1IO3hHgJ7uKtAsxd2V1_yTEflJGvKz2M8?usp=sharing", "type": "drive", "size": "25 MB", "uploadDate": "2025-01-30" },
+        { "id": 2, "title": "Materiales", "url": "https://docs.google.com/presentation/d/1Z3zmiOpzqzbN2nT7xsqPZWljqPtDsljO/edit?usp=sharing&ouid=112580292696143211510&rtpof=true&sd=true", "type": "drive", "size": "18 MB", "uploadDate": "2025-01-30" },
+        { "id": 3, "title": "Materiales", "url": "https://drive.google.com/drive/folders/1Crkv5LqpF5DpknaWG7Lce3mXsgpug5j6?usp=sharing", "type": "drive", "size": "12 MB", "uploadDate": "2025-01-30" },
+        { "id": 4, "title": "Materiales", "url": "", "type": "drive", "size": "12 MB", "uploadDate": "2025-01-30" },
+        { "id": 5, "title": "Materiales", "url": "https://drive.google.com/drive/folders/1kAzUxFAqUUv08PC6vLvXsBX50mod5JgC?usp=sharing", "type": "drive", "size": "12 MB", "uploadDate": "2025-01-30" }
       ],
       "tasks": [],
       "exams": []
