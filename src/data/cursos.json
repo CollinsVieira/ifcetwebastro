@@ -256,5 +256,155 @@
         "link": "https://wa.link/8afxah"
       }
     ]
+  },
+  {
+    "categoria": "Contabilidad Sectorial Avanzada",
+    "descripcion": "Cursos especializados en contabilidad para sectores específicos y servicios especializados.",
+    "cursos": [
+      {
+        "img": "/cursos/IFCET-Contabilidad-agricola-en-el-Peru.webp",
+        "title": " Contabilidad Agricola En El Peru",
+        "duration": "",
+        "docente": "",
+        "Inicio": "",
+        "Horario": "",
+        "lessons": "7",
+        "students": "28",
+        "hours": "220",
+        "link": "https://wa.link/agricola"
+      },
+      {
+        "img": "/cursos/IFCET-Contabilidad-de-Servicios-Educativos.webp",
+        "title": " Contabilidad De Servicios Educativos",
+        "duration": "",
+        "docente": "",
+        "Inicio": "",
+        "Horario": "",
+        "lessons": "6",
+        "students": "24",
+        "hours": "220",
+        "link": "https://wa.link/educativos"
+      },
+      {
+        "img": "/cursos/IFCET-Contabilidad-de-Servicios-de-Consultoria-y-Comisiones.webp",
+        "title": " Contabilidad De Servicios De Consultoria Y Comisiones",
+        "duration": "",
+        "docente": "",
+        "Inicio": "",
+        "Horario": "",
+        "lessons": "5",
+        "students": "22",
+        "hours": "220",
+        "link": "https://wa.link/consultoria"
+      },
+      {
+        "img": "/cursos/IFCET-Contabilidad-y-Tributacion-de-empresas-de-transporte.webp",
+        "title": " Contabilidad Y Tributacion De Empresas De Transporte",
+        "duration": "",
+        "docente": "",
+        "Inicio": "",
+        "Horario": "",
+        "lessons": "8",
+        "students": "31",
+        "hours": "220",
+        "link": "https://wa.link/transporte"
+      }
+    ]
+  },
+  {
+    "categoria": "Gestión de Activos y Depreciación",
+    "descripcion": "Programas especializados en gestión de activos fijos, depreciación y valorización patrimonial.",
+    "cursos": [
+      {
+        "img": "/cursos/IFCET-Determinacion-de-la-Depreciacion-de-Activos-fijos.webp",
+        "title": " Determinacion De La Depreciacion De Activos Fijos",
+        "duration": "",
+        "docente": "",
+        "Inicio": "",
+        "Horario": "",
+        "lessons": "6",
+        "students": "26",
+        "hours": "220",
+        "link": "https://wa.link/depreciacion"
+      },
+      {
+        "img": "/cursos/IFCET-Peritaje-y-elaboracion-de-informes-Actualizacion-de-deudas-activos-pasivos-patrimonio-y-acciones.webp",
+        "title": " Peritaje Y Elaboracion De Informes Actualizacion De Deudas Activos Pasivos Patrimonio Y Acciones",
+        "duration": "",
+        "docente": "",
+        "Inicio": "",
+        "Horario": "",
+        "lessons": "9",
+        "students": "34",
+        "hours": "220",
+        "link": "https://wa.link/peritaje"
+      }
+    ]
+  },
+  {
+    "categoria": "Impuesto a la Renta y Tributación Especializada",
+    "descripcion": "Cursos especializados en normativa del Impuesto a la Renta, precios de transferencia y rentas específicas.",
+    "cursos": [
+      {
+        "img": "/cursos/IFCET-Ley-y-su-reglamento-del-Impuesto-a-la-renta.webp",
+        "title": " Ley Y Su Reglamento Del Impuesto A La Renta",
+        "duration": "",
+        "docente": "",
+        "Inicio": "",
+        "Horario": "",
+        "lessons": "10",
+        "students": "45",
+        "hours": "220",
+        "link": "https://wa.link/impuesto-renta"
+      },
+      {
+        "img": "/cursos/IFCET-Especialista-en-Precios-de-transferencia.webp",
+        "title": " Especialista En Precios De Transferencia",
+        "duration": "",
+        "docente": "",
+        "Inicio": "",
+        "Horario": "",
+        "lessons": "8",
+        "students": "32",
+        "hours": "220",
+        "link": "https://wa.link/precios-transferencia"
+      },
+      {
+        "img": "/cursos/IFCET-Renta-de-trabajo-y-Gastos-deducibles.webp",
+        "title": " Renta De Trabajo Y Gastos Deducibles",
+        "duration": "",
+        "docente": "",
+        "Inicio": "",
+        "Horario": "",
+        "lessons": "6",
+        "students": "29",
+        "hours": "220",
+        "link": "https://wa.link/renta-trabajo"
+      },
+      {
+        "img": "/cursos/IFCET-Renta-de-tercera-gastos-deducibles-y-no-deducibles.webp",
+        "title": " Renta De Tercera Gastos Deducibles Y No Deducibles",
+        "duration": "",
+        "docente": "",
+        "Inicio": "",
+        "Horario": "",
+        "lessons": "7",
+        "students": "27",
+        "hours": "220",
+        "link": "https://wa.link/renta-tercera"
+      },
+      {
+        "img": "/cursos/IFCET-Renta-de-capital-y-Gastos-deducibles.webp",
+        "title": " Renta De Capital Y Gastos Deducibles",
+        "duration": "",
+        "docente": "",
+        "Inicio": "",
+        "Horario": "",
+        "lessons": "7",
+        "students": "25",
+        "hours": "220",
+        "link": "https://wa.link/renta-capital"
+      }
+    ]
   }
 ] 
