@@ -3,10 +3,11 @@ import "./swipermodules.css";
 import { FreeMode, Pagination } from "swiper/modules";
 import { Card } from "./card.tsx";
 import categoriasData from "../data/cursos.json";
+import type { CategoriaCurso } from "../types/index";
 
 export function Cursos() {
   // Extraer todos los cursos de todas las categorías
-  const todosLosCursos = categoriasData.flatMap(categoria => categoria.cursos);
+  const todosLosCursos = (categoriasData as CategoriaCurso[]).flatMap(categoria => categoria.cursos);
 
   return (
     <section className="bg-white overflow-x-hidden w-full">
@@ -55,6 +56,7 @@ export function Cursos() {
                 students={parseInt(curso.students)}
                 hours={curso.hours}
                 link={curso.link}
+                brochure={curso.brochure}
               />
             </SwiperSlide>
           ))}

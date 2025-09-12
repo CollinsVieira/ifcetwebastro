@@ -7,6 +7,7 @@ interface CardProps {
   students?: number;
   hours?: string;
   link?: string;
+  brochure?: string;
 }
 
 export function Card({
@@ -18,6 +19,7 @@ export function Card({
   students = 22,
   hours = "120 horas",
   link,
+  brochure,
 }: CardProps) {
   return (
     <article className="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl mb-8 
@@ -109,15 +111,25 @@ export function Card({
           <p className="text-xs text-gray-500">Inicio: {Inicio}</p>
         </div>
         <div className="border-t border-gray-200 pt-4">
-          <a
-            className="w-full bg-[#101fd2] hover:bg-[#ffb204] text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-300 text-center block text-sm"
-            role="button"
-            href={link || "#"}
-            target={link?.startsWith('http') ? "_blank" : undefined}
-            rel={link?.startsWith('http') ? "noopener noreferrer" : undefined}
-          >
-            Solicitar información
-          </a>
+          <div className="flex gap-2">
+            <a
+              className="flex-1 bg-[#101fd2] hover:bg-[#ffb204] text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-300 text-center text-sm"
+              role="button"
+              href={link || "#"}
+              target={link?.startsWith('http') ? "_blank" : undefined}
+              rel={link?.startsWith('http') ? "noopener noreferrer" : undefined}
+            >
+              Solicitar información
+            </a>
+            {brochure && (
+              <button
+                onClick={() => window.open(brochure, '_blank')}
+                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-200 text-sm cursor-pointer"
+              >
+                Ver Brochure
+              </button>
+            )}
+          </div>
         </div>
       </div>
     </article>
