@@ -5,37 +5,128 @@
       "quote": "El CPC William Mendoza Tarrillo titulado en la Universidad Nacional Pedro Ruiz Gallo, con estudios de Maestría en Tributación y Asesoría Fiscal por la Universidad de Tarapacá del país vecino de Chile y la Universidad Católica Santo Toribio de Mogrovejo. Además, completó diplomados especializados y cursos en auditoría tributaria e internacionalización fiscal.",
       "name": "CPC. William Mendoza Tarrillo",
       "designation": "Auditor Tributario",
-      "src": "/CPC-William-Mendoza-el-mejor-Tributarista-Auditor-Fiscalizador-Peru.webp"
+      "src": "/docentes/CPC-William-Mendoza-el-mejor-Tributarista-Auditor-Fiscalizador-Peru.webp",
+      "cv": "/pdfs/CV-CPC-William-Abraham-Mendoza-Tarrillo.pdf"
     },
     {
       "id": 2,
       "quote": "Egresado de la Universidad Nacional Pedro Ruiz Gallo, con Maestría en Tributación por la UNT. Especializado en Costos y Presupuestos, Precios de Transferencia, NIIF, Agronegocios de Exportación, Power BI, Google Data Studio y Gestión de Proyectos BPM, en reconocidas instituciones como Universidad ESAN, Universidad Nacional de Ingeniería, etc.",
       "name": "Mag. CPC Isrrael Chaquila Carrasco",
       "designation": "Auditor Tributario",
-      "src": "/CPC-isrrael-chaquila-carrasco-Experto-Costos-Presupuestos-Gestión-Financiera-Peru.webp"
+      "src": "/docentes/Mag-CPC-isrrael-chaquila-carrasco-Experto-Costos-Presupuestos-Gestión-Financiera-Internacional-Peru.webp",
+      "cv": ""
     },
     {
       "id": 3,
       "quote": "Con más de 11 años de experiencia en el ámbito tributario y contable, ha liderado funciones clave dentro de SUNAT Lambayeque. Actualmente, se desempeña como Auditora en la Intendencia de Principales Contribuyentes Nacionales.",
       "name": "Mag. CPC Fiorela Prada Montalvan",
       "designation": "Contadora Pública",
-      "src": "/Mag-CPC-Fiorela-Prada-Montalvan-Auditor-Tributario-Peru.webp"
-    }
-    ,
+      "src": "/docentes/Mag-CPC-Fiorela-Prada-Montalvan-Auditor-Tributario-Peru.webp",
+      "cv": "/pdfs/CV-CPC-Fiorela-Prada-Montalvan.pdf"
+    },
     {
       "id": 4,
       "quote": "Juliana Bueno Arias es una Contadora Pública Colegiada con un perfil profesional sólido en el ámbito tributario. Posee maestrías en Derecho Tributario y Fiscalidad Internacional, y está especializada en procedimientos tributarios. Su trayectoria incluye roles clave en la SUNAT y el Tribunal Fiscal Peruano, lo que le otorga una comprensión profunda de la administración tributaria.",
       "name": "Dra. Juliana Bueno Arias",
       "designation": "Abogada Tributarista",
-      "src": "/Juliana-Bueno-Arias-la-mejor-Abogada-Tributarista-Peru.webp"
-    }
-    ,
+      "src": "/docentes/Juliana-Bueno-Arias-la-mejor-Abogada-Tributarista-Peru.webp",
+      "cv": ""
+    },
     {
       "id": 5,
       "quote": "Ex ministro de la nación y fiscal especializado, se desempeñó como fiscal provincial y posteriormente lideró fiscalías contra la criminalidad organizada en Chiclayo, donde obtuvo reconocimiento por su trabajo en casos complejos de crimen organizado y corrupción.",
       "name": "LL.M. Abog. Juan Carrasco Millones",
       "designation": "Abogado",
-      "src": "/Abogado-Juan-Carrasco-Millones-Fiscal-especializado-Ministro-del-Interior-Ministro-de-Defensa.webp"
+      "src": "/docentes/Abogado-Juan-Carrasco-Millones-Fiscal-especializado-Ministro-del-Interior-Ministro-de-Defensa.webp",
+      "cv": ""
+    },
+    {
+      "id": 6,
+      "quote": "Contador Público Colegiado con amplia experiencia en auditoría y consultoría empresarial. Especializado en normativa tributaria peruana y sistemas de control interno. Ha desarrollado su carrera en firmas contables reconocidas del país.",
+      "name": "CPC. Fernando Paredes Sánchez",
+      "designation": "Contador Público",
+      "src": "/docentes/CPC-Fernando-Paredes-Sanchez.webp",
+      "cv": "/pdfs/CV-CPC-Fernando-Paredes-Sanchez.pdf"
+    },
+    {
+      "id": 7,
+      "quote": "Contadora Pública con especialización en tributación y auditoría. Experiencia en el sector privado y público, con enfoque en cumplimiento normativo y optimización fiscal. Docente universitaria con amplio conocimiento en NIIF.",
+      "name": "CPC. Susan Amy Aliaga Vilchez",
+      "designation": "Contadora Pública",
+      "src": "/docentes/CPC-Susan-Amy-Aliaga-Vilchez.webp",
+      "cv": "/pdfs/CV-CPC-Susan-Amy-Aliaga-Vilchez.pdf"
+    },
+    {
+      "id": 8,
+      "quote": "Contador Público especializado en costos y presupuestos empresariales. Experiencia en análisis financiero y gestión de proyectos. Ha trabajado en empresas del sector industrial y de servicios.",
+      "name": "CPC. Jeis Beiker Cahuaza Tangoa",
+      "designation": "Contador Público",
+      "src": "/docentes/CPC-Jeis-Beiker-Cahuaza-Tangoa.webp",
+      "cv": "/pdfs/CV-CPC-Jeis-Beiker-Cahuaza-Tangoa.pdf"
+    },
+    {
+      "id": 9,
+      "quote": "Contador Público con experiencia en auditoría externa e interna. Especializado en normativa contable y tributaria. Ha desarrollado su carrera en firmas de auditoría internacional y consultoría empresarial.",
+      "name": "CPC. José Carlos Alpaca Licera",
+      "designation": "Contador Público",
+      "src": "/docentes/CPC-Jose-Carlos-Alpaca-Licera.webp",
+      "cv": "/pdfs/CV-CPC-Jose-Carlos-Alpaca-Licera.pdf"
+    },
+    {
+      "id": 10,
+      "quote": "Contador Público especializado en tributación empresarial y consultoría fiscal. Experiencia en el sector financiero y manufacturero. Docente universitario con enfoque en casos prácticos y normativa actualizada.",
+      "name": "CPC. Juan Alberto Fernández Vilela",
+      "designation": "Contador Público",
+      "src": "/docentes/CPC-Juan-Alberto-Fernandez-Vilela.webp",
+      "cv": "/pdfs/CV-CPC-Juan-Alberto-Fernández-Vilela.pdf"
+    },
+    {
+      "id": 11,
+      "quote": "Contadora Pública con especialización en auditoría y control interno. Experiencia en empresas del sector retail y servicios. Enfoque en procesos de mejora continua y cumplimiento normativo.",
+      "name": "CPC. Alondra Yesenia Sandoval Ñamoc",
+      "designation": "Contadora Pública",
+      "src": "/docentes/CPC-Alondra-Yesenia-Sandoval.webp",
+      "cv": "/pdfs/CV-CPC-Alondra-Yesenia-Sandoval-Ñamoc.pdf"
+    },
+    {
+      "id": 12,
+      "quote": "Contador Público con experiencia en consultoría tributaria y auditoría. Especializado en normativa del IGV e Impuesto a la Renta. Ha trabajado en firmas contables reconocidas y empresas multinacionales.",
+      "name": "CPC. Richard Cortez Ortiz",
+      "designation": "Contador Público",
+      "src": "/docentes/CPC-Richard-Cortez-Ortiz.webp",
+      "cv": "/pdfs/CV–CPC-Richard-Cortez-Ortiz.pdf"
+    },
+    {
+      "id": 13,
+      "quote": "Contadora Pública especializada en auditoría y consultoría empresarial. Experiencia en el sector público y privado. Enfoque en sistemas de control interno y cumplimiento de normativas contables.",
+      "name": "CPC. Angélica María Ubillús Ticlla",
+      "designation": "Contadora Pública",
+      "src": "/docentes/CPC-Angelica-Ubillus-Tributarista.webp",
+      "cv": "/pdfs/CV-CPC-Angélica-María-Ubillús-Ticlla.pdf"
+    },
+    {
+      "id": 14,
+      "quote": "Contadora Pública con experiencia en tributación y auditoría. Especializada en normativa contable y fiscal. Ha desarrollado su carrera en empresas del sector financiero y consultoría especializada.",
+      "name": "CPC. Jessica Bravo Moya",
+      "designation": "Contadora Pública",
+      "src": "/docentes/MBA-CPC-Jessica-Bravo-Moya-Especialista-Finanzas-Gestión-Educativa-Peru.webp",
+      "cv": "/pdfs/CV-CPC-Jessica-Bravo-Moya.pdf"
+    },
+    {
+      "id": 15,
+      "quote": "Contadora Pública especializada en auditoría externa y consultoría tributaria. Experiencia en firmas de auditoría internacional y empresas del sector manufacturero. Enfoque en normativa contable y fiscal.",
+      "name": "CPC. Linda Giovanna Pongo Alva",
+      "designation": "Contadora Pública",
+      "src": "/docentes/Mag-CPC-Linda-Pongo-Alva-tributaria-contabilidad-financiera-derecho-laboral-Peru.webp",
+      "cv": "/pdfs/CV-CPC-Linda-Giovanna-Pongo-Alva.pdf"
+    },
+    {
+      "id": 16,
+      "quote": "Contador Público con amplia experiencia en auditoría y consultoría empresarial. Especializado en normativa tributaria y sistemas de información contable. Ha trabajado en empresas multinacionales y firmas contables.",
+      "name": "CPC. Carlos M. Manrique",
+      "designation": "Contador Público",
+      "src": "/docentes/Mag-CPC-Carlos-Manrique-DeLara-Seminario-asesor-financiero-contable-tributario-NIIF.webp",
+      "cv": "/pdfs/CV-CPC-Carlos-M-Manrique-DeLara-Seminario.pdf"
     }
   ]
 }
