@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Particles from "../utils/particles";
+import TextType from "../utils/textType";
 
 interface LoginComponentProps {
   onLogin: (username: string, password: string) => void;
@@ -26,7 +28,7 @@ export function LoginComponent({ onLogin, error }: LoginComponentProps) {
       top: Math.random() * 100,
       left: Math.random() * 100,
       animationDelay: Math.random() * 2,
-      animationDuration: 3 + Math.random() * 2
+      animationDuration: 3 + Math.random() * 2,
     }));
     setDotPositions(positions);
   }, []);
@@ -34,7 +36,7 @@ export function LoginComponent({ onLogin, error }: LoginComponentProps) {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!username.trim() || !password.trim()) return;
-    
+
     setIsLoading(true);
     onLogin(username, password);
     setIsLoading(false);
@@ -45,14 +47,26 @@ export function LoginComponent({ onLogin, error }: LoginComponentProps) {
       {/* Lado izquierdo - Formulario de Login */}
       <div className="w-full lg:w-1/2 flex items-center justify-center px-8 py-12 bg-gradient-to-br from-slate-50 to-slate-100">
         <div className="w-full max-w-md">
-          <div className="text-center mb-8">
-            <h1 className="text-3xl font-bold text-slate-800 mb-2">Bienvenido</h1>
-            <p className="text-slate-600">Accede a tu aula virtual</p>
+          <div className="text-center mb-8 color-black">
+            <TextType
+              text={[
+                "Bienvenido ;)",
+                "Accede a tu aula virtual",
+              ]}
+              typingSpeed={50}
+              pauseDuration={1500}
+              showCursor={true}
+              cursorCharacter="_"
+              className="text-3xl font-bold text-black mb-2 color-black"
+              textColors={["#000"]}
+            />
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="space-y-2">
-              <label className="block text-sm font-medium text-slate-700">Usuario</label>
+              <label className="block text-sm font-medium text-slate-700">
+                Usuario
+              </label>
               <div className="relative">
                 <input
                   type="text"
@@ -63,15 +77,27 @@ export function LoginComponent({ onLogin, error }: LoginComponentProps) {
                   required
                 />
                 <div className="absolute inset-y-0 right-0 flex items-center pr-3">
-                  <svg className="h-5 w-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                  <svg
+                    className="h-5 w-5 text-slate-400"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                    />
                   </svg>
                 </div>
               </div>
             </div>
 
             <div className="space-y-2">
-              <label className="block text-sm font-medium text-slate-700">Contraseña</label>
+              <label className="block text-sm font-medium text-slate-700">
+                Contraseña
+              </label>
               <div className="relative">
                 <input
                   type="password"
@@ -82,8 +108,18 @@ export function LoginComponent({ onLogin, error }: LoginComponentProps) {
                   required
                 />
                 <div className="absolute inset-y-0 right-0 flex items-center pr-3">
-                  <svg className="h-5 w-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                  <svg
+                    className="h-5 w-5 text-slate-400"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                    />
                   </svg>
                 </div>
               </div>
@@ -114,7 +150,10 @@ export function LoginComponent({ onLogin, error }: LoginComponentProps) {
           <div className="mt-8 text-center">
             <p className="text-sm text-slate-500">
               ¿Necesitas ayuda?{" "}
-              <a href="/contacto" className="text-blue-600 hover:text-blue-700 font-medium">
+              <a
+                href="/contacto"
+                className="text-blue-600 hover:text-blue-700 font-medium"
+              >
                 Contacta soporte
               </a>
             </p>
@@ -133,57 +172,86 @@ export function LoginComponent({ onLogin, error }: LoginComponentProps) {
 
         {/* Patrón de puntos decorativos */}
         <div className="absolute inset-0 ">
-          {dotPositions.map((dot, i) => (
-            <div
-              key={i}
-              className="absolute w-2 h-2 bg-white/20 rounded-full animate-pulse"
-              style={{
-                top: `${dot.top}%`,
-                left: `${dot.left}%`,
-                animationDelay: `${dot.animationDelay}s`,
-                animationDuration: `${dot.animationDuration}s`
-              }}
-            />
-          ))}
+          <Particles
+            particleColors={["#ffbb01", "#FFF"]}
+            particleCount={600}
+            particleSpread={5}
+            speed={0.1}
+            particleBaseSize={100}
+            moveParticlesOnHover={true}
+            alphaParticles={false}
+            disableRotation={false}
+          />
         </div>
 
         {/* Contenido principal del lado derecho */}
         <div className="relative z-10 flex flex-col items-center justify-center text-center text-white px-12">
           <div className="mb-8">
-            {/* Logo de la empresa - diseño moderno */}
-            
-            
             <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-200 to-indigo-200 bg-clip-text text-transparent">
               IFCET
             </h2>
             <p className="text-xl text-blue-100 mb-2">Instituto de Formación</p>
-            <p className="text-lg text-blue-200">Contable Empresarial y Tributaria</p>
+            <p className="text-lg text-blue-200">
+              Contable Empresarial y Tributaria
+            </p>
           </div>
 
           {/* Características destacadas */}
           <div className="space-y-4 max-w-sm">
             <div className="flex items-center gap-3 text-blue-100">
               <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
-                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                <svg
+                  className="w-5 h-5 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
                 </svg>
               </div>
-              <span className="text-sm">Formación profesional especializada</span>
+              <span className="text-sm">
+                Formación profesional especializada
+              </span>
             </div>
-            
+
             <div className="flex items-center gap-3 text-blue-100">
               <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
-                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9m0-9c0-4.97 4.03-9 9-9s9 4.03 9 9-4.03 9-9 9" />
+                <svg
+                  className="w-5 h-5 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9m0-9c0-4.97 4.03-9 9-9s9 4.03 9 9-4.03 9-9 9"
+                  />
                 </svg>
               </div>
               <span className="text-sm">Aula virtual interactiva</span>
             </div>
-            
+
             <div className="flex items-center gap-3 text-blue-100">
               <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
-                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                <svg
+                  className="w-5 h-5 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                  />
                 </svg>
               </div>
               <span className="text-sm">Material educativo actualizado</span>
