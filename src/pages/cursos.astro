@@ -74,6 +74,14 @@ import ifcetcontadores from '../assets/ifcet-contadores.webp'
                     <img src={curso.img} alt={curso.title} 
                       class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
                       loading="lazy" />
+                    {curso.brochure && (
+                      <button
+                        onclick={`window.open('${curso.brochure}', '_blank')`}
+                        class="absolute bottom-3 right-3 bg-gradient-to-r from-amber-500 to-orange-500 hover:scale-[1.10] transition-all duration-300 hover:bg-blue-700 text-white text-xs font-semibold px-2 py-1 rounded-md shadow-lg cursor-pointer"
+                      >
+                        Ver Brochure
+                      </button>
+                    )}
                   </div>
 
                   <!-- Contenido -->
@@ -118,9 +126,14 @@ import ifcetcontadores from '../assets/ifcet-contadores.webp'
                         <img src={curso.img} alt={curso.title} 
                           class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
                           loading="lazy" />
-                        <div class="absolute top-3 left-3">
-                          <span class="px-3 py-1 text-xs font-semibold rounded-full bg-amber-500 text-white">Inicio: {curso.Inicio}</span>
-                        </div>
+                        {curso.brochure && (
+                          <button
+                            onclick={`window.open('${curso.brochure}', '_blank')`}
+                            class="absolute bottom-3 right-3 bg-gradient-to-r from-amber-500 to-orange-500 hover:bg-blue-700 text-white text-xs font-semibold px-2 py-1 rounded-md transition-colors duration-200 shadow-lg cursor-pointer"
+                          >
+                            Ver Brochure
+                          </button>
+                        )}
                       </div>
 
                       <!-- Contenido -->
