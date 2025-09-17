@@ -84,7 +84,7 @@ export function Card({
         </div>
         <div className="mb-3">
           <h3 className="text-lg font-bold text-gray-800 leading-tight line-clamp-2">
-            {title}
+            Curso Especializado en {title}
           </h3>
         </div>
         <div className="flex items-center justify-center mb-4">

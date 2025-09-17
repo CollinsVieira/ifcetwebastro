@@ -74,7 +74,7 @@ export function BibliotecaComponent() {
       {/* Layout con Aside a los lados y contenido al centro */}
       <section className="grid grid-cols-1 lg:grid-cols-[1fr_4fr_1fr] grid-rows-1 min-h-screen">
         <div className="hidden lg:block">
-          <Aside />
+        <Aside videoUrl="/videos/IFCET-Curso-Auditoria-Tributaria-Preventiva.webm" linkUrl="https://wa.link/xdm8j0" />
         </div>
         <main className="p-4 sm:p-6 lg:p-8 text-black flex justify-start items-center flex-col w-full">
           <section id="listado" className="w-full">
@@ -157,7 +157,7 @@ export function BibliotecaComponent() {
           </section>
         </main>
         <div className="hidden lg:block">
-          <Aside />
+        <Aside videoUrl="/videos/IFCET-Curso-Codigo-Tributario-Peruano.webm" linkUrl="https://wa.link/20lh8p"/>
         </div>
       </section>
     </div>

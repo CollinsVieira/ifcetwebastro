@@ -248,7 +248,7 @@ export function BlogComponent({ allPosts }: { allPosts: Post[] }) {
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_4fr_1fr] min-h-screen max-w-full overflow-x-hidden gap-4">
         {/* Aside Izquierdo */}
         <aside className="col-span-1 hidden lg:block">
-          <Aside />
+        <Aside videoUrl="/videos/IFCET-Curso-Peritaje-Contable-Tributario-y-Financiero.webm" linkUrl="https://wa.link/ry63wj"/>
         </aside>
 
         {/* Contenido Principal */}
@@ -484,7 +484,7 @@ export function BlogComponent({ allPosts }: { allPosts: Post[] }) {
 
         {/* Aside Derecho */}
         <aside className="col-span-1 hidden lg:block">
-          <Aside />
+        <Aside videoUrl="/videos/IFCET-Curso-Auditoria-Tributaria-Preventiva.webm" linkUrl="https://wa.link/xdm8j0" />
         </aside>
       </div>
     </div>

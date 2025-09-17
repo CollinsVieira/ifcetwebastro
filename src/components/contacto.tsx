@@ -118,7 +118,7 @@ export function ContactoComponent() {
       {/* Layout con Aside a los lados y contenido al centro */}
       <section className="grid grid-cols-1 lg:grid-cols-[1fr_4fr_1fr] grid-rows-1 min-h-screen">
         <div className="hidden lg:block">
-          <Aside />
+        <Aside videoUrl="/videos/IFCET-Curso-Peritaje-Contable-Tributario-y-Financiero.webm" linkUrl="https://wa.link/ry63wj"/>
         </div>
         <main className="p-4 sm:p-6 lg:p-8 text-black flex justify-center items-center flex-col w-full" >
           <section id="contacto" className="w-full">
@@ -201,7 +201,7 @@ export function ContactoComponent() {
 
         </main>
         <div className="hidden lg:block">
-          <Aside />
+        <Aside videoUrl="/videos/IFCET-Curso-Codigo-Tributario-Peruano.webm" linkUrl="https://wa.link/20lh8p"/>
         </div>
       </section>
     </div>
