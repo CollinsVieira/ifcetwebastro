@@ -290,7 +290,7 @@
         "lessons": "7",
         "students": "28",
         "hours": "220",
-        "link": "https://wa.link/agricola",
+        "link": "https://wa.link/wml5ef",
         "brochure": "/brochure/IFCET-CURSO-ESPECIALIZADO-EN-CONTABILIDAD-AGRÍCOLA-EN-EL-PERÚ.pdf"
       },
       {
@@ -303,7 +303,7 @@
         "lessons": "6",
         "students": "24",
         "hours": "220",
-        "link": "https://wa.link/educativos",
+        "link": "https://wa.link/89le9q",
         "brochure": "/brochure/IFCET-CURSO-CONTABILIDAD-DE-SERVICIOS-EDUCATIVOS.pdf"
       },
       {
@@ -316,7 +316,7 @@
         "lessons": "5",
         "students": "22",
         "hours": "220",
-        "link": "https://wa.link/consultoria",
+        "link": "https://wa.link/epub8q",
         "brochure": "/brochure/IFCET-CURSO-CONTABILIDAD-DE-SERVICIOS-DE-CONSULTORÍA-Y-COMISIONES.pdf"
       },
       {
@@ -329,7 +329,7 @@
         "lessons": "8",
         "students": "31",
         "hours": "220",
-        "link": "https://wa.link/transporte",
+        "link": "https://wa.link/mp3s9s",
         "brochure": "/brochure/IFCET-CURSO-CONTABILIDAD-Y-TRIBUTACIÓN-DE-EMPRESAS-DE-TRANSPORTE.pdf"
       }
     ]
@@ -348,7 +348,7 @@
         "lessons": "6",
         "students": "26",
         "hours": "220",
-        "link": "https://wa.link/depreciacion",
+        "link": "https://wa.link/87dkmj",
         "brochure": "/brochure/IFCET-ESPECIALISTA-EN-DETERMINACIÓN-DE-LA DEPRECIACIÓN-DE-LOS-ACTIVOS-FIJOS.pdf"
       },
       {
@@ -361,7 +361,7 @@
         "lessons": "9",
         "students": "34",
         "hours": "220",
-        "link": "https://wa.link/peritaje",
+        "link": "https://wa.link/bxbvy6",
         "brochure": "/brochure/IFCET-ESPECIALISTA-EN-PERITAJE-Y-ELABORACIÓN-DE-INFORMES-DE-ACTUALIZACIÓN-DE-DEUDAS-ACTIVOS-PASIVOS-PATRIMONIO-Y-ACCIONES.pdf"
       }
     ]
@@ -380,7 +380,7 @@
         "lessons": "10",
         "students": "45",
         "hours": "220",
-        "link": "https://wa.link/impuesto-renta",
+        "link": "https://wa.link/q6m8fr",
         "brochure": "/brochure/IFCET-ESPECIALISTA-EN-LA-LEY-Y-SU-REGLAMENTO-DEL-IMPUESTO-A-LA-RENTA.pdf"
       },
       {
@@ -393,7 +393,7 @@
         "lessons": "8",
         "students": "32",
         "hours": "220",
-        "link": "https://wa.link/precios-transferencia",
+        "link": "https://wa.link/sdf6c4",
         "brochure": "/brochure/IFCET-ESPECIALISTA-EN-PRECIOS-DE-TRANSFERENCIA.pdf"
       },
       {
@@ -406,7 +406,7 @@
         "lessons": "6",
         "students": "29",
         "hours": "220",
-        "link": "https://wa.link/renta-trabajo",
+        "link": "https://wa.link/1lpj3r",
         "brochure": "/brochure/IFCET-ESPECIALISTA-EN-RENTA-DE-TRABAJO-Y-GASTOS-DEDUCIBLES.pdf"
       },
       {
@@ -419,7 +419,7 @@
         "lessons": "7",
         "students": "27",
         "hours": "220",
-        "link": "https://wa.link/renta-tercera",
+        "link": "https://wa.link/p1zzan",
         "brochure": "/brochure/IFCET-ESPECIALISTA-EN-RENTA-DE-TERCERA-CATEGORÍA-GASTOS-DEDUCIBLES-Y-NO-DEDUCIBLES.pdf"
       },
       {
@@ -432,8 +432,169 @@
         "lessons": "7",
         "students": "25",
         "hours": "220",
-        "link": "https://wa.link/renta-capital",
+        "link": "https://wa.link/zfjd3v",
         "brochure": "/brochure/IFCET-ESPECIALISTA-EN-RENTA-DE-CAPITAL-Y-GASTOS-DEDUCIBLES.pdf"
+      },
+      {
+        "img": "/cursos/IFCET-Rentas-de-Fuente-Extranjera-y-No-Domiciliados.jpg",
+        "title": " Rentas de Fuente Extranjera y No Domiciliados",
+        "duration": "",
+        "docente": "",
+        "Inicio": "",
+        "Horario": "",
+        "lessons": "8",
+        "students": "30",
+        "hours": "220",
+        "link": "https://wa.link/p20g8i",
+        "brochure": "/brochure/IFCET-ESPECIALISTA-EN-RENTAS-DE-FUENTE-EXTRANJERA-Y-NO-DOMICILIADOS.pdf"
+      }
+    ]
+  },
+  {
+    "categoria": "Cursos Básicos y Fundamentales",
+    "descripcion": "Programas básicos y fundamentales para el desarrollo profesional en contabilidad y tributación.",
+    "cursos": [
+      {
+        "img": "/cursos/IFCET-Asistente-Contable-Tributario.jpg",
+        "title": " Asistente Contable Tributario",
+        "duration": "",
+        "docente": "",
+        "Inicio": "",
+        "Horario": "",
+        "lessons": "12",
+        "students": "50",
+        "hours": "220",
+        "link": "https://wa.link/oblx19",
+        "brochure": "/brochure/IFCET-CURSO-ASISTENTE-CONTABLE-TRIBUTARIO.pdf"
+      },
+      {
+        "img": "/cursos/IFCET-Auditoria-Tributaria-Preventiva.jpg",
+        "title": " Auditoria Tributaria Preventiva",
+        "duration": "",
+        "docente": "",
+        "Inicio": "",
+        "Horario": "",
+        "lessons": "10",
+        "students": "40",
+        "hours": "220",
+        "link": "https://wa.link/s3nyfx",
+        "brochure": "/brochure/IFCET-CURSO-ESPECIALISTA-EN-AUDITORIA-TRIBUTARIA-PREVENTIVA.pdf"
+      },
+      {
+        "img": "/cursos/IFCET-Codigo-Tributario-Peruano.jpg",
+        "title": " Codigo Tributario Peruano",
+        "duration": "",
+        "docente": "",
+        "Inicio": "",
+        "Horario": "",
+        "lessons": "8",
+        "students": "35",
+        "hours": "220",
+        "link": "https://wa.link/plecqs",
+        "brochure": "/brochure/IFCET-ESPECIALISTA-EN-EL-CÓDIGO-TRIBUTARIO-PERUANO.pdf"
+      }
+    ]
+  },
+  {
+    "categoria": "Contabilidad Empresarial Especializada",
+    "descripcion": "Cursos especializados en contabilidad para diferentes tipos de empresas y sectores económicos específicos.",
+    "cursos": [
+      {
+        "img": "/cursos/IFCET-Contabilidad-de-Consorcios-en-el-Peru.jpg",
+        "title": " Contabilidad de Consorcios en el Peru",
+        "duration": "",
+        "docente": "",
+        "Inicio": "",
+        "Horario": "",
+        "lessons": "7",
+        "students": "28",
+        "hours": "220",
+        "link": "https://wa.link/vvs6xs",
+        "brochure": "/brochure/IFCET-CURSO-CONTABILIDAD-DE-CONSORCIOS-EN-EL-PERÚ.pdf"
+      },
+      {
+        "img": "/cursos/IFCET-Contabilidad-de-Empresas-Ganaderas.jpg",
+        "title": " Contabilidad de Empresas Ganaderas",
+        "duration": "",
+        "docente": "",
+        "Inicio": "",
+        "Horario": "",
+        "lessons": "6",
+        "students": "24",
+        "hours": "220",
+        "link": "https://wa.link/owd47y",
+        "brochure": "/brochure/IFCET-CURSO-CONTABILIDAD-DE-EMPRESAS-GANADERAS.pdf"
+      },
+      {
+        "img": "/cursos/IFCET-Contabilidad-Empresas-Comerciales-con-Incidencia-Tributaria-y-Legal.jpg",
+        "title": " Contabilidad Empresas Comerciales con Incidencia Tributaria y Legal",
+        "duration": "",
+        "docente": "",
+        "Inicio": "",
+        "Horario": "",
+        "lessons": "8",
+        "students": "32",
+        "hours": "220",
+        "link": "https://wa.link/bp9hb8",
+        "brochure": "/brochure/IFCET-CURSO-CONTABILIDAD-DE-EMPRESAS-COMERCIALES-CON-INCIDENCIA-TRIBUTARIA-Y-LEGAL.pdf"
+      }
+    ]
+  },
+  {
+    "categoria": "Especialización Profesional Avanzada",
+    "descripcion": "Programas de especialización avanzada en áreas específicas de contabilidad, tributación y procedimientos legales.",
+    "cursos": [
+      {
+        "img": "/cursos/IFCET-Especialista-Clinicas-con-Incidencia-Contable-Tributaria-Societaria-Jurisprudencial.jpg",
+        "title": " Especialista Clinicas con Incidencia Contable Tributaria Societaria Jurisprudencial",
+        "duration": "",
+        "docente": "",
+        "Inicio": "",
+        "Horario": "",
+        "lessons": "9",
+        "students": "36",
+        "hours": "220",
+        "link": "https://wa.link/5wd4w8",
+        "brochure": "/brochure/IFCET-ESPECIALISTA-EN-CLINICAS-CON-INCIDENCIA-CONTABLE-TRIBUTARIA-SOCIETARIA-JURISPRUDENCIAL.pdf"
+      },
+      {
+        "img": "/cursos/IFCET-Especialista-Infracciones-Sanciones-Gradualidad-Tributaria.jpg",
+        "title": " Especialista Infracciones Sanciones Gradualidad Tributaria",
+        "duration": "",
+        "docente": "",
+        "Inicio": "",
+        "Horario": "",
+        "lessons": "7",
+        "students": "30",
+        "hours": "220",
+        "link": "https://wa.link/ytgnmg",
+        "brochure": "/brochure/IFCET-ESPECIALISTA-EN-INFRACCIONES-SANCIONES-Y-GRADUALIDAD-TRIBUTARIA.pdf"
+      },
+      {
+        "img": "/cursos/IFCET-Especialista-Procedimientos-Contenciosos-y-No-Contenciosos-Tributarios.jpg",
+        "title": " Especialista Procedimientos Contenciosos y No Contenciosos Tributarios",
+        "duration": "",
+        "docente": "",
+        "Inicio": "",
+        "Horario": "",
+        "lessons": "8",
+        "students": "33",
+        "hours": "220",
+        "link": "https://wa.link/i3ki3q",
+        "brochure": "/brochure/IFCET-ESPECIALISTA-EN-PROCEDIMIENTOS-CONTENCIOSOS-Y-NO-CONTENCIOSOS-TRIBUTARIOS.pdf"
+      },
+      {
+        "img": "/cursos/IFCET-Peritaje-Contable-Tributario-y-Financiero.jpg",
+        "title": " Peritaje Contable Tributario y Financiero",
+        "duration": "",
+        "docente": "",
+        "Inicio": "",
+        "Horario": "",
+        "lessons": "10",
+        "students": "40",
+        "hours": "220",
+        "link": "https://wa.link/u0uw65",
+        "brochure": "/brochure/IFCET-ESPECIALISTA-EN-PERITAJE-CONTABLE-TRIBUTARIO-Y-FINANCIERO.pdf"
       }
     ]
   }
