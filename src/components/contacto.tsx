@@ -134,9 +134,7 @@ export function ContactoComponent() {
                       <p className="text-sm mt-2">+51 950 268 312</p>
                     </div>
                     <div className="bg-black/5 border border-black/10 rounded-xl p-4 sm:col-span-2">
-                      <h3 className="font-semibold">Correos</h3>
-                      <p className="text-sm mt-2">administracion@ifcet.com.pe</p>
-                      <p className="text-sm">informes@ifcet.com.pe</p>
+                      <h3 className="font-semibold">Correo</h3>
                       <p className="text-sm">ifcet.chiclayo@gmail.com</p>
                     </div>
                     <div className="bg-black/5 border border-black/10 rounded-xl p-4 sm:col-span-2">
