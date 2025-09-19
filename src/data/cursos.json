@@ -597,5 +597,50 @@
         "brochure": "/brochure/IFCET-ESPECIALISTA-EN-PERITAJE-CONTABLE-TRIBUTARIO-Y-FINANCIERO.pdf"
       }
     ]
+  },
+  {
+    "categoria": "Gestión Pública y Sector Gubernamental",
+    "descripcion": "Programas especializados en contabilidad y gestión financiera del sector público, incluyendo SIAF y obras públicas.",
+    "cursos": [
+      {
+        "img": "/cursos/IFCET-Contabilidad-en-Gestion-Publica-en-el-Siaf-Web.webp",
+        "title": " Contabilidad en Gestion Publica en el Siaf Web",
+        "duration": "",
+        "docente": "",
+        "Inicio": "",
+        "Horario": "",
+        "lessons": "8",
+        "students": "30",
+        "hours": "220",
+        "link": "https://wa.link/oe4c8n",
+        "brochure": ""
+      },
+      {
+        "img": "/cursos/IFCET-Gestion-de-Presupuesto-Publico-en-el-Siaf-Web.webp",
+        "title": " Gestion de Presupuesto Publico en el Siaf Web",
+        "duration": "",
+        "docente": "",
+        "Inicio": "",
+        "Horario": "",
+        "lessons": "7",
+        "students": "28",
+        "hours": "220",
+        "link": "https://wa.link/z6xhe0",
+        "brochure": ""
+      },
+      {
+        "img": "/cursos/IFCET-Liquidacion-Financiera-en-Obras-Publicas.webp",
+        "title": " Liquidacion Financiera en Obras Publicas",
+        "duration": "",
+        "docente": "",
+        "Inicio": "",
+        "Horario": "",
+        "lessons": "6",
+        "students": "25",
+        "hours": "220",
+        "link": "https://wa.link/4hpul8",
+        "brochure": ""
+      }
+    ]
   }
 ]
